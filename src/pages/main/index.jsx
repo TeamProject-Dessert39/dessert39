@@ -26,42 +26,53 @@ const Main = () => {
     return (
         <>
             <div>Dessert39</div>
+
+            {/* 이미지 슬라이드 */}
             <ImageSliderWrap>
                 <ImageSlider />
             </ImageSliderWrap>
 
+            {/* 그래프 */}
             <ReuserableGraphWrap>
                 <ReuserableGraph />
             </ReuserableGraphWrap>
 
+            {/* 탭 - 영상, 이미지 슬라이드 */}
             <EcoStoryWrap>
                 <EcoStory />
             </EcoStoryWrap>
 
+            {/* 디저트 - 이미지 슬라이드 변형 */}
             <DessertListWrap>
                 <DessertList />
             </DessertListWrap>
 
+            {/* 음료 - 이미지 슬라이드 변형 */}
             <BeverageWrap>
                 <Beverage />
             </BeverageWrap>
 
+            {/* 문구 - 버튼, 이미지 */}
             <IntroductionWrap>
                 <Introduction />
             </IntroductionWrap>
 
+            {/* 화살표 버튼 - 이미지 전환 */}
             <StoreInteriorWrap>
                 <StoreInterior />
             </StoreInteriorWrap>
 
+            {/* 이미지 슬라이드 */}
             <EventNewsWrap>
                 <EventNews />
             </EventNewsWrap>
 
+            {/* div 슬라이드 */}
             <NewStoreListWrap>
                 <NewStoreList />
             </NewStoreListWrap>
 
+            {/* 이미지 슬라이드 */}
             <InstagramWrap>
                 <Instagram />
             </InstagramWrap>
