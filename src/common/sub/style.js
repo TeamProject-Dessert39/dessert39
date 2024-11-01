@@ -20,7 +20,7 @@ export const SubLayoutContainer = styled.div`
             top: 108px;
             font-size: 26px;
             b {
-                margin-left: 4px;
+                margin: 0 6px;
                 font-weight: 700;
             }
             span {
