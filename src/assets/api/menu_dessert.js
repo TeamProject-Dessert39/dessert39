@@ -565,7 +565,7 @@ export default [
     },
     // SANDWICH
     {
-        id : 35 , 
+        id : 41 , 
         category : 'SANDWICH',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_sand/menu_dessert_sand_1.png?raw=true` , 
         name : `스모크 바베큐 샌드위치` , 
@@ -579,7 +579,7 @@ export default [
         allergy : ''
     },
     {
-        id : 36, 
+        id : 42, 
         category : 'SANDWICH',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_sand/menu_dessert_sand_2.png?raw=true` , 
         name : `스리라차 마요 그릴드 치킨 샌드위치` , 
@@ -593,7 +593,7 @@ export default [
         allergy : ''
     },
     {
-        id : 37 , 
+        id : 43 , 
         category : 'SANDWICH',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_sand/menu_dessert_sand_3.png?raw=true` , 
         name : `마요 그릴드 치킨 샌드위치` , 
@@ -608,7 +608,7 @@ export default [
     },
     //SHAVED ICE & PARFAIT
     {
-        id : 38 , 
+        id : 44 , 
         category : 'SHAVED ICE & PARFAIT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_ice/menu_dessert_ice_1.png?raw=true` , 
         name : `프로틴 미숫가루 컵빙수` , 
@@ -622,7 +622,7 @@ export default [
         allergy : '[밀, 우유, 대두, 아몬드, 땅콩]'
     },
     {
-        id : 39 , 
+        id : 45 , 
         category : 'SHAVED ICE & PARFAIT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_ice/menu_dessert_ice_2.png?raw=true` , 
         name : `황치즈 빙수` , 
@@ -636,7 +636,7 @@ export default [
         allergy : '[밀, 우유, 대두]'
     },
     {
-        id : 40 , 
+        id : 46 , 
         category : 'SHAVED ICE & PARFAIT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_ice/menu_dessert_ice_3.png?raw=true` , 
         name : `황치즈 버켓 빙수` , 
@@ -650,7 +650,7 @@ export default [
         allergy : '[우유, 밀, 대두]'
     },
     {
-        id : 41 , 
+        id : 47 , 
         category : 'SHAVED ICE & PARFAIT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_ice/menu_dessert_ice_4.png?raw=true` , 
         name : `인절미 팥빙수` , 
@@ -664,7 +664,7 @@ export default [
         allergy : '[밀, 우유, 대두, 아몬드]'
     },
     {
-        id : 42 , 
+        id : 48 , 
         category : 'SHAVED ICE & PARFAIT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_ice/menu_dessert_ice_5.png?raw=true` , 
         name : `쿠키 초코 버켓 빙수 (쿠키선택가능)` , 
@@ -678,7 +678,7 @@ export default [
         allergy : '[밀, 우유, 대두, 난류]'
     },
     {
-        id : 43 , 
+        id : 49 , 
         category : 'SHAVED ICE & PARFAIT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_ice/menu_dessert_ice_6.png?raw=true` , 
         name : `카라멜 인절미 버켓 빙수` , 
@@ -693,7 +693,7 @@ export default [
     },
     //BAGEL & CREAM CHEESE
     {
-        id : 44 , 
+        id : 50 , 
         category : 'BAGEL & CREAM CHEESE',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_bagel/menu_dessert_bagel_1.png?raw=true` , 
         name : `플레인 크림치즈` , 
@@ -708,7 +708,7 @@ export default [
         else : '50g'
     },
     {
-        id : 45 , 
+        id : 51 , 
         category : 'BAGEL & CREAM CHEESE',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_bagel/menu_dessert_bagel_2.png?raw=true` , 
         name : `대파 크림치즈` , 
@@ -723,8 +723,8 @@ export default [
         else : '50g'
     },
     {
-        id : 46, 
-        category : 'MEAL & SET MENU',
+        id : 52, 
+        category : 'BAGEL & CREAM CHEESE',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_bagel/menu_dessert_bagel_3.png?raw=true` , 
         name : `플레인 베이글` , 
         price : `2900` , 
@@ -737,8 +737,8 @@ export default [
         allergy : '[밀 ,우유]'
     },
     {
-        id : 47 , 
-        category : 'MEAL & SET MENU',
+        id : 53 , 
+        category : 'BAGEL & CREAM CHEESE',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_bagel/menu_dessert_bagel_4.png?raw=true` , 
         name : `무화과 베이글` , 
         price : `3500` , 
@@ -751,8 +751,8 @@ export default [
         allergy : '[밀,우유,호두]'
     },
     {
-        id : 48, 
-        category : 'MEAL & SET MENU',
+        id : 54, 
+        category : 'BAGEL & CREAM CHEESE',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_bagel/menu_dessert_bagel_5.png?raw=true` , 
         name : `치즈 베이글` , 
         price : `3800` , 
@@ -765,8 +765,8 @@ export default [
         allergy : '[밀, 우유, 돼지고기]'
     },
     {
-        id : 49, 
-        category : 'MEAL & SET MENU',
+        id : 55, 
+        category : 'BAGEL & CREAM CHEESE',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_bagel/menu_dessert_bagel_6.png?raw=true` , 
         name : `플레인 베이글+대파 크림치즈+아메리카노 세트` , 
         price : `7500` , 
@@ -779,8 +779,8 @@ export default [
         allergy : '[밀,우유]'
     },
     {
-        id : 50, 
-        category : 'MEAL & SET MENU',
+        id : 56, 
+        category : 'BAGEL & CREAM CHEESE',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_bagel/menu_dessert_bagel_7.png?raw=true` , 
         name : `무화과 베이글+플레인 크림치즈+아메리카노 세트` , 
         price : `7800` , 
@@ -793,8 +793,8 @@ export default [
         allergy : '[밀,우유,호두]'
     },
     {
-        id : 51, 
-        category : 'MEAL & SET MENU',
+        id : 57, 
+        category : 'BAGEL & CREAM CHEESE',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_bagel/menu_dessert_bagel_8.png?raw=true` , 
         name : `치즈 베이글+대파 크림치즈+아메리카노 세트` , 
         price : `8400` , 
@@ -808,7 +808,7 @@ export default [
     },
     //BAKING BREAD & DESSERT
     {
-        id : 52, 
+        id : 58, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_1.png?raw=true` , 
         name : `크로칸슈 커스타드 오믈렛` , 
@@ -822,7 +822,7 @@ export default [
         allergy : '[밀, 우유, 계란, 대두]'
     },
     {
-        id : 53, 
+        id : 59, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_2.png?raw=true` , 
         name : `초코 오믈렛` , 
@@ -836,7 +836,7 @@ export default [
         allergy : '[밀, 우유, 계란, 대두]'
     },
     {
-        id : 54, 
+        id : 60, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_3.png?raw=true` , 
         name : `녹차 오믈렛` , 
@@ -850,7 +850,7 @@ export default [
         allergy : '[밀, 우유, 계란, 대두]'
     },
     {
-        id : 55, 
+        id : 61, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_1.png?raw=true` , 
         name : `도쿄롤 우유 크림 오믈렛` , 
@@ -864,7 +864,7 @@ export default [
         allergy : '[밀, 우유, 계란, 대두]'
     },
     {
-        id : 56, 
+        id : 62, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_5.png?raw=true` , 
         name : `더블 초콜릿 쿠키` , 
@@ -878,7 +878,7 @@ export default [
         allergy : '[계란, 대두, 밀, 우유]'
     },
     {
-        id : 57, 
+        id : 63, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_6.png?raw=true` , 
         name : `초코 크런키 소프트 쿠키` , 
@@ -892,7 +892,7 @@ export default [
         allergy : '[계란, 대두, 밀, 우유]'
     },
     {
-        id : 58, 
+        id : 64, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_7.png?raw=true` , 
         name : `스윗 화이트 딜라이트 쿠키` , 
@@ -906,7 +906,7 @@ export default [
         allergy : '[계란, 대두, 밀, 우유]'
     },
     {
-        id : 59, 
+        id : 65, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_8.png?raw=true` , 
         name : `요거트 마카롱` , 
@@ -920,7 +920,7 @@ export default [
         allergy : ''
     },
     {
-        id : 60, 
+        id : 66, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_9.png?raw=true` , 
         name : `얼그레이 마카롱` , 
@@ -934,7 +934,7 @@ export default [
         allergy : ''
     },
     {
-        id : 61, 
+        id : 67, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_10.png?raw=true` , 
         name : `오레오 프렌치 마카롱` , 
@@ -948,7 +948,7 @@ export default [
         allergy : ''
     },
     {
-        id : 62, 
+        id : 68, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_11.png?raw=true` , 
         name : `황치즈 프렌치 마카롱` , 
@@ -962,7 +962,7 @@ export default [
         allergy : ''
     },
     {
-        id : 63, 
+        id : 69, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_12.png?raw=true` , 
         name : `딥초코가나슈 프렌치 마카롱` , 
@@ -976,7 +976,7 @@ export default [
         allergy : ''
     },
     {
-        id : 64, 
+        id : 70, 
         category : 'BAKING BREAD & DESSERT',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_baking_bred_des/menu_dessert_baking_bred_des_13.png?raw=true` , 
         name : `딸기 프렌치 마카롱` , 
@@ -991,7 +991,7 @@ export default [
     },
     // CAKE & Tokyo Roll & TIRAMISU
     {
-        id : 65, 
+        id : 71, 
         category : 'CAKE & Tokyo Roll & TIRAMISU',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_cake/menu_dessert_cake_1.png?raw=true` , 
         name : `스페셜 월드 케익` , 
@@ -1006,7 +1006,7 @@ export default [
         else : '선택 케이크에 따라 가격이 상이할 수 있습니다.'
     },
     {
-        id : 66, 
+        id : 72, 
         category : 'CAKE & Tokyo Roll & TIRAMISU',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_cake/menu_dessert_cake_2.png?raw=true` , 
         name : `황치즈 바스크 케이크[조각]` , 
@@ -1020,7 +1020,7 @@ export default [
         allergy : '[우유, 계란, ]',
     },
     {
-        id : 67, 
+        id : 73, 
         category : 'CAKE & Tokyo Roll & TIRAMISU',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_cake/menu_dessert_cake_3.png?raw=true` , 
         name : `크럼블 애플 치즈 케익` , 
@@ -1034,7 +1034,7 @@ export default [
         allergy : '[밀, 계란, 우유]',
     },
     {
-        id : 68, 
+        id : 74, 
         category : 'CAKE & Tokyo Roll & TIRAMISU',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_cake/menu_dessert_cake_4.png?raw=true` , 
         name : `크럼블 블루베리 치즈 케익` , 
@@ -1048,7 +1048,7 @@ export default [
         allergy : '[밀, 계란, 우유]',
     },
     {
-        id : 69, 
+        id : 75, 
         category : 'CAKE & Tokyo Roll & TIRAMISU',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_cake/menu_dessert_cake_6.png?raw=true` , 
         name : `녹차 도쿄롤 S` , 
@@ -1062,7 +1062,7 @@ export default [
         allergy : '[밀, 우유, 계란, 대두]',
     },
     {
-        id : 70, 
+        id : 76, 
         category : 'CAKE & Tokyo Roll & TIRAMISU',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_cake/menu_dessert_cake_7.png?raw=true` , 
         name : `화이트 초코 도쿄롤 S` , 
@@ -1076,7 +1076,7 @@ export default [
         allergy : '[밀, 우유, 계란, 대두]',
     },
     {
-        id : 71, 
+        id : 77, 
         category : 'CAKE & Tokyo Roll & TIRAMISU',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_cake/menu_dessert_cake_8.png?raw=true` , 
         name : `망고 도쿄롤 S` , 
@@ -1090,7 +1090,7 @@ export default [
         allergy : '[밀, 계란, 우유, 대두, 돼지고기]',
     },
     {
-        id : 72, 
+        id : 78, 
         category : 'CAKE & Tokyo Roll & TIRAMISU',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_cake/menu_dessert_cake_9.png?raw=true` , 
         name : `자색 고구마 도쿄롤 S` , 
@@ -1104,7 +1104,7 @@ export default [
         allergy : '[밀, 계란, 우유, 대두]',
     },
     {
-        id : 73, 
+        id : 79, 
         category : 'CAKE & Tokyo Roll & TIRAMISU',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_cake/menu_dessert_cake_10.png?raw=true` , 
         name : `완전 부드러운 오리지널 치즈 케익` , 
@@ -1118,7 +1118,7 @@ export default [
         allergy : ' [밀, 계란, 대두, 우유, 쇠고기, 아황산류]',
     },
     {
-        id : 74, 
+        id : 80, 
         category : 'CAKE & Tokyo Roll & TIRAMISU',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_cake/menu_dessert_cake_14.png?raw=true` , 
         name : `당근 케익 (조각)` , 
@@ -1132,7 +1132,7 @@ export default [
         allergy : '[밀, 우유, 계란, 대두]',
     },
     {
-        id : 75, 
+        id : 81, 
         category : 'CAKE & Tokyo Roll & TIRAMISU',
         imgurl : `https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/menu/dessesrt/menu_dessert_cake/menu_dessert_cake_16.png?raw=true` , 
         name : `레드벨벳 케익 (조각)` , 
