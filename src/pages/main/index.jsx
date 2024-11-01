@@ -25,8 +25,6 @@ import Instagram from '../../components/main/Instagram';
 const Main = () => {
     return (
         <>
-            <div>Dessert39</div>
-
             {/* 이미지 슬라이드 */}
             <ImageSliderWrap>
                 <ImageSlider />

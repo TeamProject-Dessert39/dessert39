@@ -1,5 +1,5 @@
 const EcoStory = () => {
-    return <div></div>;
+    return <div>EcoStory</div>;
 };
 
 export default EcoStory;

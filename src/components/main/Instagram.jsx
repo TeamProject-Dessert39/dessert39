@@ -1,5 +1,5 @@
 const Instagram = () => {
-    return <div></div>;
+    return <div>Instagram</div>;
 };
 
 export default Instagram;

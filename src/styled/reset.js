@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
   }
   /* 공통 */
   .inner{
-    width: 95%;
+    width: 100%;
     max-width: 1440px;
     margin: 0 auto;
     box-sizing: border-box;

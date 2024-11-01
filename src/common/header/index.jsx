@@ -5,6 +5,9 @@ import Sub from './sub';
 
 const Header = () => {
     const [isHovered, setIsHovered] = useState(false);
+
+    const handleMouseEnter = () => setIsHovered(true);
+    const handleMouseLeave = () => setIsHovered(false);
     return (
         <HeaderWrap>
             <HeaderInner>
@@ -18,7 +21,7 @@ const Header = () => {
                             />
                         </Link>
                     </h1>
-                    <NavContainer onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+                    <NavContainer onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <LeftNav>
                             <Nav>
                                 <ul>
@@ -26,7 +29,7 @@ const Header = () => {
                                         <Link to={'/brand/intro'}>Brand</Link>
                                     </li>
                                     <li className="nav2">
-                                        <Link to={'/menu'}>Menu</Link>
+                                        <Link to={'/menu/dessert'}>Menu</Link>
                                     </li>
                                 </ul>
                             </Nav>
@@ -35,10 +38,10 @@ const Header = () => {
                             <Nav>
                                 <ul>
                                     <li className="nav3">
-                                        <Link to={'/franchise'}>Franchise</Link>
+                                        <Link to={'/community/information'}>Community</Link>
                                     </li>
                                     <li className="nav4">
-                                        <Link to={'/community'}>Community</Link>
+                                        <Link to={'/franchise/competitive'}>Franchise</Link>
                                     </li>
                                 </ul>
                             </Nav>

@@ -1,5 +1,5 @@
 const ReuserableGraph = () => {
-    return <div></div>;
+    return <div>ReuserableGraph</div>;
 };
 
 export default ReuserableGraph;

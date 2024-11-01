@@ -1,54 +1,35 @@
 import { Link } from 'react-router-dom';
-import {} from './style';
+import { SubContainer, SubMenu } from './style';
+import MenuData from '../../assets/api/menu';
 
 const Sub = () => {
+    // HTML 엔티티를 실제 문자로 변환하는 함수
+    const decodeHTMLEntities = (text) => {
+        const textArea = document.createElement('textarea');
+        textArea.innerHTML = text;
+        return textArea.value;
+    };
+
+    const renderMenuItems = (categories) => {
+        return categories.map((category) => (
+            <ul key={category}>
+                {MenuData[category].map(
+                    (item) =>
+                        !item.sub && (
+                            <li key={item.id}>
+                                <Link to={`/${category}/${item.main}`}>{decodeHTMLEntities(item.desc)}</Link>
+                            </li>
+                        )
+                )}
+            </ul>
+        ));
+    };
+
     return (
-        <>
-            <ul>
-                <li>
-                    <Link to="/brand/story">브랜드 스토리</Link>
-                </li>
-                <li>
-                    <Link to="/brand/vision">비전</Link>
-                </li>
-                <li>
-                    <Link to="/brand/history">연혁</Link>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <Link to="/menu/coffee">커피</Link>
-                </li>
-                <li>
-                    <Link to="/menu/beverage">음료</Link>
-                </li>
-                <li>
-                    <Link to="/menu/food">푸드</Link>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <Link to="/franchise/info">창업안내</Link>
-                </li>
-                <li>
-                    <Link to="/franchise/process">창업절차</Link>
-                </li>
-                <li>
-                    <Link to="/franchise/inquiry">가맹문의</Link>
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <Link to="/community/notice">공지사항</Link>
-                </li>
-                <li>
-                    <Link to="/community/event">이벤트</Link>
-                </li>
-                <li>
-                    <Link to="/community/faq">FAQ</Link>
-                </li>
-            </ul>
-        </>
+        <SubContainer>
+            <SubMenu className="left">{renderMenuItems(['brand', 'menu'])}</SubMenu>
+            <SubMenu className="right">{renderMenuItems(['community', 'franchise'])}</SubMenu>
+        </SubContainer>
     );
 };
 

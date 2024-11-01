@@ -1,5 +1,5 @@
 const StoreInterior = () => {
-    return <div></div>;
+    return <div>StoreInterior</div>;
 };
 
 export default StoreInterior;
