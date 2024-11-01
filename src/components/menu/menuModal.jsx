@@ -1,23 +1,25 @@
 import React from 'react';
 import { MenuModalComponents } from './styled';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import { onModalClose } from '../../store/modules/menuDataSlice';
 
 const MenuModal = () => {
     const currentModal = useSelector(state=> state.menu.currentModal)
-    console.log(currentModal)
+    const dispatch = useDispatch()
     return (
         <MenuModalComponents>
             <figure>
-                <img src={currentModal[0].imgurl} alt="" />
+                <img src={currentModal.imgurl} alt="" />
             </figure>
-            <button className='closeBtn'>
+            <button className='closeBtn' onClick={()=>dispatch(onModalClose())}>
                 <IoMdCloseCircleOutline size={40} />
             </button>
             <div className="modal-body">
                 <div className="product-data">
-                    <span>{currentModal[0].name}</span>
-                    <strong>{currentModal[0].price}</strong>
+                    <span>{currentModal.name}</span>
+                    <p>{currentModal.con}</p>
+                    <strong>가격{currentModal.price.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</strong>
                 </div>
             </div>
         </MenuModalComponents>

@@ -49,11 +49,14 @@ export const getDataSlice = createSlice({
             }
         },
         onModalData: (state, action) => {
-            state.currentModal.push(action.payload)
+            state.currentModal = action.payload
             state.Modal = true
+        },
+        onModalClose: (state, action) => {
+            state.Modal = false
         },
     },
 });
 
-export const { onModalData , onLoadingData } = getDataSlice.actions;
+export const { onModalData , onLoadingData , onModalClose } = getDataSlice.actions;
 export default getDataSlice.reducer;

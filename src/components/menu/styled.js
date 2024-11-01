@@ -139,12 +139,16 @@ export const MenuModalComponents = styled.div`
     transform: translate(50% ,-50%);
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
+    width: 605px;
     figure{
-        width: 605px;
-        height: 380px;
+        background: #F8F9FA;
         display: flex;
-        justify-content: center;
         img{
+            padding: 20px;
+            max-height: 350px;
+            margin: 0 auto;
+            height: 85%;
         }
     }
     button{
@@ -154,5 +158,27 @@ export const MenuModalComponents = styled.div`
         right: 0;
         top: 0;
         transform: translate(-10px , 10px);
+        cursor: pointer;
+    }
+    .modal-body{
+        padding: 30px 10px;
+        .product-data{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            span{
+                text-align: center;
+                font-size: 26px;
+                font-weight: bold;
+            }
+            p{
+                font-size: 20px;
+                font-weight: 700;
+                margin: 30px 0;
+            }
+            strong{
+                font-size: 22px;
+            }
+        }
     }
 `
