@@ -69,8 +69,8 @@ export const ImageSliderWrap = styled.div`
         height: 10px !important; /* 원의 높이 설정 */
         text-indent: -9999px; /* 텍스트를 화면 밖으로 밀어냄 */
         overflow: hidden; /* 넘치는 텍스트 숨김 */
-        background-color: #ffffff; /* 원의 색상 설정 */
-        opacity: 0.2; /* 비활성 상태의 투명도 */
+        background-color: #ffffff;
+        opacity: 0.2;
 
         &:hover {
             background-color: white;
@@ -78,7 +78,7 @@ export const ImageSliderWrap = styled.div`
     }
 
     .swiper-pagination-bullet-active {
-        opacity: 1; /* 활성 상태의 투명도 */
+        opacity: 1;
     }
     // ---------------------------------------------------------------------
 `

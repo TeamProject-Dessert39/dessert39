@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const ReadMoreBtnWrap = styled.div`
+    position:relative;
     width: 180px;
     height: 50px;
     background-color: #cbccba;
