@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { ReadMoreBtnWrap } from './styled';
+import { ReadMoreBtnWrap } from './ReadMoreCss';
 
 const ReadMore = ({ linkUrl }) => {
     return (

@@ -98,7 +98,7 @@ const ImageSlider = () => {
                 {/* 이미지 리스트 생성 */}
                 {imgUrlArray.map((img, index) => (
                     <SwiperSlide key={index}>
-                        <img src={`${startImgUrl}${img}${endImgUrl}`} alt={`${index + 1}`}></img>
+                        <img referrerPolicy="no-referrer" src={`${startImgUrl}${img}${endImgUrl}`} alt={`${index + 1}`}></img>
                     </SwiperSlide>
                 ))}
             </Swiper>

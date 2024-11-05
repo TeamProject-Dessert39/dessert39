@@ -46,6 +46,7 @@ const EcoStory = () => {
                         <div className="photo">
                             <a href="https://dessert39.com/html/pages/competitiveness.php">
                                 <img
+                                    referrerPolicy="no-referrer"
                                     src="https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EcoStroty_01.png?raw=true"
                                     alt="EcoStroty_01"
                                 />
@@ -57,6 +58,7 @@ const EcoStory = () => {
                     <div className="ecoTab">
                         <div className="article">
                             <img
+                                referrerPolicy="no-referrer"
                                 src="https://raw.githubusercontent.com/TeamProject-Dessert39/dataCenter/1884dadb9ee5b3abba6003573b35818b2700bd0e/icon/esg_icon.svg"
                                 alt="esg_icon"
                             />
@@ -81,6 +83,7 @@ const EcoStory = () => {
                         <div className="photo">
                             <a href="https://dessert39.com/html/pages/competitiveness.php">
                                 <img
+                                    referrerPolicy="no-referrer"
                                     src="https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EcoStroty_02.png?raw=true"
                                     alt="EcoStroty_02"
                                 />
@@ -92,6 +95,7 @@ const EcoStory = () => {
                     <div className="ecoTab">
                         <div className="article">
                             <img
+                                referrerPolicy="no-referrer"
                                 src="https://github.com/TeamProject-Dessert39/dataCenter/blob/master/icon/ret_img.png?raw=true"
                                 alt="ret_img"
                             />

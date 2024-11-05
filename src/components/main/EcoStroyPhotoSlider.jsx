@@ -56,7 +56,7 @@ const EcoStroyPhotoSlice = () => {
                                 <h2 dangerouslySetInnerHTML={{ __html: item.main }} />
                                 <h3 dangerouslySetInnerHTML={{ __html: item.sub }} />
                             </div>
-                            <img src={item.photo} alt={`EcoStroySlider_${index + 1}`} />
+                            <img referrerPolicy="no-referrer" src={item.photo} alt={`EcoStroySlider_${index + 1}`} />
                         </LinkWrapper>
                     </SwiperSlide>
                 ))}

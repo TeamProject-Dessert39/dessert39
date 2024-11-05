@@ -1,5 +1,13 @@
+import { DessertListWrap, TitleWrap } from './DessertListCss';
+import DessertListSlider from './DessertListSlider';
+
 const DessertList = () => {
-    return <div>DessertList</div>;
+    return (
+        <DessertListWrap>
+            <TitleWrap>DESSERT39 DESSERT</TitleWrap>
+            <DessertListSlider />
+        </DessertListWrap>
+    );
 };
 
 export default DessertList;
