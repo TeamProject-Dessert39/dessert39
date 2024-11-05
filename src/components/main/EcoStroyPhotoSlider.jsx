@@ -8,23 +8,22 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
 import 'swiper/css/autoplay';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+
+const LinkWrapper = ({ children, href }) => {
+    const handleClick = (e) => {
+        // 드래그 중에는 링크 이동 제한
+        if (e.detail === 0) e.preventDefault();
+    };
+    return (
+        <a href={href} onClick={handleClick} style={{ display: 'block', width: '100%', height: '100%' }}>
+            {children}
+        </a>
+    );
+};
 
 const EcoStroyPhotoSlice = () => {
-    const [slides, setSlides] = useState([]);
-    const [swiper, setSwiper] = useState(null);
     const [currentSlide, setCurrentSlide] = useState(0);
-
-    useEffect(() => {
-        // mainEcoStory 데이터를 slides 상태에 설정
-        setSlides(mainEcoStory);
-    }, []);
-
-    useEffect(() => {
-        if (swiper) {
-            swiper.update();
-        }
-    }, [slides, swiper]);
 
     const handleSlideChange = (swiper) => {
         setCurrentSlide(swiper.realIndex);
@@ -46,15 +45,19 @@ const EcoStroyPhotoSlice = () => {
                 }}
                 onSlideChange={handleSlideChange}
                 autoplay={{ delay: 3000, disableOnInteraction: false }}
-                loop={slides.length > 1} // slides가 2개 이상일 때만 loop 활성화
+                loop={true}
+                allowTouchMove={true}
+                watchSlidesProgress={true}
             >
                 {mainEcoStory.map((item, index) => (
                     <SwiperSlide key={item.id}>
-                        <div className="swiper-slide-content">
-                            <h2 dangerouslySetInnerHTML={{ __html: item.main }} />
-                            <h3 dangerouslySetInnerHTML={{ __html: item.sub }} />
-                        </div>
-                        <img src={item.photo} alt={`EcoStroySlider_${index + 1}`} />
+                        <LinkWrapper href="https://dessert39.com/html/pages/competitiveness.php">
+                            <div className="swiper-slide-content">
+                                <h2 dangerouslySetInnerHTML={{ __html: item.main }} />
+                                <h3 dangerouslySetInnerHTML={{ __html: item.sub }} />
+                            </div>
+                            <img src={item.photo} alt={`EcoStroySlider_${index + 1}`} />
+                        </LinkWrapper>
                     </SwiperSlide>
                 ))}
             </Swiper>

@@ -144,16 +144,14 @@ const EcoStory = () => {
                             <ReadMore linkUrl={'https://dessert39.com/html/pages/competitiveness.php'} />
                         </div>
                         <div className="ecoSlider">
-                            <a href="https://dessert39.com/html/pages/competitiveness.php">
-                                <h2 className="ecoTitle">
-                                    &#60;친환경 켐페인&#62;
-                                    <br />
-                                    디저트39는 친환경으로
-                                    <br />
-                                    인증된 차(TEA)를 이용합니다.
-                                </h2>
-                                <EcoStroyPhotoSlider />
-                            </a>
+                            <h2 className="ecoTitle">
+                                &#60;친환경 켐페인&#62;
+                                <br />
+                                디저트39는 친환경으로
+                                <br />
+                                인증된 차(TEA)를 이용합니다.
+                            </h2>
+                            <EcoStroyPhotoSlider />
                         </div>
                     </div>
                 </li>
