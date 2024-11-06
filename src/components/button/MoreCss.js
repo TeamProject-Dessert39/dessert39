@@ -121,9 +121,9 @@ export const ButtonBlob = styled.span`
         transform: translate3d(0,150%,0) scale(1.4);
     }
 
-    ${({ index }) => `
-        left: ${index * 30}%;
-        transition-delay: ${index * 0.08}s;
+    ${({ $index }) => `
+        left: ${$index * 30}%;
+        transition-delay: ${$index * 0.08}s;
     `}
 
     ${BlobButton}:hover & {

@@ -14,7 +14,7 @@ const More = ({ linkUrl }) => {
                     <ButtonInner>
                         <ButtonBlobs>
                             {[0, 1, 2, 3].map((index) => (
-                                <ButtonBlob key={index} index={index} />
+                                <ButtonBlob key={index} $index={index} />
                             ))}
                         </ButtonBlobs>
                     </ButtonInner>
