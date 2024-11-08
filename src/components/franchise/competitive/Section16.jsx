@@ -9,6 +9,7 @@ import 'swiper/css';
 
 // import required modules
 import { Autoplay } from 'swiper/modules';
+import ReadMore from '../../button/ReadMore';
 
 const Section16 = () => {
     return (
@@ -28,7 +29,7 @@ const Section16 = () => {
                         <span> </span>매장들로 구성된 감각적이고, SNS에서 핫한 인테리어
                     </p>
                     {/* 추후 버튼 수정, Link 사용 */}
-                    <p className="more">INTERIOR MORE</p>
+                    <ReadMore linkUrl={'/franchise/interior'} txt={'INTERIOR MORE'} circle={true} />
                 </div>
                 <div className="right">
                     <div className="slide">
