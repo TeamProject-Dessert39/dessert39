@@ -25,12 +25,19 @@ export const TitleComponents = styled.div`
 `
 
 export const MenuSlideComponents = styled.div`
+    padding: 0px 80px;
     .swiper {
-        padding: 30px 80px;
+        padding: 30px 0px;
         padding-top: 0px;
         margin-top: 45px;
         .swiper-wrapper{
             box-sizing: border-box;
+            .swiper-slide{
+                margin-right: 30px;
+                img{
+                    width: 100%;
+                }
+            }
         }
         .swiper-button-prev{
             color: #1c1c1c;
@@ -41,6 +48,13 @@ export const MenuSlideComponents = styled.div`
     }
     .swiper-scrollbar{
         margin: 0px 80px;
+        height: 2px;
+        .swiper-scrollbar-drag{
+            background-color: #000;
+        }
+    }
+    @media (max-width: 768px ) {
+        padding: 0px 50px;
     }
 `
 
@@ -83,6 +97,33 @@ export const ClickMenuComponents = styled.li`
         }
     
     }
+    @media (max-width: 1300px ) {
+        margin: 0 10px 20px;
+    }
+    @media (max-width: 1024px ) {
+        width: 120px;
+        height: 120px;
+    }
+    @media (max-width: 850px ) {
+        width: 100px;
+        height: 100px;
+        margin: 0 6px 12px;
+        strong{
+            font-size: 14px;
+        }
+    }
+    @media (max-width: 600px ) {
+        width: 85px;
+        height: 85px;
+        margin: 0 5px 10px;
+        strong{
+            font-size: 10px;
+            line-height: 1.3;
+        }
+        figure{
+            height: 40px;
+        }
+    }
 `
 export const MenuTitleComponents = styled.div`
     display: block;
@@ -108,6 +149,15 @@ export const ProductItemComponents = styled.li`
     box-sizing: border-box;
     box-shadow: 0px 0px 20px rgba(38, 38 , 38 , 0.18);
     border-radius: 10px;
+    overflow: hidden;
+    &.mdproduct{
+        padding: 0px;
+        padding-bottom: 20px;
+        img{
+            width: 100%;
+            height: 230px;
+        }
+    }
     img{
         width: 170px;
         height: 170px;
@@ -118,7 +168,7 @@ export const ProductItemComponents = styled.li`
         font-weight: bold;
         white-space: nowrap;
         overflow: hidden;
-        width: 240px;
+        width: 100%;
         text-align: center;
         text-overflow: ellipsis;
     }
@@ -128,10 +178,61 @@ export const ProductItemComponents = styled.li`
     &:hover{
         box-shadow: 0px 0px 20px rgba(38, 38 , 38 , 0.35);
     }
+    @media (max-width: 1300px ) {
+        width: calc(100%/4 - 60px/4);
+        margin-right: 20px;
+        margin-bottom: 20px;
+        &:nth-of-type(4n){
+            margin-right: 0px;
+        }
+    }
+    @media (max-width: 1024px ) {
+        width: calc(100%/3 - 40px/3);
+        &:nth-of-type(4n){
+            margin-right: 20px;
+        }
+        &:nth-of-type(3n){
+            margin-right: 0px;
+        }
+        strong{
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        p{
+            font-size: 17px;
+        }
+        button{
+            margin-top: 20px;
+        }
+    }
+    @media (max-width: 850px ) {
+        width: calc(100%/3 - 35px/3);
+        margin-right: 15px;
+        margin-bottom: 15px;
+        &:nth-of-type(3n){
+            margin-right: 0px;
+        }
+        strong{
+            font-size: 16px;
+        }
+        p{
+            font-size: 15px;
+        }
+    }
+    @media (max-width: 600px ) {
+        width: calc(100%/2 - 15px/2);
+        &:nth-of-type(3n){
+            margin-right: 15px;
+        }
+        &:nth-of-type(2n){
+            margin-right: 0px;
+        }
+    }
 `
 export const MenuModalComponents = styled.div`
+    height: 90vh;
     border-radius: 25px;
-    overflow: hidden;
+    overflow: auto;
     position: absolute;
     top: 50%;
     right: 50%;
@@ -141,6 +242,7 @@ export const MenuModalComponents = styled.div`
     flex-direction: column;
     box-sizing: border-box;
     width: 605px;
+    height: fit-content;
     figure{
         background: #F8F9FA;
         display: flex;
@@ -170,15 +272,106 @@ export const MenuModalComponents = styled.div`
                 text-align: center;
                 font-size: 26px;
                 font-weight: bold;
+                letter-spacing: -2px;
             }
             p{
                 font-size: 20px;
                 font-weight: 700;
                 margin: 30px 0;
+                letter-spacing: -1px;
             }
             strong{
                 font-size: 22px;
+                font-weight: bold;
             }
+        }
+    }
+    .standard{
+        padding: 20px;
+        font-weight: 600;
+    }
+    &::-webkit-scrollbar{
+        background-color: #E5E5E5;
+        width: 10px;
+        border-radius: 36px;
+    }
+    &::-webkit-scrollbar-thumb{
+        background-color: #1B1B1B;
+    }
+    @media (max-width: 1200px ) {
+        width: 520px;
+        .modal-body{
+            .product-data{
+                p{
+                    font-size: 18px;
+                    margin: 25px 0;
+                    line-height: 120%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @media (max-width: 1024px ) {
+        max-width: 520px;
+        figure{
+            height: 330px;
+            img{
+            }
+        }
+        .modal-body
+            {.product-data{
+                span{
+                    font: 22px;
+                }
+                p{
+                    font-size: 18px;
+                    margin: 25px 0;
+                }
+                strong{
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+`
+export const NatritionalIngredientsComponents = styled.div`
+    display: flex;
+    border : 1px solid #ddd;
+    ul{
+        flex-basis: 50%;
+        border-right: 1px solid #ddd;
+        li{
+            text-align: center;
+            margin: 12px 0px;
+            font-weight: bold;
+        }
+    }   
+`
+export const AllergyComponents = styled.div`
+    border-top: 1px solid #ddd;
+    text-align: center;
+    padding: 12px 0px;
+    font-weight: 500;
+    span{
+        &.bold{
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+`
+export const ElseInfoComponents = styled.div`
+    background-color: #F8F9FA;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: #666666;
+    font-weight: bold;
+    span{
+        display: flex;
+        gap: 8px;
+        align-items: flex-start;
+        svg{
+            transform: translateY(4px);
         }
     }
 `

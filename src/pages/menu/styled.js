@@ -10,7 +10,7 @@ export const MenuCom = styled.div`
         transform: translateY(-100px);
     }
     .topCon{
-        padding: 100px 230px ;
+        padding: 100px 0px ;
         text-align: center;
         .inner{
             display: flex;
@@ -53,6 +53,40 @@ export const MenuCom = styled.div`
                 padding-bottom: 100px;
                 div{
                     margin-top: 100px;
+                    .price-info{
+                        font-size: 14px;
+                        margin-top: 10px;
+                        text-align: center;
+                        font-weight: bold;
+                        letter-spacing: -1px;
+                    }
+                    .beverage-condition{
+                        display: flex;
+                        justify-content: center;
+                        gap: 18px;
+                        font-size: 18px;
+                        font-weight: bold;
+                        color: #999;
+                        li{
+                            cursor: pointer;
+                            position: relative;
+                            &.on{
+                                color: #000;
+                                text-decoration: underline;
+                            }
+                            &:hover{
+                                color: #000;
+                                transition: 0.5s;
+                                ::after{
+                                    content: '';
+                                    display: block;
+                                    height: 2px;
+                                    width: fit-content;
+                                    background-color: black;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }

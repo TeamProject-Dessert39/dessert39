@@ -17,7 +17,7 @@ const MenuSlide = ({newMenuItem}) => {
     return (
         <MenuSlideComponents>
             <Swiper
-                slidesPerView={2.5}
+                slidesPerView={2}
                 // centeredSlides={false}
                 // slidesPerGroupSkip={1}
                 // grabCursor={true}
@@ -25,10 +25,9 @@ const MenuSlide = ({newMenuItem}) => {
                 // enabled: true,
                 // }}
                 breakpoints={{
-                // 769: {
-                //     slidesPerView: 3,
-                //     slidesPerGroup: 3,
-                // },
+                768: {
+                    slidesPerView: 2.5,
+                },
                 }}
                 scrollbar={true}
                 navigation={true}

@@ -1,8 +1,9 @@
+import { useRef } from "react";
 import { ClickMenuComponents } from "./styled";
 
-const ClickMenu = ({imgurl , hoverimg , title}) => {
+const ClickMenu = ({imgurl , hoverimg , title ,handelScrollView}) => {
     return (
-        <ClickMenuComponents>
+        <ClickMenuComponents onClick={handelScrollView}>
             <figure>
                 <img src={imgurl} alt={title} />
                 <img src={hoverimg} alt={title} />

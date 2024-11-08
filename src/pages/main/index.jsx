@@ -1,16 +1,3 @@
-import {
-    ImageSliderWrap,
-    ReuserableGraphWrap,
-    EcoStoryWrap,
-    DessertListWrap,
-    BeverageWrap,
-    IntroductionWrap,
-    StoreInteriorWrap,
-    EventNewsWrap,
-    NewStoreListWrap,
-    InstagramWrap,
-} from './style';
-
 import ImageSlider from '../../components/main/ImageSlider';
 import ReuserableGraph from '../../components/main/ReuserableGraph';
 import EcoStory from '../../components/main/EcoStory';
@@ -26,54 +13,34 @@ const Main = () => {
     return (
         <>
             {/* 이미지 슬라이드 */}
-            <ImageSliderWrap>
-                <ImageSlider />
-            </ImageSliderWrap>
+            <ImageSlider />
 
             {/* 그래프 */}
-            <ReuserableGraphWrap>
-                <ReuserableGraph />
-            </ReuserableGraphWrap>
+            <ReuserableGraph />
 
             {/* 탭 - 영상, 이미지 슬라이드 */}
-            <EcoStoryWrap>
-                <EcoStory />
-            </EcoStoryWrap>
+            <EcoStory />
 
             {/* 디저트 - 이미지 슬라이드 변형 */}
-            <DessertListWrap>
-                <DessertList />
-            </DessertListWrap>
+            <DessertList />
 
             {/* 음료 - 이미지 슬라이드 변형 */}
-            <BeverageWrap>
-                <Beverage />
-            </BeverageWrap>
+            <Beverage />
 
             {/* 문구 - 버튼, 이미지 */}
-            <IntroductionWrap>
-                <Introduction />
-            </IntroductionWrap>
+            <Introduction />
 
             {/* 화살표 버튼 - 이미지 전환 */}
-            <StoreInteriorWrap>
-                <StoreInterior />
-            </StoreInteriorWrap>
+            <StoreInterior />
 
             {/* 이미지 슬라이드 */}
-            <EventNewsWrap>
-                <EventNews />
-            </EventNewsWrap>
+            <EventNews />
 
             {/* div 슬라이드 */}
-            <NewStoreListWrap>
-                <NewStoreList />
-            </NewStoreListWrap>
+            <NewStoreList />
 
             {/* 이미지 슬라이드 */}
-            <InstagramWrap>
-                <Instagram />
-            </InstagramWrap>
+            <Instagram />
         </>
     );
 };

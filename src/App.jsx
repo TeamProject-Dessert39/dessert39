@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route, Link, HashRouter } from 'react-router-dom';
 import Layout from './common/Layout';
-import { NotFile, Main, Competitive, Interior, Procedure, Contact, Alliance, AlliancePurchasing, AllianceEntry, AllianceSupplier } from './pages';
+import { NotFile, Main, Bi, Intro, Headquarters, Location, Competitive, Interior, Procedure, Contact, Alliance, AlliancePurchasing, AllianceEntry, AllianceSupplier } from './pages';
 import Dessert from './pages/menu/Dessert';
 
 const App = () => {
@@ -10,6 +10,14 @@ const App = () => {
                 <Routes>
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Main />} />
+
+                        <Route path="/brand">
+                            <Route index path="intro" element={<Intro />} />
+                            <Route path="bi" element={<Bi />} />
+                            <Route path="headquarters" element={<Headquarters />} />
+                            <Route path="location" element={<Location />} />
+                        </Route>
+
                         <Route path="/menu/dessert" element={<Dessert />} />
                         <Route path="/menu/beverage" element={<Dessert />} />
                         <Route path="/menu/mdproduct" element={<Dessert />} />

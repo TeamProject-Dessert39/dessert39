@@ -16,6 +16,7 @@ const initialState = {
     clickMenuItem : [],
     currentModal : [],
     Modal : false,
+    filteredByCategory : [],
 };
 
 
@@ -42,6 +43,7 @@ export const getDataSlice = createSlice({
                     state.productItem.push(...state.mdData)
                     state.newMenuItem = state.newMenu.filter(item => item.category === 'MD')
                     state.clickMenuItem = state.clickMenu.filter(item => item.category === 'MD')
+                    
                     break;
             
                 default:
@@ -55,8 +57,22 @@ export const getDataSlice = createSlice({
         onModalClose: (state, action) => {
             state.Modal = false
         },
+        onBeverageFilter: (state, action) => {
+            state.productItem = state.coffeeData
+            state.filteredByCategory = []
+            state.filteredByCategory = state.productItem.filter(item => item.category === action.payload);
+            state.productItem = state.productItem.filter(item => item.category !== action.payload);
+        },
+        onTemFilter : (state, action) => {
+            if (action.payload === 'all') {
+                state.productItem = state.coffeeData
+            }else{
+                const filterItem = state.filteredByCategory.filter(item => item.tem === action.payload);
+                state.productItem = [...state.productItem, ...filterItem];
+            }
+        },
     },
 });
 
-export const { onModalData , onLoadingData , onModalClose } = getDataSlice.actions;
+export const { onModalData , onLoadingData , onModalClose ,onBeverageFilter , onTemFilter } = getDataSlice.actions;
 export default getDataSlice.reducer;
