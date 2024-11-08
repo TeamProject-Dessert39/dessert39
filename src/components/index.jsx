@@ -8,3 +8,4 @@ export { default as StoreInterior } from './main/StoreInterior';
 export { default as EventNews } from './main/EventNews';
 export { default as NewStoreList } from './main/NewStoreList';
 export { default as Instagram } from './main/Instagram';
+
