@@ -6,7 +6,7 @@ to { opacity: 1; }
 `;
 
 export const SliderButtonWrap = styled.div`
-    width:110px;
+    width:130px;
     height: 50px;
     color: #ffffff;
     background-color: #d1d1d1;
@@ -25,6 +25,14 @@ export const SliderButtonWrap = styled.div`
         border: none;
         font-size: 14px;
         cursor: pointer;
+    }
+
+    .leftBtn {
+        padding-right: 10px;
+    }
+
+    .rightBtn {
+        padding-left: 10px;
     }
 `
 

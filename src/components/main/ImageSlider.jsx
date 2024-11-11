@@ -25,8 +25,8 @@ import 'swiper/css/autoplay';
 // react Icon
 import { SlArrowLeft, SlArrowRight } from 'react-icons/sl';
 
-import ReadMore from '../button/ReadMore';
 import mainDesc from '../../assets/api/mainDesc';
+import MainReadMore from '../button/MainReadMore';
 
 const ImageSlider = () => {
     const [currentSlide, setCurrentSlide] = useState(1); // 현재 이미지 index
@@ -88,7 +88,7 @@ const ImageSlider = () => {
                     },
                 }}
                 onSlideChange={handleSlideChange}
-                autoplay={{ delay: 5000, disableOnInteraction: false }}
+                // autoplay={{ delay: 5000, disableOnInteraction: false }}
                 loop={true}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 onActiveIndexChange={handleSlideChange}
@@ -104,11 +104,11 @@ const ImageSlider = () => {
             </Swiper>
             {/* 이미지 좌우 클릭 */}
             <SliderButtonWrap>
-                <button onClick={handlePrev}>
+                <button className="leftBtn" onClick={handlePrev}>
                     <SlArrowLeft />
                 </button>
-                {`${currentSlide}/${imgTotalCnt}`}
-                <button onClick={handleNext}>
+                {`${currentSlide} / ${imgTotalCnt}`}
+                <button className="rightBtn" onClick={handleNext}>
                     <SlArrowRight />
                 </button>
             </SliderButtonWrap>
@@ -118,7 +118,9 @@ const ImageSlider = () => {
                 <h3 style={{ color: color === 'white' ? 'white' : 'black' }}>{title}</h3>
                 <p style={{ color: color === 'white' ? 'white' : 'black' }}>{desc}</p>
                 <div className="btnWrap">
-                    {mainDesc[currentSlide - 1].button && <ReadMore linkUrl={mainDesc[currentSlide - 1].buttonUrl} />}
+                    {mainDesc[currentSlide - 1].button && (
+                        <MainReadMore linkUrl={mainDesc[currentSlide - 1].buttonUrl} circleBg={'#a9af91'} bg={color} />
+                    )}
                 </div>
             </TextBoxWrap>
         </ImageSliderWrap>

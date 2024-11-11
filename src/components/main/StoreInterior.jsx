@@ -72,7 +72,7 @@ const StoreInterior = () => {
             </LeftSide>
             <RightSide>
                 <TitleWrap>Store Interior</TitleWrap>
-                <ReadMore linkUrl={'https://dessert39.com/html/pages/interior.php'} />
+                <ReadMore linkUrl={'https://dessert39.com/html/pages/interior.php'} txt={'READ MORE'} circle={true} />
                 <div className="silderInfo">
                     <ControllBox>
                         <button onClick={handlePrev}>
