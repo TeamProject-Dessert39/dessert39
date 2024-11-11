@@ -33,7 +33,7 @@ export const MenuCom = styled.div`
             margin: 0 auto;
             span{
                 text-align: center;
-                margin-top: 10px;
+                /* margin-top: 10px; */
                 font-size: 18px;
                 font-weight: 500;
             }
@@ -52,7 +52,8 @@ export const MenuCom = styled.div`
             .con2{
                 padding-bottom: 100px;
                 div{
-                    margin-top: 100px;
+                    /* margin-top: 100px; */
+                    margin-top: unset;
                     .price-info{
                         font-size: 14px;
                         margin-top: 10px;

@@ -2,6 +2,8 @@ import { useDispatch } from "react-redux";
 import ReadMore from "../button/ReadMore";
 import { ProductItemComponents } from "./styled";
 import { onModalData } from "../../store/modules/menuDataSlice";
+import MoreBtn from "../button/MoreBtn";
+import ProgressiveImg from "./ProgressiveImg";
 
 const ClickProductItem = ({getData, ...item}) => {
     const {imgurl , name , price} = item
@@ -15,10 +17,10 @@ const ClickProductItem = ({getData, ...item}) => {
         <ProductItemComponents 
             className={ getData === 'mdproduct' ? 'mdproduct' : ''} 
         >
-            <img referrerPolicy="no-referrer" src={imgurl} alt={name} />
+            <ProgressiveImg src={name} placeholderSrc={imgurl}/>
             <strong>{name}</strong>
             <p>{price.replace(/\B(?=(\d{3})+(?!\d))/g, ",")}원</p>
-            <button onClick={onModal}>자세히보기</button>
+            <MoreBtn onModal={onModal}>자세히보기</MoreBtn>
         </ProductItemComponents>
     );
 };
