@@ -29,7 +29,15 @@ const MenuSlide = ({newMenuItem}) => {
                 <Swiper
                     modules={[Pagination, Navigation, Autoplay]}
                     spaceBetween={20}
-                    slidesPerView={2.5}
+                    slidesPerView={1.2}
+                    breakpoints={{
+                        480 : {
+                            slidesPerView: 2
+                        },
+                        769 : {
+                            slidesPerView: 2.5
+                        },
+                    }}
                     pagination={{ type: 'progressbar', clickable: true }}
                     navigation={{
                         prevEl: prevRef.current,

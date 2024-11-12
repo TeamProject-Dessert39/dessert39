@@ -35,6 +35,7 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const BlobButton = styled.button`
+    white-space: nowrap;
     z-index: 1;
     position: relative;
     padding: 20px 60px;
@@ -84,6 +85,17 @@ export const BlobButton = styled.button`
             left: 0;
             top: 0;
             border-radius: 30px;
+        }
+    }
+    @media (max-width:480px) {
+        width: 100%;
+        font-size: 13px;
+        width: 80px;
+        height: 30px;
+        padding: unset;
+        margin: unset;
+        button{
+            padding: 12px 0 5px;
         }
     }
 `;

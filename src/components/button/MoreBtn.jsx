@@ -10,7 +10,7 @@ const MoreBtn = ({onModal}) => {
             <GlobalStyle />
             <ButtonsContainer>
                 <BlobButton>
-                    More
+                    자세히보기
                     <ButtonInner>
                         <ButtonBlobs>
                             {[0, 1, 2, 3].map((index) => (
