@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const EventNewsWrap = styled.div`
-
+    padding: 100px 0;
 `
 
 export const TitleWrap = styled.div`
