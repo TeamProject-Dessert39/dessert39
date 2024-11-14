@@ -1,4 +1,9 @@
 import { Link } from 'react-router-dom';
+import { FaInstagram } from 'react-icons/fa';
+import { LuFacebook } from 'react-icons/lu';
+import { FiYoutube, FiArrowRightCircle } from 'react-icons/fi';
+import { SiNaver } from 'react-icons/si';
+import { RiTiktokLine } from 'react-icons/ri';
 import { FooterWrap, LogoTabWrap, InfoWrap, ContactWrap } from './style';
 
 const Footer = () => {
@@ -36,24 +41,56 @@ const Footer = () => {
                     </ul>
                 </InfoWrap>
                 <ContactWrap>
-                    <button>제휴·제안 문의하기</button>
+                    <Link to={'/franchise/alliance'}>
+                        <button>
+                            제휴·제안 문의하기 <FiArrowRightCircle />
+                        </button>
+                    </Link>
                     <div className="follow">
                         <h4>FOLLOW US</h4>
                         <ul className="followIcon">
                             <li>
-                                <a href=""></a>
+                                <a target="_black" href="https://www.facebook.com/dessert39">
+                                    <LuFacebook />
+                                </a>
                             </li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                            <li></li>
+                            <li>
+                                <a target="_black" href="https://www.instagram.com/dessert39_official/#">
+                                    <FaInstagram />
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_black" href="https://www.youtube.com/channel/UC0ykSSGK7ik4_qIlyA-jpcg">
+                                    <FiYoutube />
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_black" href="https://blog.naver.com/dessertmakers">
+                                    <SiNaver />
+                                </a>
+                            </li>
+                            <li>
+                                <a target="_black" href="https://www.tiktok.com/@dessert39_?">
+                                    <RiTiktokLine />
+                                </a>
+                            </li>
                         </ul>
                     </div>
                     <div className="contact">
                         <h4>CONTACT US</h4>
+                        <a href="mailto:dessert39@dessert39.com">
+                            <span>
+                                <img
+                                    src="https://raw.githubusercontent.com/TeamProject-Dessert39/dataCenter/490cd36408095b9d46c800e9f2c8eddb1eb9e648/icon/contact_icon.svg"
+                                    alt="contact_icon"
+                                />
+                            </span>
+                            dessert39@dessert39.com
+                        </a>
                     </div>
                 </ContactWrap>
             </div>
+            <strong>TM & Copyright 2022 DESSERT 39. All Rights Reserved.</strong>
         </FooterWrap>
     );
 };
