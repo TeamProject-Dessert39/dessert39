@@ -40,5 +40,20 @@ const GlobalStyle = createGlobalStyle`
   table {
     width: 100%;
   }
+  .fixed-btn{
+    position: fixed;
+    top: 50%;
+    right: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: flex-end;
+    z-index: 80;
+    opacity: 0;
+    transition: 0.5s;
+    &.on{
+      opacity: 1;
+    }
+  }
 `;
 export default GlobalStyle;

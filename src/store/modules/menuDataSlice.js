@@ -58,21 +58,30 @@ export const getDataSlice = createSlice({
             state.Modal = false
         },
         onBeverageFilter: (state, action) => {
-            state.productItem = state.coffeeData
-            state.filteredByCategory = []
-            state.filteredByCategory = state.productItem.filter(item => item.category === action.payload);
-            state.productItem = state.productItem.filter(item => item.category !== action.payload);
-        },
-        onTemFilter : (state, action) => {
-            if (action.payload === 'all') {
-                state.productItem = state.coffeeData
+            const {title , menuname} = action.payload
+            
+            if (menuname === 'all') {
+                let filteredCategoryItem = [] 
+                filteredCategoryItem = state.coffeeData.filter(item => item.category === title)
+                state.productItem = state.productItem.filter(item => item.category !== title)
+                state.productItem = [...state.productItem , ...filteredCategoryItem]
             }else{
-                const filterItem = state.filteredByCategory.filter(item => item.tem === action.payload);
-                state.productItem = [...state.productItem, ...filterItem];
+                let temitem = menuname === 'ice' ? 'hot' : 'ice'
+                let filteredCategoryItem = [] 
+                filteredCategoryItem = state.coffeeData.filter(item => item.category === title);
+                state.productItem = state.productItem.filter(item => item.category !== title)
+        
+                if (filteredCategoryItem.length > 0) {
+                    filteredCategoryItem = filteredCategoryItem.filter(item => item.tem !== temitem)
+                    state.productItem = [...state.productItem , ...filteredCategoryItem]
+                } else {
+                    state.productItem = [];
+                }
             }
+
         },
     },
 });
 
-export const { onModalData , onLoadingData , onModalClose ,onBeverageFilter , onTemFilter } = getDataSlice.actions;
+export const { onModalData , onLoadingData , onModalClose ,onBeverageFilter } = getDataSlice.actions;
 export default getDataSlice.reducer;

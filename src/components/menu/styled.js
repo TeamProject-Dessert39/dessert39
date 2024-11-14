@@ -22,6 +22,11 @@ export const TitleComponents = styled.div`
             transform: translateY(-10px);
         }
     }
+    @media (max-width : 480px) {
+        h2{
+            font-size: 30px;
+        }
+    }
 `
 
 export const MenuSlideComponents = styled.div`
@@ -112,6 +117,29 @@ export const MenuSlideComponents = styled.div`
     @media (max-width: 768px ) {
         padding: 0px 50px;
     }
+    @media (max-width: 480px ) {
+        padding: unset;
+        .slide{
+            padding: 0 35px;
+            margin-top: 30px;
+            .swiper {
+                width: 100%;
+                max-width: 1400px;
+                margin: 0 auto;
+            }
+            .swiper-button-next{
+                transform: translateX(13px);
+            }
+            .swiper-button-prev{
+                transform: translateX(-13px);
+            }
+            .swiper-button-prev:after,
+            .swiper-button-next:after {
+                font-size: 30px;
+                color: black;
+            }
+        }
+    }
 `
 
 export const ClickMenuComponents = styled.li`
@@ -169,8 +197,8 @@ export const ClickMenuComponents = styled.li`
         }
     }
     @media (max-width: 600px ) {
-        width: 85px;
-        height: 85px;
+        width: 95px;
+        height: 95px;
         margin: 0 5px 10px;
         strong{
             font-size: 10px;
@@ -178,6 +206,26 @@ export const ClickMenuComponents = styled.li`
         }
         figure{
             height: 40px;
+        }
+        img{
+            height: 40px;
+        }
+    }
+    @media (max-width: 480px ) {
+        width: calc(100% / 3 - 30px / 3 );
+        figure{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            height: 40px;
+            img{
+                width: 100%;
+                height: 40px;
+            }
+        }
+        strong{
+            font-size: 13px;
         }
     }
 `
@@ -189,6 +237,12 @@ export const MenuTitleComponents = styled.div`
         display: inline-block;
         font-size: 36px;
         font-weight: bold;
+    }
+    @media (max-width : 480px) {
+        h3{
+            margin-bottom: unset;
+            font-size: 20px;
+        }
     }
 `
 export const ProductItemComponents = styled.li`
@@ -284,6 +338,15 @@ export const ProductItemComponents = styled.li`
             margin-right: 0px;
         }
     }
+    @media (max-width : 480px) {
+        img{
+            width: 130px;
+            height: 130px;
+        }
+        strong{
+            font-size: 15px;
+        }
+    }
 `
 export const MenuModalComponents = styled.div`
     height: 90vh;
@@ -335,6 +398,11 @@ export const MenuModalComponents = styled.div`
                 font-weight: 700;
                 margin: 30px 0;
                 letter-spacing: -1px;
+                &.subtit{
+                  color: #1c1c1c;
+                  font-size: 18px;
+                  font-weight: 300;
+                }
             }
             strong{
                 font-size: 22px;
@@ -368,20 +436,26 @@ export const MenuModalComponents = styled.div`
         }
     }
     @media (max-width: 1024px ) {
-        max-width: 520px;
+        width: 90%;
+        margin: 0 auto;
+        max-height: 90vh;
         figure{
             height: 330px;
+            padding: 10px;
             img{
             }
         }
-        .modal-body
-            {.product-data{
+        .modal-body{
+            .product-data{
                 span{
-                    font: 22px;
+                    font-size: 22px;
                 }
                 p{
                     font-size: 18px;
                     margin: 25px 0;
+                    &.subtit{
+                        font-size: 16px;
+                    }
                 }
                 strong{
                     font-size: 20px;
@@ -389,6 +463,41 @@ export const MenuModalComponents = styled.div`
             }
         }
     }
+    @media (max-width: 480px ) {
+        figure{
+            height: 240px;
+            img{
+                padding: 10px;
+            }
+        }
+        .modal-body{
+            .product-data{
+                span{
+                    font-size: 18px;
+                    margin-bottom: 8px;
+                }
+                p{
+                    font-size: 14px;
+                    margin: 10px 0;
+                    &.subtit{
+                        font-size: 14px;
+                        margin-bottom: unset;
+                    }
+                }
+                strong{
+                    font-size: 16px;
+                    margin: 15px 0;
+                }
+            }
+            .standard{
+                padding: unset;
+                margin: 20px;
+                font-size: 12px;
+                text-align: left;
+            }
+        }
+    }
+
 `
 export const NatritionalIngredientsComponents = styled.div`
     display: flex;

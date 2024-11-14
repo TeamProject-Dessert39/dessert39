@@ -38,6 +38,9 @@ const MenuModal = () => {
                     <span>
                         {currentModal.name}
                     </span>
+                    {
+                        getData === 'beverage' && <p className='subtit'>{currentModal.subtit}</p>
+                    }
                     <p>
                         {currentModal.con.split('<br>').map((line, index) => (
                             <React.Fragment key={index}>
