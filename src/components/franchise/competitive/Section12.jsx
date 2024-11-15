@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Section12Container } from './style2';
+import { Section12Container } from './section12style';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -40,10 +40,26 @@ const Section12 = () => {
                                 swiper.params.navigation.nextEl = nextRef.current;
                             }}
                             modules={[Navigation]}
-                            slidesPerView={3}
-                            spaceBetween={60}
                             loop={true}
                             speed={800}
+                            breakpoints={{
+                                1440: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 60,
+                                },
+                                1025: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 30,
+                                },
+                                769: {
+                                    slidesPerView: 2.2,
+                                    spaceBetween: 20,
+                                },
+                                581: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 15,
+                                },
+                            }}
                             className="mySwiper">
                             <SwiperSlide className="slide_item01 slide_item">
                                 <p className="num">01</p>

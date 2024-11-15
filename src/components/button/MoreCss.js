@@ -1,7 +1,6 @@
 import styled, { createGlobalStyle } from 'styled-components';
 
 export const MoreBtnWrap = styled.div`
-
     /* button {
         width: 170px;
         height:40px;
@@ -17,7 +16,7 @@ export const MoreBtnWrap = styled.div`
             background-color: black;
         }
     } */
-`
+`;
 // Global styles
 export const GlobalStyle = createGlobalStyle`
     *, *:before, *:after {
@@ -52,7 +51,7 @@ export const BlobButton = styled.button`
     border-radius: 30px;
 
     &:before {
-        content: "";
+        content: '';
         z-index: 1;
         position: absolute;
         left: 0;
@@ -64,7 +63,7 @@ export const BlobButton = styled.button`
     }
 
     &:after {
-        content: "";
+        content: '';
         z-index: -2;
         position: absolute;
         left: 3px;
@@ -114,11 +113,11 @@ export const ButtonBlob = styled.span`
     height: 100%;
     background: black;
     border-radius: 100%;
-    transform: translate3d(0,150%,0) scale(1.7);
+    transform: translate3d(0, 150%, 0) scale(1.7);
     transition: transform 0.45s;
 
-    @supports(filter: url('#goo')) {
-        transform: translate3d(0,150%,0) scale(1.4);
+    @supports (filter: url('#goo')) {
+        transform: translate3d(0, 150%, 0) scale(1.4);
     }
 
     ${({ $index }) => `
@@ -129,7 +128,7 @@ export const ButtonBlob = styled.span`
     ${BlobButton}:hover & {
         transform: translateZ(0) scale(1.7);
 
-        @supports(filter: url('#goo')) {
+        @supports (filter: url('#goo')) {
             transform: translateZ(0) scale(1.4);
         }
     }

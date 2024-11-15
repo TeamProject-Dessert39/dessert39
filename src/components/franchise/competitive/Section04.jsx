@@ -1,4 +1,4 @@
-import { Section04Container } from './style';
+import { Section04Container } from './section04style';
 import { useRef } from 'react';
 
 import competitiveData from '../../../assets/api/competitive_slide';

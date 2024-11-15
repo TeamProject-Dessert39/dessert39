@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Section20Container } from './style2';
+import { Section20Container } from './section20style';
 import { useEffect, useState } from 'react';
 
 const Section20 = () => {

@@ -1,4 +1,4 @@
-import { Section15Container } from './style2';
+import { Section15Container } from './section15style';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';

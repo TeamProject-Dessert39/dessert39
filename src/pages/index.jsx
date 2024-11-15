@@ -19,3 +19,5 @@ export { default as Alliance } from './franchise/alliance/Alliance';
 export { default as AlliancePurchasing } from './franchise/alliance/AlliancePurchasing';
 export { default as AllianceEntry } from './franchise/alliance/AllianceEntry';
 export { default as AllianceSupplier } from './franchise/alliance/AllianceSupplier';
+export { default as AllianceSupplier2 } from './franchise/alliance/AllianceSupplier2';
+export { default as AllianceSupplier3 } from './franchise/alliance/AllianceSupplier3';

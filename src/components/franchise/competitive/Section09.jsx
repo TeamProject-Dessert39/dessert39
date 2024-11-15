@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
-import { Section09Container } from './style';
+import { Section09Container } from './section09style';
 import { Link } from 'react-router-dom';
+import WaveBtn from '../../button/WaveBtn';
 
 const Section09 = () => {
     const [onBtn, setOnBtn] = useState(false);
@@ -38,17 +39,8 @@ const Section09 = () => {
                         alt="체계적인 생산 시스템을 확립"
                     />
                 </div>
-                {/* <div className="btn">
-                    <Link to="/" onMouseLeave={() => setOnBtn(true)} onMouseEnter={() => setOnBtn(false)}>
-                        <p>브랜드 소개 더보기</p>
-                        <span className={`${onBtn ? 'btn_bubble_inner btn_leave' : 'btn_bubble_inner'}`}>
-                            <span className="btn_bubble_item"></span>
-                            <span className="btn_bubble_item"></span>
-                            <span className="btn_bubble_item"></span>
-                            <span className="btn_bubble_item"></span>
-                        </span>
-                    </Link>
-                </div> */}
+
+                <WaveBtn linkUrl={'/brand/intro'} txt={'브랜드 소개 더보기'} />
             </div>
         </Section09Container>
     );

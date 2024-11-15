@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { Section10Container } from './style';
+import { Section10Container } from './section10style';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';

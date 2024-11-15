@@ -1,4 +1,4 @@
-import { Section17Container } from './style2';
+import { Section17Container } from './section17style';
 import competitiveData from '../../../assets/api/competitive_slide';
 
 // Import Swiper React components

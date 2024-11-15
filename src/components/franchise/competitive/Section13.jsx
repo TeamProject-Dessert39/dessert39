@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Section13Container } from './style2';
+import { Section13Container } from './section13style';
+import WaveBtn from '../../button/WaveBtn';
 
 const Section13 = () => {
     return (
@@ -9,7 +10,8 @@ const Section13 = () => {
                     <div className="title">
                         <p>
                             Outstanding Brand
-                            <br />
+                            <br className="pc" />
+                            <span> </span>
                             Reputation
                         </p>
                         <h3>MZ세대들의 브랜드 1위</h3>
@@ -90,7 +92,7 @@ const Section13 = () => {
                                     수많은 인플루언서들이 먹어본 디저트39 영상들을 만나보세요.
                                 </p>
                                 {/* 추후 버튼 수정 */}
-                                <p className="more_btn">인기틱톡 더보기</p>
+                                <WaveBtn txt={'인기틱톡 더보기'} white={true} />
                             </div>
                             <img
                                 src="https://teamproject-dessert39.github.io/dataCenter/images/franchise/competitive_se13_img.png"

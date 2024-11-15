@@ -1,6 +1,23 @@
 import { BrowserRouter, Routes, Route, Link, HashRouter } from 'react-router-dom';
 import Layout from './common/Layout';
-import { NotFile, Main, Bi, Intro, Headquarters, Location, Competitive, Interior, Procedure, Contact, Alliance, AlliancePurchasing, AllianceEntry, AllianceSupplier } from './pages';
+import {
+    NotFile,
+    Main,
+    Bi,
+    Intro,
+    Headquarters,
+    Location,
+    Competitive,
+    Interior,
+    Procedure,
+    Contact,
+    Alliance,
+    AlliancePurchasing,
+    AllianceEntry,
+    AllianceSupplier,
+    AllianceSupplier2,
+    AllianceSupplier3,
+} from './pages';
 import Dessert from './pages/menu/Dessert';
 
 const App = () => {
@@ -33,6 +50,8 @@ const App = () => {
                                 <Route path="alliancePurchasing" element={<AlliancePurchasing />} />
                                 <Route path="allianceEntry" element={<AllianceEntry />} />
                                 <Route path="allianceSupplier" element={<AllianceSupplier />} />
+                                <Route path="allianceSupplier2" element={<AllianceSupplier2 />} />
+                                <Route path="allianceSupplier3" element={<AllianceSupplier3 />} />
                             </Route>
                         </Route>
 

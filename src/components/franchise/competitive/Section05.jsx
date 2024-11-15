@@ -1,4 +1,4 @@
-import { Section05Container } from './style';
+import { Section05Container } from './section05style';
 
 const Section05 = () => {
     return (

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Section16Container } from './style2';
+import { Section16Container } from './section16style';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';

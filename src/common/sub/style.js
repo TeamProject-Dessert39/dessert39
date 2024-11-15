@@ -18,11 +18,13 @@ export const SubLayoutContainer = styled.div`
         h2 {
             position: absolute;
             left: 0;
-            top: 100px;
+            top: 103px;
             font-size: 26px;
-            letter-spacing: -1px;
+            letter-spacing: -2px;
+            line-height: 1.5;
             b {
-                margin: 0 6px;
+                letter-spacing: -0.5px;
+                margin: 0 5px;
                 font-weight: 700;
             }
             span {
@@ -39,46 +41,30 @@ export const SubLayoutContainer = styled.div`
     @media (max-width: 1024px) {
         .inner {
             h2 {
-                top: 110px;
+                top: 115px;
                 font-size: 24px;
                 span {
-                    line-height: 1.2;
+                    margin-top: 2px;
+                    line-height: 1;
                     font-size: 54px;
                 }
             }
         }
     }
 
-    /* 태블릿 스타일 */
-    @media (min-width: 481px) and (max-width: 768px) {
-        height: 188px;
-        &::before {
-            height: 160px;
-        }
-        .inner {
-            h2 {
-                top: 92px;
-                font-size: 22px;
-                letter-spacing: -1.5px;
-                span {
-                    font-size: 48px;
-                }
-            }
-        }
-    }
-
-    /* 모바일 스타일 */
-    @media (max-width: 480px) {
+    @media (max-width: 600px) {
         height: 144px;
         &::before {
             height: 120px;
         }
         .inner {
             h2 {
-                top: 60px;
+                top: 63px;
                 font-size: 20px;
                 letter-spacing: -2px;
                 span {
+                    margin-top: 2px;
+                    line-height: 1;
                     font-size: 42px;
                 }
             }

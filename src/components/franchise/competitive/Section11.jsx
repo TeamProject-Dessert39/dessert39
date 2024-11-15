@@ -1,6 +1,36 @@
-import { Section11Container } from './style2';
+import { useEffect, useState } from 'react';
+import { Section11Container } from './section11style';
 
 const Section11 = () => {
+    /* 
+    a = .box의 최상단부터 요소 위치까지의 높이값. 300
+b = 현재 스크롤 위치 400
+b - a = 요소로부터 스크롤된 값 100
+
+100만큼 top 주면됨. transition 넣어주고, useState,useEffect 사용해서 style 바꾸면 될듯.
+    */
+    /* const [ScrollActive, setScrollActive] = useState(false);
+    const [ScrollY, setScrollY] = useState(0); // window 의 pageYOffset값을 저장
+
+    function handleScroll() {
+        if (ScrollY > 390 && ScrollY < 1000) {
+            setScrollY(window.pageYOffset);
+            setScrollActive(true);
+        } else {
+            setScrollY(window.pageYOffset);
+            setScrollActive(false);
+        }
+    }
+    useEffect(() => {
+        function scrollListener() {
+            window.addEventListener('scroll', handleScroll);
+        } //  window 에서 스크롤을 감시 시작
+        scrollListener(); // window 에서 스크롤을 감시
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        }; //  window 에서 스크롤을 감시를 종료
+    }); */
+
     return (
         <Section11Container>
             <div className="inner">
@@ -193,7 +223,8 @@ const Section11 = () => {
                         </ul>
                     </div>
                     <div className="right">
-                        <div className="pic">
+                        {/*  className={`pic ${ScrollActive ? 'fixed' : ''}`} */}
+                        <div className={`pic`}>
                             <img src="https://teamproject-dessert39.github.io/dataCenter/images/franchise/competitive_se11_img.svg" alt="디저트39의 매출신화" />
                         </div>
                     </div>

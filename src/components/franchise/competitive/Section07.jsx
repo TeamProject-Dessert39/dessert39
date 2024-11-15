@@ -1,4 +1,4 @@
-import { Section07Container } from './style';
+import { Section07Container } from './section07style';
 import { FaUserCircle } from 'react-icons/fa';
 import competitiveData from '../../../assets/api/competitive_slide';
 
