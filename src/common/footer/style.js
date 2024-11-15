@@ -1,7 +1,19 @@
 import styled from 'styled-components';
 
 export const FooterWrap = styled.footer`
+
     background-color: #f4f5f6;
+    strong {
+        display: block;
+        text-align: center;
+        box-sizing: border-box;
+        padding: 22px 2.5%;
+        font-size: 15px;
+        border-top: 1px solid #c2c2c3;
+        line-height: 130%;
+    }
+
+
     .inner {
         height: 300px;
         box-sizing: border-box;
@@ -47,7 +59,7 @@ export const FooterWrap = styled.footer`
             }
         }
     }
-`;
+`
 
 export const LogoTabWrap = styled.div`
     img {
@@ -56,7 +68,6 @@ export const LogoTabWrap = styled.div`
     }
 
 `
-
 
 export const InfoWrap = styled.div`
     ul {
@@ -128,14 +139,45 @@ export const InfoWrap = styled.div`
     }
 `
 
-
 export const ContactWrap = styled.div`
     display: flex;
     flex-direction: column;
-    width: 20%;
+    width: 44%;
     justify-items: right;
     position: relative;
     box-sizing: border-box;
+
+    @keyframes moveArrow {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(10px);
+        }
+    }
+
+    button {
+        margin: 0 0 0 400px;
+        font-size: 16px;
+        color: white;
+        cursor: pointer;
+        width: 230px;
+        height: 45px;
+        padding: 0 35px 0 0;
+        display: inline-block;
+        background: #1b1b1b;
+        border-radius: 25px;
+        margin-bottom: 15px;
+        position: relative;
+
+        svg {
+            position: absolute;
+            right: 30px;
+            top: 30%;
+            transform: translateY(-50%);
+            animation: moveArrow 0.5s ease-in-out infinite alternate;
+        }
+    }
 
     .follow {
         text-align: right;
@@ -143,17 +185,25 @@ export const ContactWrap = styled.div`
         margin-bottom: 10px;
         font-weight: 600;
 
-
         .followIcon {
+            display: flex;
             float: right;
             align-items: center;
             margin-left: 20px;
 
             li {
+                padding: 0 10px 0 10px;
+
                 a {
                     display: block;
-                    width: 18px;
-                    height: 18px;
+                    width: 14px;
+                    height: 30px;
+                    font-size: 20px;
+
+                    svg {
+                        width: 20px;
+                        height: 20px;
+                    }
                 }
             }
         }
@@ -164,9 +214,22 @@ export const ContactWrap = styled.div`
         font-size: 28px;
         margin-bottom: 10px;
         font-weight: 600;
+
+        a {
+            font-size: 16px;
+            display: block;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+
+            span {
+                img {
+                    vertical-align: bottom;
+                    width: 20px;
+                    height: 20px;
+                }
+            }
+        }
     }
-
-
 `
 
 

@@ -26,7 +26,7 @@ const Layout = () => {
     return (
         <div className="wrap">
             <Header />
-            <main className="main">
+            <main className="main" style={{ padding: '100px 0 0 0' }}>
                 <Outlet />
                 <ul className={scroll ? 'fixed-btn on' : 'fixed-btn'}>
                     <MainSideBtn/>

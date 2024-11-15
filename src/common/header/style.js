@@ -13,11 +13,18 @@ const breakpoints = {
 
 export const HeaderWrap = styled.header`
     width: 100%;
-    position: relative;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: white;
+    display: flex;
+    justify-content: center;
 `;
 
 export const HeaderInner = styled.div`
-    max-width: 1440px;
+    width: 100%;
+    max-width: 1440px; // 최대 너비 설정
     margin: 0 auto;
     height: 100px;
     position: relative;
@@ -79,6 +86,12 @@ export const HeaderInner = styled.div`
 export const HeaderOuter = styled.div`
     width: 100%;
     background-color: #f8f8f8;
+    position: fixed;
+    top: 100px;
+    left: 0;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
 `;
 
 // ---------------------------------------------------------------------
@@ -88,30 +101,29 @@ export const SubWrap = styled.div`
     display: flex;
     position: absolute;
     width: 100%;
-    left: 0;
+    max-width: 1440px; // 최대 너비 설정
     top: 100px;
     background-color: white;
     transform-origin: top;
-    transform: scaleY(${props => props.$ishovered ? 1 : 0});
     opacity: ${props => props.$ishovered ? 1 : 0};
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 
     @media (max-width: ${breakpoints.mobile}) {
-        top: 100px;
+        top: 0px;
     }
 
     @media (min-width: ${breakpoints.tablet}) {
-        top: 100px;
+        top: 0px;
     }
 
     @media (min-width: ${breakpoints.desktop}) {
-        top: 100px;
+        top: 0px;
     }
 
     @media (min-width: ${breakpoints.widescreen}) {
-        top: 100px;
+        top: 0px;
     }
 
     &:hover {
