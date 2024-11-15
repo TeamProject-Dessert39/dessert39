@@ -41,7 +41,7 @@ const EcoStory = () => {
                                 디저트39는 2027년까지 탄소중립을 위한 다양한
                                 <br /> 솔루션을 실현해 나갈 계획입니다.
                             </p>
-                            <ReadMore linkUrl={'https://dessert39.com/html/pages/competitiveness.php'} />
+                            <ReadMore linkUrl={'https://dessert39.com/html/pages/competitiveness.php'} txt={'MORE'} circle={true} />
                         </div>
                         <div className="photo">
                             <a href="https://dessert39.com/html/pages/competitiveness.php">
@@ -78,7 +78,7 @@ const EcoStory = () => {
                                 <br />
                                 텀블러만을 사용합니다.
                             </p>
-                            <ReadMore linkUrl={'https://dessert39.com/html/pages/competitiveness.php'} />
+                            <ReadMore linkUrl={'https://dessert39.com/html/pages/competitiveness.php'} txt={'MORE'} circle={true} />
                         </div>
                         <div className="photo">
                             <a href="https://dessert39.com/html/pages/competitiveness.php">
@@ -116,7 +116,7 @@ const EcoStory = () => {
                                 <br />
                                 리유저블 텀블러를 개발하고 있습니다.
                             </p>
-                            <ReadMore linkUrl={'https://dessert39.com/html/pages/competitiveness.php'} />
+                            <ReadMore linkUrl={'https://dessert39.com/html/pages/competitiveness.php'} txt={'MORE'} circle={true} />
                         </div>
                         <div className="photo">
                             <video
@@ -145,7 +145,7 @@ const EcoStory = () => {
                                 <br />
                                 생산합니다.
                             </p>
-                            <ReadMore linkUrl={'https://dessert39.com/html/pages/competitiveness.php'} />
+                            <ReadMore linkUrl={'https://dessert39.com/html/pages/competitiveness.php'} txt={'MORE'} circle={true} />
                         </div>
                         <div className="ecoSlider">
                             <h2 className="ecoTitle">

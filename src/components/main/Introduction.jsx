@@ -19,7 +19,7 @@ const Introduction = () => {
                         <span>가맹점 안내</span>입니다.
                     </p>
                     <div className="btnDiv">
-                        <ReadMore linkUrl={'/brand/location'} />
+                        <ReadMore linkUrl={'/brand/location'} txt={'MORE'} circle={true} />
                     </div>
                 </LeftSide>
                 <RightSide>
@@ -31,7 +31,7 @@ const Introduction = () => {
                         <span>브랜드 경쟁력</span>을 보여드립니다.
                     </p>
                     <div className="btnDiv">
-                        <ReadMore linkUrl={'https://dessert39.com/html/pages/competitiveness.php'} />
+                        <ReadMore linkUrl={'https://dessert39.com/html/pages/competitiveness.php'} txt={'MORE'} circle={true} />
                     </div>
                     <img
                         className="location"

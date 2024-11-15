@@ -3,9 +3,13 @@ import { ReadMoreBtnWrap } from './ReadMoreCss';
 
 const ReadMore = ({ linkUrl, txt, circle, square }) => {
     /* 
-        props로 url, txt 전달,
-        버튼 모양에 따라 
-        circle, square에 true 값 전달해주세요.
+        props guide
+        linkUrl : 연결할 URL
+        txt : 버튼 내용
+        * circle, square 둘 중 하나만 true 처리
+            circle : 버튼 내부 도형 원
+            square : 버튼 내부 도형 사각형
+
         ex)
         <ReadMore linkUrl={'/franchise/interior'} txt={'INTERIOR MORE'} circle={true} />
     */

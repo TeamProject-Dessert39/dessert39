@@ -7,7 +7,7 @@ export const MenuCom = styled.div`
         height: 100vh;
         background: rgba(0,0,0,0.3);
         z-index: 100;
-        transform: translateY(-100px);
+        top: 0;
     }
     .topCon{
         padding: 100px 0px ;
@@ -33,7 +33,7 @@ export const MenuCom = styled.div`
             margin: 0 auto;
             span{
                 text-align: center;
-                margin-top: 10px;
+                /* margin-top: 10px; */
                 font-size: 18px;
                 font-weight: 500;
             }
@@ -52,7 +52,8 @@ export const MenuCom = styled.div`
             .con2{
                 padding-bottom: 100px;
                 div{
-                    margin-top: 100px;
+                    /* margin-top: 100px; */
+                    margin-top: unset;
                     .price-info{
                         font-size: 14px;
                         margin-top: 10px;
@@ -83,6 +84,48 @@ export const MenuCom = styled.div`
                                     height: 2px;
                                     width: fit-content;
                                     background-color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width : 480px) {
+        .mainCon{
+            padding: 50px 0;
+            .inner{
+                .con2{
+                    margin-top: 50px;
+                    div{
+                        margin-top: unset;
+                        .price-info{
+                            font-size: 14px;
+                            margin-top: 10px;
+                            text-align: center;
+                            font-weight: bold;
+                            letter-spacing: -1px;
+                        }
+                        .beverage-condition{
+                            margin-top: 8px;
+                            li{
+                                cursor: pointer;
+                                position: relative;
+                                &.on{
+                                    color: #000;
+                                    text-decoration: underline;
+                                }
+                                &:hover{
+                                    color: #000;
+                                    transition: 0.5s;
+                                    ::after{
+                                        content: '';
+                                        display: block;
+                                        height: 2px;
+                                        width: fit-content;
+                                        background-color: black;
+                                    }
                                 }
                             }
                         }

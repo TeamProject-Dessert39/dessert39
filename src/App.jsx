@@ -19,14 +19,18 @@ import {
     AllianceSupplier3,
 } from './pages';
 import Dessert from './pages/menu/Dessert';
+import Store from './pages/store';
+import Mainintro from './pages/brand/MainIntro';
 
 const App = () => {
     return (
         <>
             <BrowserRouter>
                 <Routes>
+                    <Route path='/intro' element={<Mainintro />} />
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Main />} />
+                        
 
                         <Route path="/brand">
                             <Route index path="intro" element={<Intro />} />
@@ -53,6 +57,11 @@ const App = () => {
                                 <Route path="allianceSupplier2" element={<AllianceSupplier2 />} />
                                 <Route path="allianceSupplier3" element={<AllianceSupplier3 />} />
                             </Route>
+                        </Route>
+
+                        {/* store */}
+                        <Route path='/store'>
+                            <Route path='competitiveness' element={<Store/>}></Route>
                         </Route>
 
                         <Route path="*" element={<NotFile />} />

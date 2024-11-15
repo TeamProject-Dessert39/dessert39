@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { MenuTitleComponents } from "./styled";
-import { onBeverageFilter, onTemFilter } from "../../store/modules/menuDataSlice";
+import { onBeverageFilter } from "../../store/modules/menuDataSlice";
 import { useDispatch } from "react-redux";
 
 const MenuTitle = ({ title, getData }) => {
@@ -18,8 +18,7 @@ const MenuTitle = ({ title, getData }) => {
     const filter = (menu) => {
         const menuname = menu.toLowerCase();  
 
-        dispatch(onBeverageFilter(title));  
-        dispatch(onTemFilter(menuname));  
+        dispatch(onBeverageFilter({title , menuname})); 
 
         setLocalTabmenu((prevTabmenu) => 
             prevTabmenu.map(item => 
