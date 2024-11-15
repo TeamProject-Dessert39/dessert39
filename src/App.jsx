@@ -3,13 +3,14 @@ import Layout from './common/Layout';
 import { NotFile, Main, Bi, Intro, Headquarters, Location, Competitive, Interior, Procedure, Contact, Alliance, AlliancePurchasing, AllianceEntry, AllianceSupplier } from './pages';
 import Dessert from './pages/menu/Dessert';
 import Store from './pages/store';
+import Mainintro from './pages/brand/MainIntro';
 
 const App = () => {
     return (
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path='/intro' element={<Intro />} />
+                    <Route path='/intro' element={<Mainintro />} />
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Main />} />
                         

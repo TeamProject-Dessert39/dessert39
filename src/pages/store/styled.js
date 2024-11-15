@@ -213,7 +213,7 @@ export const SoteModalCon = styled.div`
     position: fixed;
     top: 0;
     background: rgba(0,0,0,0.5);
-    z-index: 100;
+    z-index: 1500;
     width: 100vw;
     height: 100vh;
     margin: 0 auto;
