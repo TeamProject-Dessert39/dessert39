@@ -5,8 +5,11 @@ import storeSlice from './modules/storeSlice';
 
 export const store = configureStore({
     reducer: {
-        aaa, 
-        menu, 
+        aaa,
+        menu,
         storeSlice,
+        comuData,
+        comupagination,
+        comuSearch,
     },
 });

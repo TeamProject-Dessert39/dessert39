@@ -19,3 +19,9 @@ export { default as Alliance } from './franchise/alliance/Alliance';
 export { default as AlliancePurchasing } from './franchise/alliance/AlliancePurchasing';
 export { default as AllianceEntry } from './franchise/alliance/AllianceEntry';
 export { default as AllianceSupplier } from './franchise/alliance/AllianceSupplier';
+
+//commuity
+export { default as Information } from './community/information';
+export { default as Notice } from './community/notice';
+export { default as EventStore } from './community/eventstore';
+export { default as Register } from './community/register';
