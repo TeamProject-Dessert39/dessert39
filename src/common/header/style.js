@@ -194,11 +194,13 @@ export const Nav = styled.nav`
 export const LeftNav = styled.div`
     display: flex;
     align-items: center;
-`;
+    flex-basis: 50%;
+    `;
 
 export const RightNav = styled.div`
     display: flex;
     align-items: center;
+    flex-basis: 50%;
 `;
 
 // ---------------------------------------------------------------------

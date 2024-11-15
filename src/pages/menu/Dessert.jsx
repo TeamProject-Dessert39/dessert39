@@ -5,10 +5,11 @@ import ClickMenu from "../../components/menu/ClickMenu";
 import MenuTitle from "../../components/menu/menutitle";
 import ClickProductItem from "../../components/menu/ClickProductItem";
 import { useLocation } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { onLoadingData } from "../../store/modules/menuDataSlice";
 import MenuModal from "../../components/menu/menuModal";
+import SubLayout from "../../common/sub/SubLayout";
 
 const Dessert = () => {
     const location = useLocation();
@@ -31,8 +32,19 @@ const Dessert = () => {
         }
     };
 
+    const [title , setTitle] = useState([
+        {id : 1 , data : 'dessert' , kTitle : '디저트 39 디저트 메뉴 소개' , eTitle : 'Dessert'},
+        {id : 2 , data : 'beverage' , kTitle : '디저트 39 음료 메뉴 소개' , eTitle : 'Beverage'},
+        {id : 3 , data : 'mdproduct' , kTitle : '디저트 39 MD 상품 소개' , eTitle : 'MD 상품'}
+    ])
+
     return (
         <MenuCom>
+            {
+                title.map(item=> item.data === getData && <SubLayout kTitle={item.kTitle} eTitle={item.eTitle} />)
+            }
+            
+
             {Modal && <div className="ModalBg"><MenuModal /></div>}
             <section className="topCon">
                 <div className="inner">

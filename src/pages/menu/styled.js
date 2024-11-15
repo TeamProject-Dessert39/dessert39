@@ -7,7 +7,7 @@ export const MenuCom = styled.div`
         height: 100vh;
         background: rgba(0,0,0,0.3);
         z-index: 100;
-        transform: translateY(-100px);
+        top: 0;
     }
     .topCon{
         padding: 100px 0px ;
