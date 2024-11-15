@@ -17,20 +17,24 @@ import {
     AllianceSupplier,
     AllianceSupplier2,
     AllianceSupplier3,
+    Information,
+    Notice,
+    EventStore,
+    Register,
 } from './pages';
 import Dessert from './pages/menu/Dessert';
 import Store from './pages/store';
 import Mainintro from './pages/brand/MainIntro';
+import { EventstoreDetail, InformationDetail, NoticeDetail } from './components';
 
 const App = () => {
     return (
         <>
             <BrowserRouter>
                 <Routes>
-                    <Route path='/intro' element={<Mainintro />} />
+                    <Route path="/intro" element={<Mainintro />} />
                     <Route path="/" element={<Layout />}>
                         <Route index element={<Main />} />
-                        
 
                         <Route path="/brand">
                             <Route index path="intro" element={<Intro />} />
@@ -59,9 +63,27 @@ const App = () => {
                             </Route>
                         </Route>
 
+                        {/* community */}
+                        <Route path="/community">
+                            <Route path="information">
+                                <Route index element={<Information />} />
+                                <Route path=":informationID" element={<InformationDetail />} />
+                            </Route>
+                            <Route path="notice">
+                                <Route index element={<Notice />} />
+                                <Route path=":noticeID" element={<NoticeDetail />} />
+                            </Route>
+                            <Route path="eventstore">
+                                <Route index element={<EventStore />} />
+                                <Route path=":eventstoreID" element={<EventstoreDetail />} />
+                            </Route>
+                            <Route path="register" element={<Register />} />
+                        </Route>
+                        {/* community end */}
+
                         {/* store */}
-                        <Route path='/store'>
-                            <Route path='competitiveness' element={<Store/>}></Route>
+                        <Route path="/store">
+                            <Route path="competitiveness" element={<Store />}></Route>
                         </Route>
 
                         <Route path="*" element={<NotFile />} />
