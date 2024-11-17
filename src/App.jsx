@@ -26,11 +26,13 @@ import Dessert from './pages/menu/Dessert';
 import Store from './pages/store';
 import Mainintro from './pages/brand/MainIntro';
 import { EventstoreDetail, InformationDetail, NoticeDetail } from './components';
+import ScrollToTop from './common/scrolltop';
 
 const App = () => {
     return (
         <>
             <BrowserRouter>
+                <ScrollToTop />
                 <Routes>
                     <Route path="/intro" element={<Mainintro />} />
                     <Route path="/" element={<Layout />}>
