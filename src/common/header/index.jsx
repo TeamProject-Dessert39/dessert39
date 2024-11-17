@@ -53,7 +53,7 @@ const Header = () => {
                 </div>
             </HeaderInner>
             <HeaderOuter>
-                <SubWrap $ishovered={isHovered}>
+                <SubWrap $ishovered={isHovered} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <Sub />
                 </SubWrap>
             </HeaderOuter>

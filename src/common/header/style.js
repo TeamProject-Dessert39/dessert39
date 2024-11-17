@@ -5,7 +5,7 @@ const breakpoints = {
     mobile: '320px',
     tablet: '768px',
     desktop: '1024px',
-    widescreen: '1440px'
+    widescreen: '1440px',
 };
 
 // ---------------------------------------------------------------------
@@ -64,7 +64,7 @@ export const HeaderInner = styled.div`
         margin: 0;
         width: 4%;
         z-index: 1;
-        
+
         .svg {
             width: 50px;
             height: 80px;
@@ -85,8 +85,8 @@ export const HeaderInner = styled.div`
 
 export const HeaderOuter = styled.div`
     width: 100%;
-    background-color: #f8f8f8;
-    position: fixed;
+    background-color: transparent;
+    position: absolute;
     top: 100px;
     left: 0;
     z-index: 999;
@@ -98,17 +98,17 @@ export const HeaderOuter = styled.div`
 // index - nav
 
 export const SubWrap = styled.div`
-    display: flex;
     position: absolute;
     width: 100%;
-    max-width: 1440px; // 최대 너비 설정
-    top: 100px;
+    max-width: 1440px;
+    top: 0;
     background-color: white;
-    transform-origin: top;
-    opacity: ${props => props.$ishovered ? 1 : 0};
-    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(${(props) => (props.$ishovered ? 1 : 0)});
+    opacity: ${(props) => (props.$ishovered ? 1 : 0)};
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
     @media (max-width: ${breakpoints.mobile}) {
         top: 0px;
@@ -139,8 +139,7 @@ export const NavContainer = styled.div`
     justify-content: space-between;
     position: relative;
 
-    &:hover ~ ${HeaderOuter} ${SubWrap},
-    &:hover + ${HeaderOuter} ${SubWrap} {
+    &:hover ~ ${HeaderOuter} ${SubWrap}, &:hover + ${HeaderOuter} ${SubWrap} {
         transform: scaleY(1);
         opacity: 1;
     }
@@ -158,17 +157,17 @@ export const Nav = styled.nav`
         list-style: none;
 
         li {
-            padding: 0 100px;
+            padding: 0 60px;
             font-size: 18px;
             font-weight: 600;
 
             @media (max-width: ${breakpoints.mobile}) {
-                padding: 0 100px;
+                /* padding: 0 100px; */
                 font-size: 18px;
             }
 
             @media (min-width: ${breakpoints.tablet}) {
-                padding: 0 100px;
+                /* padding: 0 100px; */
                 font-size: 18px;
             }
 
@@ -207,12 +206,12 @@ export const LeftNav = styled.div`
     display: flex;
     align-items: center;
     flex-basis: 50%;
-    `;
+`;
 
 export const RightNav = styled.div`
     display: flex;
     align-items: center;
-    flex-basis: 50%;
+    flex-basis: 30%;
 `;
 
 // ---------------------------------------------------------------------
@@ -230,7 +229,32 @@ export const SubContainer = styled.div`
         padding: 20px 0;
     }
 
-    .left, .right {
+    .left {
+        ul:nth-child(1) {
+            padding: 0 60px;
+        }
+
+        ul:nth-child(2) {
+            padding: 0 40px;
+        }
+
+        ul:nth-child(3) {
+            padding: 0 60px;
+        }
+    }
+
+    .right {
+        ul:nth-child(1) {
+            padding: 0 55px;
+        }
+
+        ul:nth-child(2) {
+            padding: 0 65px;
+        }
+    }
+
+    .left,
+    .right {
         justify-content: space-evenly;
         display: flex;
 
@@ -243,9 +267,8 @@ export const SubContainer = styled.div`
 
 export const SubMenu = styled.div`
     display: flex;
-    
+
     ul {
-        padding: 0 95px;
         list-style: none;
         margin: 0;
     }

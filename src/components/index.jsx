@@ -10,6 +10,6 @@ export { default as NewStoreList } from './main/NewStoreList';
 export { default as Instagram } from './main/Instagram';
 
 // commu
-export { default as EventstoreDetail } from './community/eventstore';
-export { default as InformationDetail } from './community/information';
-export { default as NoticeDetail } from './community/notice';
+export { default as EventstoreDetail } from './community/eventstore/EventstoreDetail';
+export { default as InformationDetail } from './community/information/InformationDetail';
+export { default as NoticeDetail } from './community/notice/NoticeDetail';
