@@ -31,7 +31,7 @@ const Introduction = () => {
                         <span>브랜드 경쟁력</span>을 보여드립니다.
                     </p>
                     <div className="btnDiv">
-                        <ReadMore linkUrl={'https://dessert39.com/html/pages/competitiveness.php'} txt={'MORE'} circle={true} />
+                        <ReadMore linkUrl={'/franchise/competitive'} txt={'MORE'} circle={true} />
                     </div>
                     <img
                         className="location"
