@@ -11,6 +11,7 @@ export const FooterWrap = styled.footer`
         font-size: 15px;
         border-top: 1px solid #c2c2c3;
         line-height: 130%;
+        font-family: 'Lexend Deca', sans-serif;
     }
 
 
@@ -78,14 +79,17 @@ export const InfoWrap = styled.div`
             font-size: 16px;
             margin-bottom: 15px;
             display: flex;
+            width: 700px;
 
             span {
                 font-weight: 600;
                 margin-right: 10px;
+                font-family: 'Lexend Deca', sans-serif;
             }
 
             p {
                 margin-left: 10px;
+                font-family: 'Lexend Deca', sans-serif;
             }
 
             .company {
@@ -96,7 +100,7 @@ export const InfoWrap = styled.div`
                     border-right: 1px solid #7b7b7b;
                     position: absolute;
                     top: 6px;
-                    left: 121px;
+                    left: 127px;
                 }
             }
 
@@ -120,7 +124,7 @@ export const InfoWrap = styled.div`
                     border-right: 1px solid #7b7b7b;
                     position: absolute;
                     top: 6px;
-                    left: 145px;
+                    left: 150px;
                 }
             }
 
@@ -132,7 +136,7 @@ export const InfoWrap = styled.div`
                     border-right: 1px solid #7b7b7b;
                     position: absolute;
                     top: 6px;
-                    left: 170px;
+                    left: 175px;
                 }
             }
         }
@@ -169,6 +173,7 @@ export const ContactWrap = styled.div`
         border-radius: 25px;
         margin-bottom: 15px;
         position: relative;
+        font-family: 'Noto Sans KR', sans-serif;
 
         svg {
             position: absolute;
@@ -184,6 +189,10 @@ export const ContactWrap = styled.div`
         font-size: 28px;
         margin-bottom: 10px;
         font-weight: 600;
+
+        h4 {
+            font-family: 'Lexend Deca', sans-serif;
+        }
 
         .followIcon {
             display: flex;
@@ -214,6 +223,10 @@ export const ContactWrap = styled.div`
         font-size: 28px;
         margin-bottom: 10px;
         font-weight: 600;
+        
+        h4 {
+            font-family: 'Lexend Deca', sans-serif;
+        }
 
         a {
             font-size: 16px;

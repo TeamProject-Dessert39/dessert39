@@ -248,22 +248,15 @@ export const InteriorItemContainer = styled.section`
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 34px;
-                .pic {
-                    width: 100%;
-                    height: 32vw;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    overflow: hidden;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
             }
             .photo {
                 margin-top: 100px;
+                &.visible {
+                    transition: 0.8s;
+                    p {
+                        color: red;
+                    }
+                }
                 p {
                     font-family: 'Lexend Deca', sans-serif;
                     font-size: 18px;
@@ -274,19 +267,6 @@ export const InteriorItemContainer = styled.section`
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     gap: 34px;
-                    .pic {
-                        width: 100%;
-                        height: 32vw;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        overflow: hidden;
-                        img {
-                            width: 100%;
-                            height: 100%;
-                            object-fit: cover;
-                        }
-                    }
                 }
             }
         }
@@ -477,6 +457,72 @@ export const InteriorItemContainer = styled.section`
     }
 `;
 
+export const InteriorPictureContainer = styled.div`
+    width: 100%;
+    height: 32vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        clip-path: inset(0 100% 0 0);
+        transition: ease-out 0.6s;
+        opacity: 0;
+    }
+    &.visible {
+        img {
+            opacity: 1;
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        height: 32vw;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        height: 60vw;
+    }
+`;
+
+export const InteriorPhotoContainer = styled.div`
+    width: 100%;
+    height: 32vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        clip-path: inset(0 100% 0 0);
+        transition: ease-out 0.6s;
+        opacity: 0;
+    }
+    &.visible {
+        img {
+            opacity: 1;
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        height: 32vw;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        height: 60vw;
+    }
+`;
+
 export const InteriorTitleContainer = styled.div`
     margin-bottom: 50px;
     h3 {
@@ -574,19 +620,6 @@ export const InteriorDetailContainer = styled.section`
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 gap: 34px;
-                .pic {
-                    width: 100%;
-                    height: 32vw;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    overflow: hidden;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
                 &.trd {
                     grid-template-columns: repeat(3, 1fr);
                     .pic {
@@ -622,10 +655,7 @@ export const InteriorDetailContainer = styled.section`
                     margin-top: 32px;
                     gap: 20px;
                     grid-template-columns: repeat(2, 1fr);
-                    .pic {
-                        width: 100%;
-                        height: 32vw;
-                    }
+
                     &.trd {
                         grid-template-columns: repeat(3, 1fr);
                         .pic {
@@ -666,10 +696,6 @@ export const InteriorDetailContainer = styled.section`
                     margin-top: 32px;
                     gap: 26px 16px;
                     grid-template-columns: repeat(2, 1fr);
-                    .pic {
-                        width: 100%;
-                        height: 32vw;
-                    }
                     &.trd {
                         grid-template-columns: repeat(3, 1fr);
                         .pic {
@@ -710,10 +736,6 @@ export const InteriorDetailContainer = styled.section`
                     margin-top: 24px;
                     gap: 10px;
                     grid-template-columns: repeat(1, 1fr);
-                    .pic {
-                        width: 100%;
-                        height: 60vw;
-                    }
                     &.trd {
                         grid-template-columns: repeat(3, 1fr);
                         gap: 5px;
@@ -725,6 +747,39 @@ export const InteriorDetailContainer = styled.section`
                 }
             }
         }
+    }
+`;
+
+export const InteriorDetailPicContainer = styled.div`
+    width: 100%;
+    height: 32vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        clip-path: inset(0 100% 0 0);
+        transition: ease-out 0.6s;
+        opacity: 0;
+    }
+    &.visible {
+        img {
+            opacity: 1;
+            clip-path: inset(0 0 0 0);
+        }
+    }
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        height: 32vw;
+    }
+
+    @media (max-width: 480px) {
+        width: 100%;
+        height: 60vw;
     }
 `;
 
@@ -761,18 +816,6 @@ export const InteriorReviewContainer = styled.section`
                 grid-template-columns: repeat(4, 1fr);
                 gap: 34px;
                 z-index: 0;
-                .pic {
-                    width: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: flex-end;
-                    overflow: hidden;
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
             }
         }
     }
@@ -856,6 +899,28 @@ export const InteriorReviewContainer = styled.section`
                     gap: 8px;
                 }
             }
+        }
+    }
+`;
+
+export const InteriorReviewPicContainer = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        clip-path: inset(0 100% 0 0);
+        transition: ease-out 0.6s;
+        opacity: 0;
+    }
+    &.visible {
+        img {
+            opacity: 1;
+            clip-path: inset(0 0 0 0);
         }
     }
 `;

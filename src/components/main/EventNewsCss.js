@@ -9,6 +9,7 @@ export const TitleWrap = styled.div`
     font-weight: 600;
     text-align: center;
     margin-bottom: 50px;
+    font-family: 'Lexend Deca', sans-serif;
 `
 
 export const EventNewsSliderWrap = styled.div`

@@ -531,6 +531,65 @@ export const AlliancePurchasingFormContainer = styled.section`
         }
     }
 
+    .guide {
+        margin-top: 70px;
+        width: 100%;
+        padding: 30px;
+        border-radius: 10px;
+        box-sizing: border-box;
+        background-color: #f4f5f6;
+        h3 {
+            font-size: 22px;
+            letter-spacing: -1px;
+            font-weight: 700;
+        }
+        p {
+            font-size: 16px;
+            letter-spacing: -0.5px;
+            svg {
+                margin-right: 4px;
+                vertical-align: 0px;
+            }
+            span {
+                font-family: 'Lexend Deca', sans-serif;
+            }
+        }
+        p:nth-of-type(1) {
+            margin: 15px 0 20px;
+        }
+    }
+
+    .btns {
+        margin-top: 60px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        button {
+            cursor: pointer;
+            width: 170px;
+            height: 45px;
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 500;
+            border: 2px solid #1c1c1c;
+            border-radius: 45px;
+            background-color: #fff;
+            box-sizing: border-box;
+            letter-spacing: -1px;
+            font-size: 16px;
+            padding: 1px 6px;
+            transition: 0.5s;
+            &.sure,
+            &.prev:hover {
+                background-color: #1c1c1c;
+                color: #fff;
+            }
+            &.sure:hover {
+                box-shadow: -2px 2px 8px #00000066;
+            }
+        }
+    }
+
     @media (max-width: 1440px) {
     }
 `;
@@ -784,12 +843,15 @@ export const AllianceEntryFormContainer = styled.section`
                             width: 370px;
                         }
                     }
-                    div:nth-child(2),
-                    div:nth-child(3) {
+                    div:nth-child(3),
+                    div:nth-child(4) {
                         width: 100%;
                         input {
                             width: 100%;
                         }
+                    }
+                    .find {
+                        width: 100%;
                     }
                     p {
                         font-size: 14px;

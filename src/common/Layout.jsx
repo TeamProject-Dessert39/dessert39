@@ -11,18 +11,18 @@ const Layout = () => {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
-          window.removeEventListener('scroll', handleScroll); //clean up
+            window.removeEventListener('scroll', handleScroll); //clean up
         };
-      }, []);
-    
+    }, []);
+
     const handleScroll = () => {
         if (window.scrollY > 50) {
-            setScroll(true)
-        }else{
-            setScroll(false)
+            setScroll(true);
+        } else {
+            setScroll(false);
         }
-      };
-      
+    };
+
     return (
         <div className="wrap">
             <Header />

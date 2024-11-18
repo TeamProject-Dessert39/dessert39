@@ -5,7 +5,6 @@ import ContactQuickList from '../../../components/franchise/contact/ContactQuick
 import ContactIntro from '../../../components/franchise/contact/ContactIntro';
 import ContactForm from '../../../components/franchise/contact/ContactForm';
 import ContactTitle from '../../../components/franchise/contact/ContactTitle';
-import WaveBtn from '../../../components/button/WaveBtn';
 
 const Contact = () => {
     return (
@@ -14,13 +13,10 @@ const Contact = () => {
             <div className="inner">
                 <ContactIntro />
 
-                <form action="" method="post">
+                <form action="" method='post'>
                     <ContactAgreement />
                     <ContactTitle txt={'상담 희망자 정보'} />
                     <ContactForm />
-                    <div className="submit_btn">
-                        <WaveBtn txt={'신청하기'} submit={true} />
-                    </div>
                 </form>
 
                 <ContactQuickList />

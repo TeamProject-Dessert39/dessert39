@@ -1,9 +1,10 @@
+import { useEffect, useRef, useState } from 'react';
 import InteriorTitle from './InteriorTitle';
 import { InteriorItemContainer } from './style';
+import InteriorPicture from './InteriorPicture';
+import InteriorPhoto from './InteriorPhoto';
 
 const InteriorItem = ({ item }) => {
-    
-
     return (
         <InteriorItemContainer>
             <div className="inner">
@@ -28,9 +29,7 @@ const InteriorItem = ({ item }) => {
                         </div>
                         <div className="pics">
                             {i.img.map((pic, idx) => (
-                                <div className="pic" key={idx}>
-                                    <img src={pic} alt={i.store + '매장 사진'} />
-                                </div>
+                                <InteriorPicture key={idx} pic={pic} i={i} />
                             ))}
                         </div>
                         {i.photoImg ? (
@@ -38,9 +37,7 @@ const InteriorItem = ({ item }) => {
                                 <p>PHOTO ZONE</p>
                                 <div className="photos">
                                     {i.photoImg.map((pic, idx) => (
-                                        <div className="pic" key={idx}>
-                                            <img src={pic} alt={i.store + '포토존 사진'} />
-                                        </div>
+                                        <InteriorPhoto key={idx} pic={pic} i={i} />
                                     ))}
                                 </div>
                             </div>

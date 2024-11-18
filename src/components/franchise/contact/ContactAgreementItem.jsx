@@ -1,11 +1,14 @@
 import { useEffect, useRef, useState } from 'react';
 import { ContactAgreementItemContainer } from './style';
 import { RiCheckFill } from 'react-icons/ri';
+import { useDispatch } from 'react-redux';
+import { onPersonalCheck } from '../../../store/modules/allianceContactSlice';
 
 const ContactAgreementItem = ({ id, txt, button, PopupComponent }) => {
     const [isPopup, setIsPopup] = useState(false);
     const [isChk, setIsChk] = useState(false);
     const chkBox = useRef();
+    const dispatch = useDispatch();
 
     const toggleChk = () => {
         if (isChk) {
@@ -15,6 +18,10 @@ const ContactAgreementItem = ({ id, txt, button, PopupComponent }) => {
         }
     };
 
+    useEffect(() => {
+        dispatch(onPersonalCheck(isChk));
+    }, [isChk]);
+
     return (
         <>
             <ContactAgreementItemContainer>
@@ -22,7 +29,7 @@ const ContactAgreementItem = ({ id, txt, button, PopupComponent }) => {
                     <span className={`chk ${isChk ? 'chked' : ''}`}>
                         <RiCheckFill />
                     </span>
-                    <input checked={isChk} onChange={toggleChk} type="checkbox" id={id} ref={chkBox} required />
+                    <input checked={isChk} onChange={toggleChk} type="checkbox" id={id} ref={chkBox} />
                     <span className="txt">{txt}</span>
                 </label>
                 <button

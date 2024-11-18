@@ -2,9 +2,9 @@ import { IoCloseSharp } from 'react-icons/io5';
 import { AllianceCertifyContainer } from './style';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCertifyNumber, insertCertify, onCertify } from '../../../store/modules/allianceEntrySlice';
+import { getCertifyNumber, insertCertify, onCertify } from '../../../store/modules/allianceSupplierSlice';
 
-const AllianceCertify = ({ setIsPopup, active }) => {
+const AllianceCertifySupplier = ({ setIsPopup, active }) => {
     const [formCertify, setFormCertify] = useState({
         certify_name: '',
         certify_phone: {
@@ -15,7 +15,7 @@ const AllianceCertify = ({ setIsPopup, active }) => {
         },
     });
     const dispatch = useDispatch();
-    const certifyNum = useSelector((state) => state.allianceEntry.certifyNum);
+    const certifyNum = useSelector((state) => state.allianceSupplier.appli.certifyNum);
 
     const changeInput = (e) => {
         const { name, value } = e.target;
@@ -172,4 +172,4 @@ const AllianceCertify = ({ setIsPopup, active }) => {
     );
 };
 
-export default AllianceCertify;
+export default AllianceCertifySupplier;

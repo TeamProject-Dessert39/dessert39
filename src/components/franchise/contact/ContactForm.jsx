@@ -1,31 +1,151 @@
+import { useDispatch, useSelector } from 'react-redux';
 import { ContactFormContainer } from './style';
+import { useEffect, useState } from 'react';
+import { onSubmit, onSubmitReset } from '../../../store/modules/allianceContactSlice';
+import WaveBtn from '../../../components/button/WaveBtn';
+import { useNavigate } from 'react-router-dom';
 
 const ContactForm = () => {
-    /* 
-    checkbox 유효성 검사
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const isSubmit = useSelector((state) => state.allianceContact.isSubmit);
 
-    document.querySelector("form").addEventListener("submit", function(event) {
-    const checkboxes = document.querySelectorAll("input[type='checkbox'][name='shape']");
-    const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
-
-    if (!isChecked) {
-        event.preventDefault(); // 제출 막기
-        alert("최소 한 가지 상담 방식을 선택해 주세요.");
-    }
+    const [formState, setFormState] = useState({
+        phone: {
+            input: {
+                part1: '',
+                part2: '',
+            },
+            checkInput: {
+                part1: '',
+                part2: '',
+            },
+        },
+        purpose: '',
+        shape: [],
+        time: '',
+        motive: [],
+        desc: '',
     });
-    */
 
-    /* 
-    기타 체크시 input text 입력되어야 넘어가지도록.
-    */
+    const changeInput = (e) => {
+        const { name, value, type, checked, id } = e.target;
 
-    /* 
-    휴대전화 text input 숫자 유효성 체크 필요
-    */
+        const typeCheckbox = (key) => {
+            setFormState((item) => {
+                const updatedItems = [...item[key]];
 
-    /* 
-    기타 text값 받아야함
-    */
+                if (type === 'checkbox') {
+                    if (checked) {
+                        updatedItems.push({
+                            value,
+                        });
+                    } else {
+                        const index = updatedItems.findIndex((i) => i.value === '기타');
+                        if (index > -1) {
+                            updatedItems.splice(index, 1);
+                        }
+                    }
+                } else if (type === 'text') {
+                    const index = updatedItems.findIndex((i) => i.value === '기타');
+                    if (index > -1) {
+                        updatedItems[index] = {
+                            ...updatedItems[index],
+                            input: value,
+                        };
+                    }
+                }
+
+                return {
+                    ...item,
+                    [key]: updatedItems,
+                };
+            });
+        };
+
+        const namePhone = () => {
+            setFormState((item) => {
+                const updatedItems = { ...item.phone.input };
+
+                if (id === 'phone_sel') {
+                    updatedItems.part1 = value;
+                }
+                if (type === 'text') {
+                    updatedItems.part2 = value;
+                }
+
+                return {
+                    ...item,
+                    phone: {
+                        ...item.phone,
+                        input: updatedItems,
+                    },
+                };
+            });
+        };
+
+        const namePhoneCheck = () => {
+            setFormState((item) => {
+                const updatedItems = { ...item.phone.checkInput };
+
+                if (id === 'phoneCheck_sel') {
+                    updatedItems.part1 = value;
+                }
+                if (type === 'text') {
+                    updatedItems.part2 = value;
+                }
+
+                return {
+                    ...item,
+                    phone: {
+                        ...item.phone,
+                        checkInput: updatedItems,
+                    },
+                };
+            });
+        };
+
+        switch (name) {
+            case 'phone':
+                namePhone(name);
+                break;
+
+            case 'phoneCheck':
+                namePhoneCheck();
+                break;
+
+            case 'shape':
+            case 'motive':
+                typeCheckbox(name);
+                break;
+
+            case 'time':
+            case 'desc':
+            case 'purpose':
+                setFormState((item) => ({
+                    ...item,
+                    [name]: value,
+                }));
+                break;
+
+            default:
+                console.warn(`error`);
+                break;
+        }
+    };
+
+    // 신청하기
+    const clickSubmit = (e) => {
+        e.preventDefault();
+        dispatch(onSubmit(formState));
+    };
+
+    useEffect(() => {
+        if (isSubmit) {
+            navigate('/');
+            dispatch(onSubmitReset());
+        }
+    }, [isSubmit]);
 
     return (
         <ContactFormContainer>
@@ -37,31 +157,31 @@ const ContactForm = () => {
                         </label>
                     </div>
                     <div className="right">
-                        <select name="" id="phone" required>
+                        <select name="phone" type="select" id="phone_sel" onChange={changeInput}>
                             <option value="">선택</option>
                             <option value="010">010</option>
                             <option value="011">011</option>
                             <option value="016">016</option>
                             <option value="017">017</option>
                         </select>
-                        <input type="text" name="" id="" required placeholder="12341234" minLength={8} maxLength={8} />
+                        <input type="text" name="phone" id="" placeholder="- 없이 입력해 주세요." minLength={8} maxLength={8} onChange={changeInput} />
                     </div>
                 </div>
                 <div className="input_box phone">
                     <div className="left">
-                        <label className="req" htmlFor="phone">
+                        <label className="req" htmlFor="phoneCheck">
                             휴대전화 확인
                         </label>
                     </div>
                     <div className="right">
-                        <select name="" id="phone" required>
+                        <select name="phoneCheck" type="select" id="phoneCheck_sel" onChange={changeInput}>
                             <option value="">선택</option>
                             <option value="010">010</option>
                             <option value="011">011</option>
                             <option value="016">016</option>
                             <option value="017">017</option>
                         </select>
-                        <input type="text" name="" id="" required placeholder="12341234" minLength={8} maxLength={8} />
+                        <input type="text" name="phoneCheck" id="" placeholder="- 없이 입력해 주세요." minLength={8} maxLength={8} onChange={changeInput} />
                     </div>
                 </div>
             </div>
@@ -76,17 +196,17 @@ const ContactForm = () => {
                         <p className="plus">✔️ 입점 제의 상가는 인근 희망 점주님에게 추천 후 여부에 따라 개별적으로 연락드립니다.</p>
                         <div className="radio">
                             <label htmlFor="purpose01">
-                                <input type="radio" name="purpose" id="purpose01" required />
+                                <input type="radio" name="purpose" id="purpose01" value={'가맹 문의'} onChange={changeInput} />
                                 <span className="custom"></span>
                                 <span>가맹 문의</span>
                             </label>
                             <label htmlFor="purpose02">
-                                <input type="radio" name="purpose" id="purpose02" />
+                                <input type="radio" name="purpose" id="purpose02" value={'입점 문의'} onChange={changeInput} />
                                 <span className="custom"></span>
                                 <span>입점 제의</span>
                             </label>
                             <label htmlFor="purpose03">
-                                <input type="radio" name="purpose" id="purpose03" />
+                                <input type="radio" name="purpose" id="purpose03" value={'업종 변경'} onChange={changeInput} />
                                 <span className="custom"></span>
                                 <span>업종 변경</span>
                             </label>
@@ -95,7 +215,7 @@ const ContactForm = () => {
                 </div>
                 <div className="input_box shape">
                     <div className="left">
-                        <label className="req" htmlFor="shape">
+                        <label className="req" htmlFor="">
                             상담 형태
                         </label>
                         <span>[다중 선택 가능]</span>
@@ -105,26 +225,26 @@ const ContactForm = () => {
                         <div className="check">
                             <div className="top">
                                 <label htmlFor="shape01">
-                                    <input type="checkbox" name="shape01" id="shape01" />
+                                    <input type="checkbox" name="shape" id="shape01" value={'전화 상담'} onChange={changeInput} />
                                     <span className="custom"></span>
                                     <span>전화 상담</span>
                                 </label>
                                 <label htmlFor="shape02">
-                                    <input type="checkbox" name="shape02" id="shape02" />
+                                    <input type="checkbox" name="shape" id="shape02" value={'문자 상담'} onChange={changeInput} />
                                     <span className="custom"></span>
                                     <span>문자 상담</span>
                                 </label>
                                 <label htmlFor="shape03">
-                                    <input type="checkbox" name="shape03" id="shape03" />
+                                    <input type="checkbox" name="shape" id="shape03" value={'카카오톡 상담'} onChange={changeInput} />
                                     <span className="custom"></span>
                                     <span>카카오톡 상담</span>
                                 </label>
                             </div>
                             <label htmlFor="shape_other">
-                                <input type="checkbox" name="shape_other" id="shape_other" />
+                                <input type="checkbox" name="shape" id="shape_other" value={'기타'} onChange={changeInput} />
                                 <span className="custom"></span>
                                 <span>기타(직접 입력)</span>
-                                <input type="text" name="" id="shape_other_text" />
+                                <input type="text" name="shape" id="shape_other_text" onChange={changeInput} />
                             </label>
                         </div>
                     </div>
@@ -136,7 +256,7 @@ const ContactForm = () => {
                         </label>
                     </div>
                     <div className="right">
-                        <select name="" id="time" required>
+                        <select name="time" id="time" onChange={changeInput}>
                             <option value="">선택</option>
                             <option value="상시 가능">상시 가능</option>
                             <option value="9:30 ~ 10:30">9:30 ~ 10:30</option>
@@ -164,41 +284,41 @@ const ContactForm = () => {
                         <div className="check">
                             <div className="top">
                                 <label htmlFor="motive01">
-                                    <input type="checkbox" name="motive01" id="motive01" />
+                                    <input type="checkbox" name="motive" id="motive01" value={'유튜브'} onChange={changeInput} />
                                     <span className="custom"></span>
                                     <span>유튜브</span>
                                 </label>
                                 <label htmlFor="motive02">
-                                    <input type="checkbox" name="motive02" id="motive02" />
+                                    <input type="checkbox" name="motive" id="motive02" value={'네이버검색'} onChange={changeInput} />
                                     <span className="custom"></span>
                                     <span>네이버검색</span>
                                 </label>
                                 <label htmlFor="motive03">
-                                    <input type="checkbox" name="motive03" id="motive03" />
+                                    <input type="checkbox" name="motive" id="motive03" value={'네이버블로그'} onChange={changeInput} />
                                     <span className="custom"></span>
                                     <span>네이버블로그</span>
                                 </label>
                                 <label htmlFor="motive04">
-                                    <input type="checkbox" name="motive04" id="motive04" />
+                                    <input type="checkbox" name="motive" id="motive04" value={'인스타그램'} onChange={changeInput} />
                                     <span className="custom"></span>
                                     <span>인스타그램</span>
                                 </label>
                                 <label htmlFor="motive05">
-                                    <input type="checkbox" name="motive05" id="motive05" />
+                                    <input type="checkbox" name="motive" id="motive05" value={'지인소개'} onChange={changeInput} />
                                     <span className="custom"></span>
                                     <span>지인소개</span>
                                 </label>
                                 <label htmlFor="motive06">
-                                    <input type="checkbox" name="motive06" id="motive06" />
+                                    <input type="checkbox" name="motive" id="motive06" value={'매장방문'} onChange={changeInput} />
                                     <span className="custom"></span>
                                     <span>매장방문</span>
                                 </label>
                             </div>
                             <label htmlFor="motive_other">
-                                <input type="checkbox" name="motive_other" id="motive_other" />
+                                <input type="checkbox" name="motive" id="motive_other" value={'기타'} onChange={changeInput} />
                                 <span className="custom"></span>
                                 <span>기타(직접 입력)</span>
-                                <input type="text" name="" id="motive_other_text" />
+                                <input type="text" name="motive" id="motive_other_text" onChange={changeInput} />
                             </label>
                         </div>
                     </div>
@@ -212,7 +332,7 @@ const ContactForm = () => {
                         </label>
                     </div>
                     <div className="right">
-                        <textarea name="desc" id="desc" required placeholder="내용을 입력해 주세요."></textarea>
+                        <textarea name="desc" id="desc" placeholder="내용을 입력해 주세요." onChange={changeInput}></textarea>
                         <p className="precaution">
                             지나친 욕설이나 광고글, 타인의 명예를 훼손하는 글을 올리시거나 반복적인 글은 별도의 통보 없이 삭제될 수 있습니다.
                             <br />
@@ -222,6 +342,10 @@ const ContactForm = () => {
                         </p>
                     </div>
                 </div>
+            </div>
+
+            <div className="submit_btn" onClick={clickSubmit}>
+                <WaveBtn txt={'신청하기'} submit={true} />
             </div>
         </ContactFormContainer>
     );

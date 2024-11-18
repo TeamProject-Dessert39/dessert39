@@ -1,11 +1,28 @@
 import { useNavigate } from 'react-router-dom';
 import AllianceLayout from '../../../components/franchise/alliance/AllianceLayout';
 import { AllianceSupplierContainer } from './style';
+import { useDispatch } from 'react-redux';
+import { onDisabled } from '../../../store/modules/allianceSupplierSlice';
+import { useState } from 'react';
 
 // 제휴/제안 협력사 신청 및 조회
 const AllianceSupplier = () => {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const [formState, setFormState] = useState({
+        b_num: '',
+        b_pw: '',
+    });
     // 조회하기 누르면 '해당 기능은 아직 사용하실 수 없습니다.' alert 띄우기
+
+    const changeInput = (e) => {
+        const { name, value } = e.target;
+
+        setFormState((item) => ({
+            ...item,
+            [name]: value,
+        }));
+    };
 
     return (
         <AllianceSupplierContainer>
@@ -45,18 +62,20 @@ const AllianceSupplier = () => {
                                 <dl className="num">
                                     <dt>사업자 번호</dt>
                                     <dd>
-                                        <input type="text" name="" id="" placeholder="- 없이 숫자만 입력해 주세요." />
+                                        <input onChange={changeInput} type="text" name="b_num" id="b_num" placeholder="- 없이 숫자만 입력해 주세요." />
                                     </dd>
                                 </dl>
                                 <dl className="pw">
                                     <dt>비밀번호</dt>
                                     <dd>
-                                        <input type="password" name="" id="" placeholder="비밀번호를 입력해 주세요." />
+                                        <input onChange={changeInput} type="password" name="b_pw" id="b_pw" placeholder="비밀번호를 입력해 주세요." />
                                     </dd>
                                 </dl>
                             </div>
                         </div>
-                        <button type="button">조회하기</button>
+                        <button onClick={() => dispatch(onDisabled(formState))} type="button">
+                            조회하기
+                        </button>
                     </li>
                 </ul>
             </div>

@@ -1,7 +1,11 @@
-import InteriorTitle from './InteriorTitle';
 import { InteriorReviewContainer } from './style';
+import InteriorTitle from './InteriorTitle';
+import InteriorReviewPic from './InteriorReviewPic';
+import interiorData from '../../../assets/api/interior_desc';
 
 const InteriorReview = () => {
+    const reviewData = interiorData.find((item) => item.category === 'review').list;
+
     return (
         <InteriorReviewContainer>
             <div className="inner">
@@ -23,30 +27,9 @@ const InteriorReview = () => {
                         </div>
                     </div>
                     <div className="pics">
-                        <div className="pic">
-                            <img
-                                src="https://teamproject-dessert39.github.io/dataCenter/images/franchise/interior_se06_img02.png"
-                                alt="디저트39 김해대청계곡점 리뷰사진"
-                            />
-                        </div>
-                        <div className="pic">
-                            <img
-                                src="https://teamproject-dessert39.github.io/dataCenter/images/franchise/interior_se06_img03.png"
-                                alt="디저트39 창원유니시티점 리뷰사진"
-                            />
-                        </div>
-                        <div className="pic">
-                            <img
-                                src="https://teamproject-dessert39.github.io/dataCenter/images/franchise/interior_se06_img05.png"
-                                alt="디저트39 등촌역점 리뷰사진"
-                            />
-                        </div>
-                        <div className="pic">
-                            <img
-                                src="https://teamproject-dessert39.github.io/dataCenter/images/franchise/interior_se06_img04.png"
-                                alt="디저트39 월미도점 리뷰사진"
-                            />
-                        </div>
+                        {reviewData.map((item) => (
+                            <InteriorReviewPic item={item} key={item.id} />
+                        ))}
                     </div>
                 </div>
             </div>

@@ -32,11 +32,16 @@ export const TitleWrap = styled.div`
     font-size: 60px;
     font-weight: 600;
     text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
 `
 
 export const LeftSide = styled.div`
     padding: 0 50px 0 50px;
     border-right: 1px solid #d3d3d2;
+
+    h3 {
+        font-family: 'Lexend Deca', sans-serif;
+    }
 
     .location {
         width: 600px;
@@ -47,6 +52,10 @@ export const LeftSide = styled.div`
 
 export const RightSide = styled.div`
     padding: 0 50px 0 50px;
+
+    h3 {
+        font-family: 'Lexend Deca', sans-serif;
+    }
 
     .location {
         width: 600px;
