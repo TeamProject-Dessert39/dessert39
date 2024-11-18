@@ -31,7 +31,7 @@ import ScrollToTop from './common/scrolltop';
 const App = () => {
     return (
         <>
-            <BrowserRouter>
+            <HashRouter>
                 <ScrollToTop />
                 <Routes>
                     <Route path="/intro" element={<Mainintro />} />
@@ -91,7 +91,7 @@ const App = () => {
                         <Route path="*" element={<NotFile />} />
                     </Route>
                 </Routes>
-            </BrowserRouter>
+            </HashRouter>
         </>
     );
 };

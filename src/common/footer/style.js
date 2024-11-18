@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const FooterWrap = styled.footer`
-
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
     background-color: #f4f5f6;
+
     strong {
         display: block;
         text-align: center;
@@ -20,6 +23,13 @@ export const FooterWrap = styled.footer`
         box-sizing: border-box;
         padding: 40px 0;
         display: flex;
+
+        @media (max-width: 1024px) {
+            padding: 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
     }
     .info {
         display: flex;
@@ -74,12 +84,26 @@ export const InfoWrap = styled.div`
     ul {
         margin-left: 70px;
 
+        @media (max-width: 1024px) {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            float: none;
+            width: auto;
+            margin: 35px 0;
+        }
+
         li {
             position: relative;
             font-size: 16px;
             margin-bottom: 15px;
             display: flex;
             width: 700px;
+
+            @media (max-width: 1024px) {
+                font-size: 15px;
+                margin-bottom: 0px;
+            }
 
             span {
                 font-weight: 600;
@@ -101,6 +125,10 @@ export const InfoWrap = styled.div`
                     position: absolute;
                     top: 6px;
                     left: 127px;
+
+                    @media (max-width: 1024px) {
+                        left: 120px;
+                    }
                 }
             }
 
@@ -113,6 +141,10 @@ export const InfoWrap = styled.div`
                     position: absolute;
                     top: 6px;
                     left: 71px;
+
+                    @media (max-width: 1024px) {
+                        left: 67px;
+                    }
                 }
             }
 
@@ -125,6 +157,10 @@ export const InfoWrap = styled.div`
                     position: absolute;
                     top: 6px;
                     left: 150px;
+
+                    @media (max-width: 1024px) {
+                        left: 141px;
+                    }
                 }
             }
 
@@ -137,6 +173,10 @@ export const InfoWrap = styled.div`
                     position: absolute;
                     top: 6px;
                     left: 175px;
+
+                    @media (max-width: 1024px) {
+                        left: 165px;
+                    }
                 }
             }
         }
@@ -175,6 +215,10 @@ export const ContactWrap = styled.div`
         position: relative;
         font-family: 'Noto Sans KR', sans-serif;
 
+        @media (max-width: 1024px) {
+            margin: 0;
+        }
+
         svg {
             position: absolute;
             right: 30px;
@@ -190,6 +234,10 @@ export const ContactWrap = styled.div`
         margin-bottom: 10px;
         font-weight: 600;
 
+        @media (max-width: 1024px) {
+            text-align: left;
+        }
+
         h4 {
             font-family: 'Lexend Deca', sans-serif;
         }
@@ -199,6 +247,10 @@ export const ContactWrap = styled.div`
             float: right;
             align-items: center;
             margin-left: 20px;
+
+            @media (max-width: 1024px) {
+                float: left;
+        }
 
             li {
                 padding: 0 10px 0 10px;

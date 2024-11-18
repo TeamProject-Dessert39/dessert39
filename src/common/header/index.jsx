@@ -1,13 +1,15 @@
 import { Link } from 'react-router-dom';
 import { HeaderWrap, HeaderInner, HeaderOuter, NavContainer, Nav, SubWrap, LeftNav, RightNav } from './style';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Sub from './sub';
+import MobileMenu from './mobileMenu';
 
 const Header = () => {
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => setIsHovered(true);
     const handleMouseLeave = () => setIsHovered(false);
+
     return (
         <HeaderWrap>
             <HeaderInner>
@@ -21,7 +23,7 @@ const Header = () => {
                             />
                         </Link>
                     </h1>
-                    <NavContainer onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                    <NavContainer className="pc" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                         <LeftNav>
                             <Nav>
                                 <ul>
@@ -50,13 +52,18 @@ const Header = () => {
                             </Nav>
                         </RightNav>
                     </NavContainer>
+                    <div className="mo">
+                        <MobileMenu />
+                    </div>
                 </div>
             </HeaderInner>
-            <HeaderOuter>
-                <SubWrap $ishovered={isHovered} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-                    <Sub />
-                </SubWrap>
-            </HeaderOuter>
+            <div className="pc">
+                <HeaderOuter>
+                    <SubWrap $ishovered={isHovered} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                        <Sub />
+                    </SubWrap>
+                </HeaderOuter>
+            </div>
         </HeaderWrap>
     );
 };

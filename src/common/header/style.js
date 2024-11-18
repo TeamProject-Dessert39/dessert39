@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 // 미디어 쿼리 브레이크포인트 정의
 const breakpoints = {
-    mobile: '320px',
+    mobile: '480px',
     tablet: '768px',
     desktop: '1024px',
     widescreen: '1440px',
@@ -29,26 +29,41 @@ export const HeaderInner = styled.div`
     height: 100px;
     position: relative;
 
-    @media (max-width: ${breakpoints.mobile}) {
-        height: 100px;
-        background-color: darkorange;
+    .mo {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        display: none;
     }
 
-    @media (min-width: ${breakpoints.tablet}) {
-        height: 100px;
-        background-color: firebrick;
-    }
-
-    @media (min-width: ${breakpoints.desktop}) {
-        height: 100px;
-        background-color: darkblue;
-    }
-
-    @media (min-width: ${breakpoints.widescreen}) {
+    @media (max-width: ${breakpoints.widescreen}) {
         height: 100px;
         background-color: rebeccapurple;
     }
 
+    @media (max-width: ${breakpoints.desktop}) {
+        height: 100px;
+        background-color: darkblue;
+
+        .pc {
+            display: none;
+        }
+
+        .mo {
+            display: block;
+        }
+    }
+
+    @media (max-width: ${breakpoints.tablet}) {
+        height: 100px;
+        background-color: firebrick;
+    }
+
+    @media (max-width: ${breakpoints.mobile}) {
+        height: 100px;
+        background-color: darkorange;
+    }
+    
     .inner {
         display: flex;
         justify-content: space-between;
@@ -57,13 +72,22 @@ export const HeaderInner = styled.div`
     }
 
     h1 {
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        margin: 0;
-        width: 4%;
-        z-index: 1;
+        @media (min-width: ${breakpoints.tablet}) {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            margin: 0;
+            width: 4%;
+            z-index: 1;
+        }
+
+        @media (max-width: ${breakpoints.desktop}) {
+            position: static;
+            transform: none;
+            margin: 0 0 0 50px;
+            z-index: 1;
+        }
 
         .svg {
             width: 50px;
@@ -142,6 +166,14 @@ export const NavContainer = styled.div`
     &:hover ~ ${HeaderOuter} ${SubWrap}, &:hover + ${HeaderOuter} ${SubWrap} {
         transform: scaleY(1);
         opacity: 1;
+    }
+
+    .pc {
+        display: block;
+    }
+
+    .mo {
+        display: none;
     }
 `;
 
@@ -314,4 +346,193 @@ export const SubMenu = styled.div`
             }
         }
     }
+`;
+
+// ---------------------------------------------------------------------
+// MobileMenu
+export const MobileMenuWrap = styled.div`
+    top: 20%;
+    right: 5%;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+
+    span {
+        display: block;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #1c1c1c;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .line1 {
+        top: ${props => props.$isOpen ? '24px' : '15px'};
+        transform: ${props => props.$isOpen ? 'rotate(45deg)' : 'none'};
+    }
+
+    .line2 {
+        top: 30px;
+        opacity: ${props => props.$isOpen ? '0' : '1'};
+    }
+
+    .line3 {
+        top: ${props => props.$isOpen ? '24px' : '45px'};
+        transform: ${props => props.$isOpen ? 'rotate(-45deg)' : 'none'};
+    }
+
+    transition: all 0.3s ease-in-out;
+`
+
+export const MobileNavWrap = styled.div`
+    z-index: 120;
+    display: block;
+    position: fixed;
+    right: ${props => props.$isOpen ? '0px' : '-450px'};
+    top: 101px;
+    background-color: #FFF;
+    width: 100%;
+    max-width: 450px;
+    height: calc(100% - 80px);
+    transition: all 0.5s ease-in-out;
+
+    .mobileTop {
+        box-sizing: border-box;
+        padding: 40px 0;
+
+        .imgBox {
+            height: 100px;
+            width: fit-content;
+            margin: 0 auto;
+
+            img {
+                display: block;
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        h3 {
+            font-weight: 700;
+            line-height: 1.4;
+            text-align: center;
+            font-size: 22px;
+        }
+    }
+
+    .partitionLine {
+        display: block;
+        width: 100%;
+        height: 10px;
+        background-color: #efefef;
+    }
+
+    ul {
+        box-sizing: border-box;
+        padding-top: 40px;
+        height: calc(100% - 282px);
+        overflow-y: auto;
+
+        li {
+            font-weight: 500;
+
+            .lineColor {
+                border-bottom: 1px solid #dbdbdb;
+            }
+
+            a {
+                position: relative;
+                display: flex;
+                align-items: center;
+                height: 55px;
+                width: 100%;
+                font-size: 17px;
+                box-sizing: border-box;
+                padding: 0 25px;
+                transition: color 0.3s;
+                font-family: 'Lexend Deca', sans-serif;
+
+                .icon {
+                    display: block;
+                    width: 18px;
+                    height: 18px;
+                }
+
+                .text {
+                    margin-left: 15px;
+                }
+
+                .arrow {
+                    position: absolute;
+                    display: block;
+                    width: 10px;
+                    height: 10px;
+                    top: 50%;
+                    right: 25px;
+                    transform: translateY(-50%);
+                    transition: transform 0.3s ease;
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        background-color: #1c1c1c;
+                        width: 8px;
+                        height: 2px;
+                        transition: transform 0.3s ease;
+                    }
+
+                    &::before {
+                        top: -1px;
+                        left: 0;
+                        transform: rotate(45deg);
+                        transform-origin: left center;
+                    }
+
+                    &::after {
+                        bottom: -1px;
+                        left: 0;
+                        transform: rotate(-45deg);
+                        transform-origin: left center;
+                    }
+
+                    &.open {
+                        transform: translateY(-50%) rotate(90deg);
+                    }
+                }
+            }
+        }
+    }
+`
+
+export const Overlay = styled.div`
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 110;
+    display: ${props => props.$isOpen ? 'block' : 'none'};
+    transition: opacity 0.3s ease-in-out;
+    opacity: ${props => props.$isOpen ? 1 : 0};
+`;
+
+export const TextDesc = styled.ul`
+    visibility: ${props => props.$isOpen ? 'visible' : 'hidden'};
+    opacity: ${props => props.$isOpen ? 1 : 0};
+    height: auto;
+    max-height: ${props => props.$isOpen ? '1000px' : '0'};
+    overflow: hidden;
+    transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    padding: 0;
+    margin: 0;
+`;
+
+export const TextDescItem = styled.li`
+    opacity: ${props => props.$isOpen ? 1 : 0};
+    transform: translateY(${props => props.$isOpen ? '0' : '-20px'});
+    transition: opacity 0.3s ease-in-out, transform 0.5s ease-in-out;
+    transition-delay: ${props => props.$isOpen ? `${props.$index * 0.3}s` : '0s'};
 `;
