@@ -110,6 +110,7 @@ export const TextBoxWrap = styled.div`
         position: relative;
         z-index: 1;
         margin: 200px 0 20px 0;
+        font-family: 'Lexend Deca', sans-serif;
     }
 
     h3 {

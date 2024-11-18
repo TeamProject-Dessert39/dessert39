@@ -26,6 +26,7 @@ export const TitleWrap = styled.div`
     font-size: 60px;
     font-weight: 600;
     margin-bottom: 30px;
+    font-family: 'Lexend Deca', sans-serif;
 `;
 
 export const LeftSide = styled.div`

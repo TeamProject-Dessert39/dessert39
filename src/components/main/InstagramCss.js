@@ -17,6 +17,7 @@ export const TitleWrap = styled.div`
     font-weight: 600;
     text-align: center;
     margin-bottom: 50px;
+    font-family: 'Lexend Deca', sans-serif;
 `
 
 export const LeftSide = styled.div`
@@ -28,6 +29,7 @@ export const LeftSide = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: 'Lexend Deca', sans-serif;
 
     .svg {
         width: 50px;

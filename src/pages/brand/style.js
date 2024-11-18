@@ -66,6 +66,7 @@ export const BiWrap = styled.div`
                     transform: rotate(90deg);
                     margin-top: 160px;
                     margin-left: -40px;
+                    font-family: 'Lexend Deca', sans-serif;
                 }
             }
         }

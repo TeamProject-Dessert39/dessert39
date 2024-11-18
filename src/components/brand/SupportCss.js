@@ -70,6 +70,7 @@ export const DetailWrap = styled.div`
         letter-spacing: -0.025em;
         font-weight: 700;
         line-height: 1.4;
+        font-family: 'Lexend Deca', sans-serif;
 
         span {
             width: 100px;

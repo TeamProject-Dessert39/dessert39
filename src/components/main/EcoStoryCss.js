@@ -6,6 +6,7 @@ export const TitleWrap = styled.div`
     font-size: 60px;
     font-weight: 600;
     text-align: center;
+    font-family: 'Lexend Deca', sans-serif;
 `
 
 export const TabWrap = styled.div`
