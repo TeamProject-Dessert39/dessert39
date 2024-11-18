@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
 export const FooterWrap = styled.footer`
-    width: 95%;
-    max-width: 1440px;
-    margin: 0 auto;
     background-color: #f4f5f6;
 
     strong {
@@ -19,12 +16,15 @@ export const FooterWrap = styled.footer`
 
 
     .inner {
+        width: 95%;
         height: 300px;
         box-sizing: border-box;
         padding: 40px 0;
         display: flex;
+        flex-direction: row;
 
         @media (max-width: 1024px) {
+            height: 480px;
             padding: 40px 0;
             display: flex;
             flex-direction: column;
@@ -81,6 +81,8 @@ export const LogoTabWrap = styled.div`
 `
 
 export const InfoWrap = styled.div`
+    width: 70%;
+
     ul {
         margin-left: 70px;
 
@@ -184,12 +186,17 @@ export const InfoWrap = styled.div`
 `
 
 export const ContactWrap = styled.div`
+	float: right;
     display: flex;
     flex-direction: column;
-    width: 44%;
+    width: 16%;
     justify-items: right;
     position: relative;
     box-sizing: border-box;
+
+    @media (max-width: 1024px) {
+        width: 23%;
+    }
 
     @keyframes moveArrow {
         0% {
@@ -201,7 +208,6 @@ export const ContactWrap = styled.div`
     }
 
     button {
-        margin: 0 0 0 400px;
         font-size: 16px;
         color: white;
         cursor: pointer;
@@ -236,6 +242,7 @@ export const ContactWrap = styled.div`
 
         @media (max-width: 1024px) {
             text-align: left;
+            margin-top: 10px;
         }
 
         h4 {
@@ -250,6 +257,7 @@ export const ContactWrap = styled.div`
 
             @media (max-width: 1024px) {
                 float: left;
+                margin-left: -10px;
         }
 
             li {
@@ -275,6 +283,10 @@ export const ContactWrap = styled.div`
         font-size: 28px;
         margin-bottom: 10px;
         font-weight: 600;
+
+        @media (max-width: 1024px) {
+            text-align: left;
+        }
         
         h4 {
             font-family: 'Lexend Deca', sans-serif;

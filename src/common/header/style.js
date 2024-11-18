@@ -43,7 +43,7 @@ export const HeaderInner = styled.div`
 
     @media (max-width: ${breakpoints.desktop}) {
         height: 100px;
-        background-color: darkblue;
+        background-color: white;
 
         .pc {
             display: none;
