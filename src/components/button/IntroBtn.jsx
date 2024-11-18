@@ -3,7 +3,7 @@ import { GlobalStyle, ButtonsContainer, BlobButton, ButtonInner, ButtonBlobs, Bu
 import SVGFilter from './SVGFilter';
 import { TitleWrap } from '../main/EventNewsCss';
 
-const IntroBtn = ({title , link}) => {
+const IntroBtn = ({title , link , bg}) => {
     const navigate = useNavigate()
     const ongo = () => {
         navigate(link)
@@ -13,12 +13,12 @@ const IntroBtn = ({title , link}) => {
             <MoreBtnWrap></MoreBtnWrap>
             <GlobalStyle />
             <ButtonsContainer>
-                <BlobButton>
+                <BlobButton className={bg ? 'grey' : ''}>
                     {title}
-                    <ButtonInner>
+                    <ButtonInner className={bg ? 'grey' : ''}>
                         <ButtonBlobs>
                             {[0, 1, 2, 3].map((index) => (
-                                <ButtonBlob key={index} $index={index} />
+                                <ButtonBlob key={index} $index={index} className={bg && 'grey'}/>
                             ))}
                         </ButtonBlobs>
                     </ButtonInner>

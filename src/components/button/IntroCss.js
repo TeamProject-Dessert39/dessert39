@@ -54,7 +54,11 @@ export const BlobButton = styled.button`
     cursor: pointer;
     border-radius: 30px;
     width: 100%;
-    
+    &.grey{
+        &:before {
+            border: 2px solid #474e63;
+        }
+    }
     &:before {
         content: "";
         z-index: 1;
@@ -93,7 +97,6 @@ export const BlobButton = styled.button`
     @media (max-width:480px) {
         width: 100%;
         font-size: 13px;
-        width: 80px;
         height: 30px;
         padding: unset;
         margin: unset;
@@ -113,6 +116,9 @@ export const ButtonInner = styled.span`
     height: 100%;
     border-radius: 30px;
     background: #1b1b1b;
+    &.grey{
+        background: #474e63;
+    }
 `;
 
 export const ButtonBlobs = styled.span`
@@ -131,6 +137,10 @@ export const ButtonBlob = styled.span`
     border-radius: 100%;
     transform: translate3d(0,150%,0) scale(1.7);
     transition: transform 0.45s;
+    /* 클래스 붙으면 색상 변경 */
+    &.grey{
+        background: #313131;
+    }
 
     @supports(filter: url('#goo')) {
         transform: translate3d(0,150%,0) scale(1.4);

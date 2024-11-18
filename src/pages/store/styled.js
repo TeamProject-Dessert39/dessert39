@@ -37,6 +37,7 @@ export const SoteCon = styled.div`
                         margin-bottom: 20px;
                         text-align: center;
                         display: block;
+                        font-weight: 800;
                     }
                     ul{
                         display: flex;
@@ -100,13 +101,14 @@ export const SoteCon = styled.div`
                 }
             }
             .bottom{
-                height: calc(100% - 380px);
+                height: calc(100% - 405px);
                 -webkit-box-sizing: border-box;
                 box-sizing: border-box;
                 padding: 0 30px;
                 background-color: white;
                 margin-top: 18px;
                 overflow: auto;
+
                 ul{
                     display: flex;
                     flex-direction: column;
@@ -146,7 +148,88 @@ export const SoteCon = styled.div`
         }
     }
 
-    @media (max-width: 768px) {
+    @media (max-width: 850px) {
+            .map-wrap {
+            margin-top: 80px;
+            position: relative;
+
+            #map {
+                width: 100%;
+                height: 550px;
+            }
+
+            .con {
+                width: 100%;
+                height: 100%;
+                background-color: #f6f6f6;
+                z-index: 50;
+                position: unset;
+                transform: unset;
+                .top{
+                    padding: 0 2.5%;
+                    width: 100%;
+                    padding-top: 20px;
+                    p{
+                        text-align: center;
+                    }
+                    .filter-tab{
+                        strong{
+                            font-size: 24px;
+                            margin-top: 35px;
+                            margin-bottom: 20px;
+                        }
+                        ul{
+                            display: flex;
+                            gap: 10px;
+                            justify-content: center;
+                            li{
+                                height: 40px;
+                                font-size: 14px;
+                                padding: 0 7px;
+                            }
+                        }
+                        label{
+                            height: 50px;
+                            padding: 0 15px;
+                            padding-right: 52px;
+                            font-size: 16px;
+                            input{
+                                border: none;
+                                height: 100%;
+                                background: transparent;
+                                width: 100%;
+                            }
+                            button{
+                                background: none;
+                                border: none;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                    span{
+                        display: flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 10px 0;
+                        font-size: 18px;
+                        font-weight: bold;
+                    }
+                }
+                .bottom{
+                    height: calc(100% - 345px);
+                    padding: 0 20px;
+                    ul{
+                        display: flex;
+                        flex-direction: column;
+                        li{
+                            padding: 20px 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    /* @media (max-width: 768px) {
         .map-wrap {
             .con {
                 width: 350px;
@@ -160,7 +243,7 @@ export const SoteCon = styled.div`
                 width: 300px;
             }
         }
-    }
+    } */
 `;
 
 export const StoreItemCon = styled.li`
@@ -325,6 +408,63 @@ export const SoteModalCon = styled.div`
                 width: 100%;
                 height: 250px;
                 flex-shrink: 0;
+            }
+        }
+    }
+    @media (max-width : 850px) {
+        .modal{
+            height: 550px;
+            padding: 25px;
+            .modal_header{
+                margin-bottom: 35px;
+                span{
+                    text-align: center;
+                    display: block;
+                    font-size: 26px;
+                    font-weight: bold;
+                }
+                button{
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    border: none;
+                    background: none;
+                    cursor: pointer;
+                }
+            }
+            .modal-body{
+                display: flex;
+                flex-direction: column;
+                height: calc(100% - 57px);
+                overflow-y: scroll;
+                img{
+                    height: 230px;
+                }
+                span{
+                    font-size: 17px;
+                    margin-top: 20px;
+                    margin-bottom: 17px;
+                }
+                ul{
+                    margin-bottom: 20px;
+                    li{
+                        height: 40px;
+                        font-size: 14px;
+                    }
+                }
+                .d-flex{
+                    font-size: 17px;
+                    strong{
+                        flex-basis: 20%;
+                        font-weight: bold;
+                    }
+                    p{
+                        flex-basis: 80%;
+                    }
+                }
+                #modal-map{
+                    height: 230px;
+                }
             }
         }
     }

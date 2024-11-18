@@ -301,7 +301,7 @@ export default [
         addr: '서울특별시 금천구 독산동 1156',
         tel : '0502-777-4444', 
         time : '9:30 ~ 22:00',
-        imgurl : '' ,
+        imgurl : 'https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/store/store22.jpg?raw=true' ,
     },
     {
         id : 22 , 
@@ -316,7 +316,22 @@ export default [
         addr: '경기도 부천시 원미구 중1동 1162-8',
         tel : '032-321-8942', 
         time : '9:00 ~ 23:00',
-        imgurl : '' ,
+        imgurl : 'https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/store/store23.jpg?raw=true' ,
+    },
+    {
+        id : 23 , 
+        name : '광명역점' ,
+        service : [
+            {id : 1 , service : '포장' , icon : 'MdTakeoutDining'},
+            {id : 2 , service : '주차' , icon : 'TbParkingCircleFilled'},
+            {id : 3 , service : 'wifi' , icon : 'IoIosWifi'},
+            {id : 4 , service : '화장실' , icon : 'PiToiletFill'},
+        ],
+        lating: [37.46224, 126.87848], 
+        addr: '경기도 광명시 범안로 1041',
+        tel : '02-898-1225', 
+        time : '9:00 ~ 23:00',
+        imgurl : 'https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/store/store24.jpg?raw=true' ,
     },
     // {
     //     id : 15 , 

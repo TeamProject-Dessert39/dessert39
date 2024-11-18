@@ -29,7 +29,8 @@ const Layout = () => {
             <main className="main" style={{ padding: '100px 0 0 0' }}>
                 <Outlet />
                 <ul className={scroll ? 'fixed-btn on' : 'fixed-btn'}>
-                    <MainSideBtn/>
+                    <MainSideBtn title = {'STORE'}/>
+                    <MainSideBtn title = {'KAKAO'}/>
                     <TopBtn/>
                 </ul>
             </main>

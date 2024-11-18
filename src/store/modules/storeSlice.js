@@ -20,18 +20,33 @@ export const getDataSlice = createSlice({
             state.Modal = false;
         },
         filterOn: (state, action) => {
+            const { serviceName, text } = action.payload;
+        
             const serviceFiltered = state.storeData.filter((store) => {
-                const hasService = store.service.some((service) => action.payload.serviceName.includes(service.service));
-
-                let matchesText = action.payload.text ? store.name.includes(action.payload.text) || store.addr.includes(action.payload.text) : true;
-                if (action.payload.text === '') {
-                    matchesText = state.storeData;
+                const hasService =
+                    serviceName && serviceName.length > 0
+                        ? serviceName.every((name) =>
+                              store.service.some((service) => 
+                                  service.service.toLowerCase() === name.toLowerCase()
+                              )
+                          )
+                        : true; 
+        
+                const matchesText =
+                    text && text.trim().length > 0
+                        ? store.name.includes(text) || store.addr.includes(text)
+                        : true; 
+        
+                if ((!serviceName || serviceName.length === 0) && !text) {
+                    return false;
                 }
+        
                 return hasService && matchesText;
             });
-
+        
             state.filterData = serviceFiltered;
         },
+          
     },
 });
 

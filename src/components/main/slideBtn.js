@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const MainSideBtnCon = styled.li`
-    a{
-        width: 170px;
+    div.btn{
         cursor: pointer;
         display: flex;
         position: relative;
@@ -16,13 +15,54 @@ export const MainSideBtnCon = styled.li`
         transition: 0.3s;
         box-sizing: border-box;
         box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+        position: relative;
         margin-top: 14px;
+        a{
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 100;
+            width: 100%;
+            span{
+                /* transform: translate(20% , -50%); */
+                position: absolute;
+                white-space: nowrap;
+                left: 0px;
+                top: 0%;
+                color: white;
+                line-height: 70px;
+                padding-left: 15px;
+                opacity: 0;
+                transition: 0.2s;
+            }
+            .wrap{
+                padding: 12px;
+                .kakao-wrap{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-end;
+                    img{
+                        width: 24px;
+                        height: 21px;
+                        margin-right: 11px;
+                    }
+                    strong{
+                        font-weight: bold;
+                        color: white;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
         span{
             /* transform: translate(20% , -50%); */
-            /* position: absolute; */
+            position: absolute;
             white-space: nowrap;
             left: 0px;
-            top: 50%;
+            top: 0%;
             color: white;
             line-height: 70px;
             padding-left: 15px;
@@ -30,16 +70,16 @@ export const MainSideBtnCon = styled.li`
             transition: 0.2s;
         }
         .wrap{
-            padding-right: 10px;
             padding: 12px;
             .kakao-wrap{
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-                align-items: center;
+                align-items: flex-end;
                 img{
                     width: 24px;
                     height: 21px;
+                    margin-right: 11px;
                 }
                 strong{
                     font-weight: bold;

@@ -104,4 +104,29 @@ export const IntroCon = styled.div`
             }
         }
     }
+    @media (max-width : 850px) {
+        flex-direction: column;
+        section{
+            div.section-wrap{
+                h3{
+                    margin-top: unset;
+                    font-size: 36px;
+                }
+                .text-wrap{
+                    height: 65%;
+                    strong{
+                        font-size: 24px;
+                        margin-bottom: 15px;
+                    }
+                    p{
+                        font-size: 16px;
+                        margin-bottom: 30px;
+                    }
+                    .introbtn{
+
+                    }
+                }
+            }
+        }
+    }
 `

@@ -29,7 +29,7 @@ const Mainintro = () => {
                         </p>
                         <div className="introbtn">
                             <IntroBtn title={'창업 문의'} link={'/franchise/competitive'}></IntroBtn>
-                            <IntroBtn title={'제휴 문의'} link={'/franchise/alliance'}></IntroBtn>
+                            <IntroBtn title={'제휴 문의'} link={'/franchise/alliance'} bg={'bg'}></IntroBtn>
                         </div>
                     </div>
                 </div>

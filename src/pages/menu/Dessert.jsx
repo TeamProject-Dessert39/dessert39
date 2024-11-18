@@ -33,9 +33,9 @@ const Dessert = () => {
     };
 
     const [title , setTitle] = useState([
-        {id : 1 , data : 'dessert' , kTitle : '디저트 39 디저트 메뉴 소개' , eTitle : 'Dessert'},
-        {id : 2 , data : 'beverage' , kTitle : '디저트 39 음료 메뉴 소개' , eTitle : 'Beverage'},
-        {id : 3 , data : 'mdproduct' , kTitle : '디저트 39 MD 상품 소개' , eTitle : 'MD 상품'}
+        {id : 1 , data : 'dessert' , kTitle : ' 디저트 메뉴 소개' , eTitle : 'Dessert'},
+        {id : 2 , data : 'beverage' , kTitle : ' 음료 메뉴 소개' , eTitle : 'Beverage'},
+        {id : 3 , data : 'mdproduct' , kTitle : ' MD 상품 소개' , eTitle : 'MD 상품'}
     ])
 
     return (

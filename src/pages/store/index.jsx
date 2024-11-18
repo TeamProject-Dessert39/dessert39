@@ -61,7 +61,7 @@ const Store = () => {
   useEffect(() => {
     // 지도를 표시할 HTML 요소
     const container = document.getElementById('map');
-    const mainPosition = new kakao.maps.LatLng(37.51142, 127.0573); // 지도 중심 좌표
+    const mainPosition = new kakao.maps.LatLng(37.51180, 127.0597); // 지도 중심 좌표
 
     const options = {
       center: mainPosition, // 지도 중심
@@ -103,7 +103,7 @@ const Store = () => {
   
   return (
     <SoteCon>
-      <SubLayout kTitle={'디저트39 전국 매장 찾기'} eTitle={'Store'} />
+      <SubLayout kTitle={'전국 매장 찾기'} eTitle={'Store'} />
       {Modal && <div className="ModalBg"><StoreModal/></div>}
       <div className="map-wrap">
         <article id="map" className="google-map" />
