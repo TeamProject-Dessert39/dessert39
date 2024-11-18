@@ -169,6 +169,7 @@ export const SoteCon = styled.div`
                     padding: 0 2.5%;
                     width: 100%;
                     padding-top: 20px;
+                    box-sizing: border-box;
                     p{
                         text-align: center;
                     }
@@ -229,21 +230,14 @@ export const SoteCon = styled.div`
             }
         }
     }
-    /* @media (max-width: 768px) {
-        .map-wrap {
-            .con {
-                width: 350px;
-            }
-        }
-    }
 
     @media (max-width: 480px) {
         .map-wrap {
-            .con {
-                width: 300px;
+            #map{
+                height: 350px;
             }
         }
-    } */
+    } 
 `;
 
 export const StoreItemCon = styled.li`
@@ -295,10 +289,11 @@ export const StoreItemCon = styled.li`
 export const SoteModalCon = styled.div`
     position: fixed;
     top: 0;
+    left: 0;
     background: rgba(0,0,0,0.5);
     z-index: 1500;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
     .modal{
         z-index: 110;
@@ -411,7 +406,7 @@ export const SoteModalCon = styled.div`
             }
         }
     }
-    @media (max-width : 850px) {
+    @media (min-width: 481px) and (max-width: 768px) {
         .modal{
             height: 550px;
             padding: 25px;
@@ -464,6 +459,51 @@ export const SoteModalCon = styled.div`
                 }
                 #modal-map{
                     height: 230px;
+                }
+            }
+        }
+    }
+    @media (max-width: 480px) {
+        .modal{
+            left: 50%;
+            top: 50%;
+            transform: unset;
+            height: 500px;
+            padding: 20px;
+            width: 95%;
+            position: fixed;
+            transform: translate(-50% , -50%);
+            .modal_header{
+                margin-bottom: 30px;
+                span{
+                    font-size: 20px;
+                }
+            }
+            .modal-body{
+                height: calc(100% - 55px);
+                img{
+                    height: 200px;
+                }
+                span{
+                    font-size: 16px;
+                }
+                ul{
+                    gap: 10px;
+                    li{
+                        margin-left: 0;
+                    }
+                }
+                .d-flex{
+                    font-size: 16px;
+                    strong{
+                        flex-basis: 20%;
+                    }
+                    p{
+                        flex-basis: 80%;
+                    }
+                }
+                #modal-map{
+                    height: 200px;
                 }
             }
         }

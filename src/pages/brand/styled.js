@@ -129,4 +129,35 @@ export const IntroCon = styled.div`
             }
         }
     }
+    @media (max-width : 480px) {
+        section{
+            .section-wrap{
+                padding: 25px;
+                h3{
+                    font-size: 30px;
+                    margin-top: 15px;
+                }
+                .text-wrap{
+                    height: 65%;
+                    strong{
+                        font-size: 22px;
+                        margin-bottom: 15px;
+                    }
+                    p{
+                        letter-spacing: -1.5px;
+                        font-size: 14px;
+                    }
+                    .introbtn{
+                        display: flex;
+                        justify-content: start;
+                        gap: 15px;
+                        button{
+                            display: block;
+                        }
+                    }
+                }
+
+            }
+        }
+    }
 `
