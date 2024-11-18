@@ -22,9 +22,13 @@ export const Section11Container = styled.div`
             }
         }
         .box {
+            /* height: fit-content; */
             display: flex;
             gap: 40px;
             box-sizing: border-box;
+            justify-content: space-between;
+            align-items: stretch;
+            min-height: auto;
             .left {
                 width: 60%;
                 ul {
@@ -83,20 +87,18 @@ export const Section11Container = styled.div`
                 }
             }
             .right {
-                width: 40%;
                 position: relative;
+                width: 40%;
+                /* background-color: #ffb400; */
                 display: flex;
                 justify-content: flex-end;
                 .pic {
-                    /* position: sticky; */
                     width: 100%;
                     height: fit-content;
                     top: 0;
                     right: 0;
                     min-width: 300px;
                     transition: 0.5s;
-                    &.fixed {
-                    }
                     img {
                         position: absolute;
                         top: 0;

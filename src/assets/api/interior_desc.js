@@ -382,4 +382,29 @@ export default [
             },
         ],
     },
+    {
+        category: 'review',
+        list: [
+            {
+                id: 1,
+                store: '디저트39 김해대청계곡점',
+                url: 'https://teamproject-dessert39.github.io/dataCenter/images/franchise/interior_se06_img02.png',
+            },
+            {
+                id: 2,
+                store: '디저트39 창원유니시티점',
+                url: 'https://teamproject-dessert39.github.io/dataCenter/images/franchise/interior_se06_img03.png',
+            },
+            {
+                id: 3,
+                store: '디저트39 등촌역점',
+                url: 'https://teamproject-dessert39.github.io/dataCenter/images/franchise/interior_se06_img05.png',
+            },
+            {
+                id: 4,
+                store: '디저트39 월미도점',
+                url: 'https://teamproject-dessert39.github.io/dataCenter/images/franchise/interior_se06_img04.png',
+            },
+        ],
+    },
 ];

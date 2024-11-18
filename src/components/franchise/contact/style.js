@@ -232,6 +232,9 @@ export const ContactFormContainer = styled.section`
                     border: 1px solid #d4d5d8;
                     background-color: #fafafc;
                     font-family: 'Noto Sans KR', sans-serif;
+                    &::placeholder {
+                        color: #ccc;
+                    }
                 }
                 .radio {
                     display: flex;
@@ -381,6 +384,10 @@ export const ContactFormContainer = styled.section`
                 }
                 input {
                     width: calc(430px - 13px - 170px);
+                    letter-spacing: 0.5px;
+                    &::placeholder {
+                        font-size: 14px;
+                    }
                 }
             }
         }
@@ -454,6 +461,16 @@ export const ContactFormContainer = styled.section`
     .input_wrap04 {
         border-top: none;
         border-bottom: none;
+    }
+
+    .submit_btn {
+        width: fit-content;
+        margin: 0 auto;
+        padding-bottom: 100px;
+        & > button {
+            background-color: transparent;
+            border: none;
+        }
     }
 
     /* 반응형 */
@@ -547,7 +564,7 @@ export const ContactFormContainer = styled.section`
                         }
                     }
                     .precaution {
-                        width: 370px;
+                        width: 70%;
                     }
                 }
             }
@@ -722,6 +739,12 @@ export const ContactFormContainer = styled.section`
             align-items: flex-start;
             gap: 0;
             border-top: none;
+        }
+    }
+
+    @media (max-width: 980px) {
+        .submit_btn {
+            padding-bottom: 70px;
         }
     }
 
@@ -999,6 +1022,12 @@ export const ContactFormContainer = styled.section`
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 15px;
+            }
+        }
+
+        form {
+            .submit_btn {
+                padding-bottom: 50px;
             }
         }
     }

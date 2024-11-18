@@ -18,8 +18,6 @@ const WaveBtn = ({ txt, submit, white }) => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
 
-    console.log(white);
-
     return (
         <button type={`${submit ? 'submit' : 'button'}`} style={{ backgroundColor: 'transparent', border: 'none' }}>
             <WaveBtnWrap />

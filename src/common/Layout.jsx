@@ -11,26 +11,26 @@ const Layout = () => {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
-          window.removeEventListener('scroll', handleScroll); //clean up
+            window.removeEventListener('scroll', handleScroll); //clean up
         };
-      }, []);
-    
+    }, []);
+
     const handleScroll = () => {
         if (window.scrollY > 50) {
-            setScroll(true)
-        }else{
-            setScroll(false)
+            setScroll(true);
+        } else {
+            setScroll(false);
         }
-      };
-      
+    };
+
     return (
         <div className="wrap">
             <Header />
             <main className="main" style={{ padding: '100px 0 0 0' }}>
                 <Outlet />
                 <ul className={scroll ? 'fixed-btn on' : 'fixed-btn'}>
-                    <MainSideBtn/>
-                    <TopBtn/>
+                    <MainSideBtn />
+                    <TopBtn />
                 </ul>
             </main>
             <Footer />

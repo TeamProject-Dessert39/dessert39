@@ -1,4 +1,5 @@
 import interiorDesc from '../../../assets/api/interior_desc';
+import InteriorDetailPic from './InteriorDetailPic';
 import InteriorTitle from './InteriorTitle';
 import { InteriorDetailContainer } from './style';
 
@@ -25,9 +26,7 @@ const InteriorDetail = () => {
                         </div>
                         <div className={`pics ${i.img.length === 3 ? 'trd' : ''}`}>
                             {i.img.map((pic, idx) => (
-                                <div className="pic" key={idx}>
-                                    <img src={pic} alt={i.title + '사진'} />
-                                </div>
+                                <InteriorDetailPic key={idx} pic={pic} i={i} />
                             ))}
                         </div>
                     </div>
