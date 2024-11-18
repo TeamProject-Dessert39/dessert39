@@ -6,7 +6,7 @@ to { opacity: 1; }
 `;
 
 export const SliderButtonWrap = styled.div`
-    width:130px;
+    width: 130px;
     height: 50px;
     color: #ffffff;
     background-color: #d1d1d1;
@@ -20,7 +20,7 @@ export const SliderButtonWrap = styled.div`
     z-index: 2;
 
     button {
-        background-color:#d1d1d1;
+        background-color: #d1d1d1;
         color: #ffffff;
         border: none;
         font-size: 14px;
@@ -34,7 +34,7 @@ export const SliderButtonWrap = styled.div`
     .rightBtn {
         padding-left: 10px;
     }
-`
+`;
 
 export const ImageSliderWrap = styled.div`
     // ---------------------------------------------------------------------
@@ -89,7 +89,7 @@ export const ImageSliderWrap = styled.div`
         opacity: 1;
     }
     // ---------------------------------------------------------------------
-`
+`;
 
 export const TextBoxWrap = styled.div`
     position: absolute;
@@ -100,10 +100,11 @@ export const TextBoxWrap = styled.div`
     display: flow;
 
     // ImagesSlider.jsx에서 props로 받아와서 animation 처리
-    ${props => props.$animate && css`
-        animation: ${fadeIn} 0.5s ease-out;
-    `}
-
+    ${(props) =>
+        props.$animate &&
+        css`
+            animation: ${fadeIn} 0.5s ease-out;
+        `}
 
     h4 {
         position: relative;
@@ -131,5 +132,10 @@ export const TextBoxWrap = styled.div`
         position: absolute;
         top: 65%;
         left: 0%;
+
+        .firstImg {
+            width: 350px;
+            margin-top: 40px;
+        }
     }
-`
+`;

@@ -27,7 +27,7 @@ const Sub = () => {
 
     return (
         <SubContainer>
-            <SubMenu className="left">{renderMenuItems(['brand', 'menu'])}</SubMenu>
+            <SubMenu className="left">{renderMenuItems(['brand', 'menu', 'store'])}</SubMenu>
             <SubMenu className="right">{renderMenuItems(['community', 'franchise'])}</SubMenu>
         </SubContainer>
     );

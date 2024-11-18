@@ -88,12 +88,10 @@ const ImageSlider = () => {
                     },
                 }}
                 onSlideChange={handleSlideChange}
-                // autoplay={{ delay: 5000, disableOnInteraction: false }}
+                autoplay={{ delay: 5000, disableOnInteraction: false }}
                 loop={true}
                 onSwiper={(swiper) => (swiperRef.current = swiper)}
                 onActiveIndexChange={handleSlideChange}
-                // onSwiper={(swiper) => console.log(swiper)}
-                // onSlideChange={() => console.log('slide change')}
             >
                 {/* 이미지 리스트 생성 */}
                 {imgUrlArray.map((img, index) => (
@@ -118,6 +116,15 @@ const ImageSlider = () => {
                 <h3 style={{ color: color === 'white' ? 'white' : 'black' }}>{title}</h3>
                 <p style={{ color: color === 'white' ? 'white' : 'black' }}>{desc}</p>
                 <div className="btnWrap">
+                    {/* 첫 이미지일 때 버튼 활성화 */}
+                    {currentSlide === 1 && (
+                        <a href="https://play.google.com/store/apps/details?id=com.mandeum.dessert39&pli=1">
+                            <img
+                                className="firstImg"
+                                src="https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/mainBtn.png?raw=true"
+                            ></img>
+                        </a>
+                    )}
                     {mainDesc[currentSlide - 1].button && (
                         <MainReadMore linkUrl={mainDesc[currentSlide - 1].buttonUrl} circleBg={'#a9af91'} bg={color} />
                     )}

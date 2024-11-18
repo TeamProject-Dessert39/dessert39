@@ -5,7 +5,7 @@ export const Inner = styled.div`
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
-`
+`;
 
 export const BiWrap = styled.div`
     position: relative;
@@ -175,7 +175,7 @@ export const BiWrap = styled.div`
             }
         }
     }
-`
+`;
 
 export const HQWrap = styled.div`
     box-sizing: border-box;
@@ -185,7 +185,6 @@ export const HQWrap = styled.div`
     }
 
     .cover {
-
         .bg {
             width: 100%;
             height: 260px;
@@ -271,4 +270,104 @@ export const HQWrap = styled.div`
             }
         }
     }
-`
+`;
+
+export const LocationWrap = styled.div`
+    padding-top: 120px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .topBox {
+        display: flex;
+        align-items: center;
+
+        .title {
+            font-size: 45px;
+            margin-right: 120px;
+            z-index: 1;
+            position: relative;
+            letter-spacing: -2px;
+            font-weight: 700;
+            line-height: 1.4;
+            text-align: center;
+
+            span {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    z-index: -1;
+                    position: absolute;
+                    left: 0;
+                    bottom: 5px;
+                    display: block;
+                    width: 100%;
+                    height: 20%;
+                    background-color: #c0c0c0;
+                    -webkit-transform: scaleX(1.03);
+                    transform: scaleX(1.03);
+                    opacity: 0.3;
+                }
+            }
+        }
+
+        .contactList {
+            display: flex;
+
+            .contactWrap {
+                margin-left: 50px;
+                display: flex;
+                align-items: center;
+
+                :nth-child(1) {
+                    margin-left: 0;
+                }
+
+                .icon {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 55px;
+                    height: 55px;
+                    background-color: #dfdfdf;
+                    border-radius: 50%;
+                    margin-right: 15px;
+
+                    img {
+                        width: 60%;
+                    }
+                }
+
+                .txtBox {
+                    h3 {
+                        font-size: 30px;
+                        letter-spacing: -0.025em;
+                        margin-bottom: 8px;
+                        font-weight: 600;
+                        font-family: 'Lexend Deca', sans-serif;
+                    }
+
+                    p {
+                        font-size: 18px;
+                        letter-spacing: -0.025em;
+                        line-height: 1.3;
+                    }
+                }
+
+                a {
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+`;
+
+export const MapWrap = styled.div`
+    width: 100%;
+    margin-top: 50px;
+    height: 470px;
+`;

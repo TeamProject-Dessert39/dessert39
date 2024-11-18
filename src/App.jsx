@@ -17,15 +17,22 @@ import {
     AllianceSupplier,
     AllianceSupplier2,
     AllianceSupplier3,
+    Information,
+    Notice,
+    EventStore,
+    Register,
 } from './pages';
 import Dessert from './pages/menu/Dessert';
 import Store from './pages/store';
 import Mainintro from './pages/brand/MainIntro';
+import { EventstoreDetail, InformationDetail, NoticeDetail } from './components';
+import ScrollToTop from './common/scrolltop';
 
 const App = () => {
     return (
         <>
             <BrowserRouter>
+                <ScrollToTop />
                 <Routes>
                     <Route path="/intro" element={<Mainintro />} />
                     <Route path="/" element={<Layout />}>
@@ -57,6 +64,24 @@ const App = () => {
                                 <Route path="allianceSupplier3" element={<AllianceSupplier3 />} />
                             </Route>
                         </Route>
+
+                        {/* community */}
+                        <Route path="/community">
+                            <Route path="information">
+                                <Route index element={<Information />} />
+                                <Route path=":informationID" element={<InformationDetail />} />
+                            </Route>
+                            <Route path="notice">
+                                <Route index element={<Notice />} />
+                                <Route path=":noticeID" element={<NoticeDetail />} />
+                            </Route>
+                            <Route path="eventstore">
+                                <Route index element={<EventStore />} />
+                                <Route path=":eventstoreID" element={<EventstoreDetail />} />
+                            </Route>
+                            <Route path="register" element={<Register />} />
+                        </Route>
+                        {/* community end */}
 
                         {/* store */}
                         <Route path="/store">

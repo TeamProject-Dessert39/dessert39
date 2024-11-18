@@ -51,7 +51,7 @@ const EcoStroyPhotoSlice = () => {
             >
                 {mainEcoStory.map((item, index) => (
                     <SwiperSlide key={item.id}>
-                        <LinkWrapper href="https://dessert39.com/html/pages/competitiveness.php">
+                        <LinkWrapper href="/franchise/competitive">
                             <div className="swiper-slide-content">
                                 <h2 dangerouslySetInnerHTML={{ __html: item.main }} />
                                 <h3 dangerouslySetInnerHTML={{ __html: item.sub }} />
