@@ -14,9 +14,9 @@ import SubLayout from "../../common/sub/SubLayout";
 const Dessert = () => {
     const location = useLocation();
     const scrollRefs = useRef([]);
-    const dispatch = useDispatch();
-
     const { productItem, newMenuItem, clickMenuItem, Modal } = useSelector(state => state.menu || {});
+    
+    const dispatch = useDispatch();
     const getData = location.pathname.replace(/\/menu\//g, '');
     
     useEffect(() => {

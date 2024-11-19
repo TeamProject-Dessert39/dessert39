@@ -266,8 +266,113 @@ export const HQWrap = styled.div`
                         line-height: 1.4;
                     }
 
+                    .topline-mo{
+                        display: none;
+                    }
+
                     .rightTxt2 {
                         line-height: 1.4;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width : 1024px) {
+        .cover {
+            .bg{
+                height: 220px;
+            }
+            .txtWrap{
+                margin-top: -70px;
+                h3{
+                    font-size: 36px;
+                    margin-bottom: 40px;
+                }
+                .titleBox{
+                    margin-bottom: 25px;
+                    p{
+                        font-size: 20px;
+                    }
+                }
+                .descBox{
+                    br{
+                        display: none;
+                    }
+                    font-size: 15px;
+                    .rightTxt{
+                        .rightTxt1{
+                            margin-bottom: 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width : 850px) {
+        .cover {
+            .bg{
+                height: 180px;
+            }
+            .txtWrap{
+                margin-top: -60px;
+                h3{
+                    font-size: 32px;
+                }
+                .titleBox{
+                    margin-bottom: 25px;
+                }
+                .descBox{
+                    font-size: 15px;
+                    .rightTxt{
+                        .rightTxt1{
+                            margin-bottom: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width : 600px) {
+        .cover {
+            .bg{
+                height: 150px;
+            }
+            .txtWrap{
+                margin-top: -50px;
+                h3{
+                    font-size: 28px;
+                    margin-bottom: 30px;
+                }
+                .titleBox{
+                    margin-bottom: 20px;
+                    p{
+                        font-size: 18px;
+                        width: 100px;
+                    }
+                    .line{
+                        display: none;
+                    }
+                }
+                .descBox{
+                    flex-direction: column;
+                    gap: 20px;
+                    .leftTxt{
+                        width: 100%;
+                    }
+                    .rightTxt{
+                        .topline-mo{
+                            display: block;
+                            width: 55px;
+                            height: 2px;
+                            background-color: #bad6f8;
+                            margin-top: 20px;
+                            margin-bottom: 20px;
+                        }
+                        width: 100%;
+                        .rightTxt1{
+                            margin-bottom: 20px;
+                        }
                     }
                 }
             }
