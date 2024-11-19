@@ -42,6 +42,7 @@ const StoreInterior = () => {
 
     return (
         <StoreInteriorWrap>
+            <div className="mo">Store Interior</div>
             <LeftSide>
                 <Swiper
                     modules={[Autoplay, Navigation, EffectFade]}
@@ -72,7 +73,7 @@ const StoreInterior = () => {
             </LeftSide>
             <RightSide>
                 <TitleWrap>Store Interior</TitleWrap>
-                <ReadMore linkUrl={'/franchise/interior'} txt={'READ MORE'} circle={true} />
+                <ReadMore className="mo" linkUrl={'/franchise/interior'} txt={'READ MORE'} circle={true} />
                 <div className="silderInfo">
                     <ControllBox>
                         <button onClick={handlePrev}>

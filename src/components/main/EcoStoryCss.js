@@ -65,13 +65,17 @@ export const ContentWrap = styled.ul`
 
         .ecoTab {
             display: flex;
+            width: 100%;
+            height: auto;
+            justify-content: space-between;
+            align-items: center;
 
             .ecoSlider {
                 margin: 10px;
                 border-radius: 70px 0 0 0;
                 background-color: #412a0a;
                 position: relative;
-                width: 80%;
+                width: 500px;
                 height: 550px;
 
                 .ecoTitle {
@@ -92,6 +96,11 @@ export const ContentWrap = styled.ul`
             flex-direction: column;
             justify-content: center;
             position: relative; // 추가
+
+            @media (max-width: 1024px) {
+                height: 600px;
+                width: 400px;
+            }
         
             img {
                 width: 60px;
@@ -120,6 +129,12 @@ export const ContentWrap = styled.ul`
                 border-radius: 70px 0 0 0;
                 width: 100%; // 추가
                 height: auto; // 추가
+            }
+            a {
+                img {
+                    width: 100%;
+                    height: 100%
+                }
             }
         }
     }

@@ -15,6 +15,10 @@ export const NewStoreLeft = styled.div`
     padding: 20px 0 20px 250px;
     font-family: 'Lexend Deca', sans-serif;
 
+    @media (max-width: 1024px) {
+        padding: 20px 0 20px 20px;
+    }
+
     span {
         font-weight: 700;
     }

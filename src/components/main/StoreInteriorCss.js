@@ -6,11 +6,26 @@ export const StoreInteriorWrap = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 1024px) {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .mo {
+        font-size: 60px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        font-family: 'Lexend Deca', sans-serif;
+        display: none;
+        @media (max-width: 1024px) {
+            display: block;
+        }
+    }
+
     .swiper {
         display: flex;
         width: 540px;
         height: 540px;
-        overflow: visible;
     }
 
     .swiper-slide img {
@@ -27,11 +42,25 @@ export const TitleWrap = styled.div`
     font-weight: 600;
     margin-bottom: 30px;
     font-family: 'Lexend Deca', sans-serif;
+    display: block;
+
+    @media (max-width: 1024px) {
+        display: none;
+    }
+
+    @media (max-width: 1024px) {
+        text-align: center;
+        margin-bottom: 70px;
+    }
 `;
 
 export const LeftSide = styled.div`
     width: 540px;
     margin: 0 180px 0 0;
+
+    @media (max-width: 1024px) {
+        margin: 0;
+    }
 
     .inner {
         width: 100%;
@@ -46,6 +75,10 @@ export const RightSide = styled.div`
     flex-direction: column;
     justify-content: center;
 
+    @media (max-width: 1024px) {
+        padding-top: 40px;
+    }
+
     .silderInfo {
         display: flex;
         justify-content: space-between;
@@ -57,6 +90,10 @@ export const RightSide = styled.div`
             height: 210px;
             margin: 0 150px 0 0;
         }
+    }
+
+    .mo {
+        margin-top: 40px;
     }
 `;
 
