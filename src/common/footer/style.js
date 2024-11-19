@@ -14,7 +14,6 @@ export const FooterWrap = styled.footer`
         font-family: 'Lexend Deca', sans-serif;
     }
 
-
     .inner {
         width: 95%;
         height: 300px;
@@ -70,24 +69,27 @@ export const FooterWrap = styled.footer`
             }
         }
     }
-`
+`;
 
 export const LogoTabWrap = styled.div`
     img {
         width: 150px;
         height: 20px;
     }
-
-`
+`;
 
 export const InfoWrap = styled.div`
     width: 70%;
+
+    @media (max-width: 1440px) {
+        width: 60%;
+    }
 
     ul {
         margin-left: 70px;
 
         @media (max-width: 1440px) {
-            width: 100%;
+            //width: 100%;
         }
 
         @media (max-width: 1024px) {
@@ -105,6 +107,10 @@ export const InfoWrap = styled.div`
             margin-bottom: 15px;
             display: flex;
             width: 700px;
+
+            @media (max-width: 1440px) {
+                width: 100%;
+            }
 
             @media (max-width: 1024px) {
                 font-size: 15px;
@@ -187,10 +193,10 @@ export const InfoWrap = styled.div`
             }
         }
     }
-`
+`;
 
 export const ContactWrap = styled.div`
-	float: right;
+    float: right;
     display: flex;
     flex-direction: column;
     width: 16%;
@@ -198,8 +204,17 @@ export const ContactWrap = styled.div`
     position: relative;
     box-sizing: border-box;
 
+    @media (max-width: 1440px) {
+        display: block;
+        float: right;
+        width: 26%;
+        justify-items: right;
+        position: relative;
+        box-sizing: border-box;
+    }
+
     @media (max-width: 1024px) {
-        width: 23%;
+        width: 25%;
     }
 
     @keyframes moveArrow {
@@ -262,7 +277,7 @@ export const ContactWrap = styled.div`
             @media (max-width: 1024px) {
                 float: left;
                 margin-left: -10px;
-        }
+            }
 
             li {
                 padding: 0 10px 0 10px;
@@ -291,7 +306,7 @@ export const ContactWrap = styled.div`
         @media (max-width: 1024px) {
             text-align: left;
         }
-        
+
         h4 {
             font-family: 'Lexend Deca', sans-serif;
         }
@@ -311,6 +326,4 @@ export const ContactWrap = styled.div`
             }
         }
     }
-`
-
-
+`;

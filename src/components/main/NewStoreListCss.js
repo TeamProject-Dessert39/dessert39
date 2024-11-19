@@ -5,7 +5,7 @@ export const NewStoreListWrap = styled.div`
     color: white;
     display: flex;
     margin: 0 0 100px 0;
-`
+`;
 
 export const NewStoreLeft = styled.div`
     line-height: 100%;
@@ -15,19 +15,34 @@ export const NewStoreLeft = styled.div`
     padding: 20px 0 20px 250px;
     font-family: 'Lexend Deca', sans-serif;
 
+    @media (max-width: 1440px) {
+        padding: 20px 0 20px 20px;
+        width: 20%;
+    }
+
     @media (max-width: 1024px) {
         padding: 20px 0 20px 20px;
+        width: 26%;
+        font-size: 30px;
     }
 
     span {
         font-weight: 700;
     }
-`
+`;
 
 export const NewStoreRight = styled.div`
     width: 65%;
     height: 100%;
     font-size: 18px;
+
+    @media (max-width: 1440px) {
+        width: 76%;
+    }
+
+    @media (max-width: 1024px) {
+        width: 70%;
+    }
 
     span {
         font-weight: 700;
@@ -37,7 +52,7 @@ export const NewStoreRight = styled.div`
         height: 35%;
         padding: 20px 0 10px 0;
     }
-`
+`;
 
 export const NewStoreSliderWrap = styled.div`
     width: 100%;
@@ -69,4 +84,4 @@ export const NewStoreSliderWrap = styled.div`
         text-overflow: ellipsis;
         max-width: 150px; // 최대 너비 설정, 필요에 따라 조정
     }
-`
+`;

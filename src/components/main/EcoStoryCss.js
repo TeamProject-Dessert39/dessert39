@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export const EcoStoryWrap = styled.div``
+export const EcoStoryWrap = styled.div``;
 
 export const TitleWrap = styled.div`
     font-size: 60px;
     font-weight: 600;
     text-align: center;
     font-family: 'Lexend Deca', sans-serif;
-`
+`;
 
 export const TabWrap = styled.div`
     ul {
@@ -27,18 +27,18 @@ export const TabWrap = styled.div`
         cursor: pointer;
         transition: 0.5s;
 
-    &:hover, &.on {
-        background-color: black;
-        color: white;
-    }
+        &:hover,
+        &.on {
+            background-color: black;
+            color: white;
+        }
 
-    a {
-        text-decoration: none;
-        color: inherit;
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
     }
-}
-
-`
+`;
 
 export const ContentWrap = styled.ul`
     display: flex;
@@ -54,7 +54,7 @@ export const ContentWrap = styled.ul`
         transition: 0.5s;
         display: none;
 
-         &.on {
+        &.on {
             display: block;
         }
 
@@ -79,11 +79,12 @@ export const ContentWrap = styled.ul`
                 height: 550px;
 
                 @media (max-width: 1440px) {
-                    width: 800px;
+                    width: 500px;
+                    height: 650px;
                 }
 
                 @media (max-width: 1024px) {
-                    width: 500px;
+                    width: 400px;
                 }
 
                 .ecoTitle {
@@ -114,7 +115,7 @@ export const ContentWrap = styled.ul`
                 height: 600px;
                 width: 300px;
             }
-        
+
             img {
                 width: 60px;
             }
@@ -146,12 +147,12 @@ export const ContentWrap = styled.ul`
             a {
                 img {
                     width: 100%;
-                    height: 100%
+                    height: 100%;
                 }
             }
         }
     }
-`
+`;
 
 export const RACListWrap = styled.div`
     div {
@@ -161,7 +162,7 @@ export const RACListWrap = styled.div`
             border-radius: 50%;
         }
     }
-`
+`;
 
 export const EcoImageSliderWrap = styled.div`
     // ---------------------------------------------------------------------
@@ -175,6 +176,10 @@ export const EcoImageSliderWrap = styled.div`
         width: 100%;
         height: 550px; // 높이 조정
         /* padding-bottom: 50px; */
+
+        @media (max-width: 1440px) {
+            height: 650px;
+        }
     }
 
     .swiper-slide {
@@ -193,6 +198,10 @@ export const EcoImageSliderWrap = styled.div`
         width: 50%;
         height: 50%;
         object-fit: contain;
+
+        @media (max-width: 1440px) {
+            top: 18%;
+        }
     }
 
     .swiper-slide-content {
@@ -205,7 +214,13 @@ export const EcoImageSliderWrap = styled.div`
         z-index: 10;
         padding: 20px 20px 20px 0;
 
-        h2 {font-size: 20px}
+        @media (max-width: 1440px) {
+            top: 70%;
+        }
+
+        h2 {
+            font-size: 20px;
+        }
         h3 {
             font-size: 16px;
             padding-top: 20px;
@@ -223,6 +238,10 @@ export const EcoImageSliderWrap = styled.div`
         align-items: center;
         width: auto !important;
         height: auto !important;
+
+        @media (max-width: 1440px) {
+            bottom: 7%;
+        }
     }
 
     .swiper-pagination-bullet {
@@ -243,4 +262,4 @@ export const EcoImageSliderWrap = styled.div`
         opacity: 1;
     }
     // ---------------------------------------------------------------------
-`
+`;

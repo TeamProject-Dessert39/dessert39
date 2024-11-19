@@ -44,9 +44,16 @@ export const ImageSliderWrap = styled.div`
     // ---------------------------------------------------------------------
     // swiper
     .swiper {
-        padding-top: 100px;
         width: 100%;
         height: 850px;
+
+        @media (max-width: 1440px) {
+            padding-top: 100px;
+        }
+
+        @media (max-width: 1024px) {
+            padding-top: 0;
+        }
     }
 
     .swiper-slide {
@@ -148,7 +155,6 @@ export const TextBoxWrap = styled.div`
         margin: 200px 0 20px 0;
         font-family: 'Lexend Deca', sans-serif;
 
-        
         @media (max-width: 1024px) {
             font-size: 13px;
             margin-bottom: 7px;
@@ -195,7 +201,6 @@ export const TextBoxWrap = styled.div`
             margin-top: 40px;
 
             @media (max-width: 1024px) {
-
             }
         }
     }
