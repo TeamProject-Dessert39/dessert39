@@ -9,10 +9,6 @@ import AlliancePopup01 from '../../../components/franchise/alliance/AlliancePopu
 const AlliancePurchasing = () => {
     const navigate = useNavigate();
 
-    /* 
-        확인 버튼 클릭시 문의가 접수되었습니다. alert 띄움
-    */
-
     return (
         <AlliancePurchasingContainer>
             <AllianceLayout ktit={'기업 및 단체 구매 문의'} />

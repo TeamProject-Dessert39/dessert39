@@ -117,7 +117,7 @@ const AllianceEntry = () => {
                                     </label>
                                 </div>
                                 <div className="right">
-                                    <input type="text" name="" id="email" onChange={changeInput} />
+                                    <input type="text" name="email" id="email" onChange={changeInput} placeholder="이메일을 입력해 주세요." />
                                 </div>
                             </div>
                         </div>

@@ -154,9 +154,9 @@ const AllianceSupplier2 = () => {
                             <span>[사업자등록증]</span>
                         </div>
                         <div className="right">
-                            <input type="text" name="b_num" id="part1" onChange={changeInput} />
-                            <input type="text" name="b_num" id="part2" onChange={changeInput} />
-                            <input type="text" name="b_num" id="part3" onChange={changeInput} />
+                            <input type="text" name="b_num" id="part1" onChange={changeInput} maxLength={3} />
+                            <input type="text" name="b_num" id="part2" onChange={changeInput} maxLength={2} />
+                            <input type="text" name="b_num" id="part3" onChange={changeInput} maxLength={5} />
                         </div>
                     </section>
                 </form>

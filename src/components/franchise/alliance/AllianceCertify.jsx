@@ -2,7 +2,7 @@ import { IoCloseSharp } from 'react-icons/io5';
 import { AllianceCertifyContainer } from './style';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCertifyNumber, insertCertify, onCertify } from '../../../store/modules/allianceEntrySlice';
+import { getCertifyNumber, insertCertify, onCertify, resetCertifyNum } from '../../../store/modules/allianceEntrySlice';
 
 const AllianceCertify = ({ setIsPopup, active }) => {
     const [formCertify, setFormCertify] = useState({
@@ -89,6 +89,7 @@ const AllianceCertify = ({ setIsPopup, active }) => {
                                             <option value="알뜰폰 SKT">알뜰폰 SKT</option>
                                             <option value="알뜰폰 KT">알뜰폰 KT</option>
                                             <option value="알뜰폰 LG U+">알뜰폰 LG U+</option>
+                                            <option value="헬로모바일">헬로모바일</option>
                                         </select>
                                         <select onChange={changeInput} name="part1" id="part1" value={formCertify.certify_phone.part1}>
                                             <option value="">선택</option>
@@ -151,6 +152,7 @@ const AllianceCertify = ({ setIsPopup, active }) => {
                                     },
                                 });
                                 setIsPopup(false);
+                                dispatch(resetCertifyNum());
                             }}
                             className="prev"
                             type="button">

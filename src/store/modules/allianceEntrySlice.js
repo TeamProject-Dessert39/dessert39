@@ -110,6 +110,9 @@ export const allianceEntrySlice = createSlice({
             state.b_name = state.certify.certify_name;
             state.b_phone = `${state.certify.certify_phone.part1}-${state.certify.certify_phone.part2}-${state.certify.certify_phone.part3}`;
         },
+        resetCertifyNum: (state, action) => {
+            state.certifyNum = '';
+        },
         onEmail: (state, action) => {
             state.b_email = action.payload;
             // console.log(state.b_email);
@@ -230,6 +233,7 @@ export const allianceEntrySlice = createSlice({
 });
 
 export const {
+    resetCertifyNum,
     resetState,
     onEmail,
     onSubmitReset,

@@ -2,7 +2,7 @@ import { IoCloseSharp } from 'react-icons/io5';
 import { AllianceCertifyContainer } from './style';
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCertifyNumber, insertCertify, onCertify } from '../../../store/modules/allianceSupplierSlice';
+import { getCertifyNumber, insertCertify, onCertify, resetCertifyNum } from '../../../store/modules/allianceSupplierSlice';
 
 const AllianceCertifySupplier = ({ setIsPopup, active }) => {
     const [formCertify, setFormCertify] = useState({
@@ -151,6 +151,7 @@ const AllianceCertifySupplier = ({ setIsPopup, active }) => {
                                     },
                                 });
                                 setIsPopup(false);
+                                dispatch(resetCertifyNum());
                             }}
                             className="prev"
                             type="button">

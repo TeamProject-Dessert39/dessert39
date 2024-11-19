@@ -58,20 +58,27 @@ const AllianceSupplier = () => {
                                 <img src="https://teamproject-dessert39.github.io/dataCenter/images/franchise/alliance_img05.svg" alt="협력 신청 내역 조회" />
                             </div>
                             <h3>협력 신청 내역 조회</h3>
-                            <div className="inp">
-                                <dl className="num">
-                                    <dt>사업자 번호</dt>
-                                    <dd>
-                                        <input onChange={changeInput} type="text" name="b_num" id="b_num" placeholder="- 없이 숫자만 입력해 주세요." />
-                                    </dd>
-                                </dl>
-                                <dl className="pw">
-                                    <dt>비밀번호</dt>
-                                    <dd>
-                                        <input onChange={changeInput} type="password" name="b_pw" id="b_pw" placeholder="비밀번호를 입력해 주세요." />
-                                    </dd>
-                                </dl>
-                            </div>
+                        </div>
+                        <div className="inp">
+                            <dl className="num">
+                                <dt>사업자 번호</dt>
+                                <dd>
+                                    <input
+                                        onChange={changeInput}
+                                        type="text"
+                                        name="b_num"
+                                        id="b_num"
+                                        placeholder="- 없이 숫자만 입력해 주세요."
+                                        maxLength={10}
+                                    />
+                                </dd>
+                            </dl>
+                            <dl className="pw">
+                                <dt>비밀번호</dt>
+                                <dd>
+                                    <input onChange={changeInput} type="password" name="b_pw" id="b_pw" placeholder="비밀번호를 입력해 주세요." />
+                                </dd>
+                            </dl>
                         </div>
                         <button onClick={() => dispatch(onDisabled(formState))} type="button">
                             조회하기

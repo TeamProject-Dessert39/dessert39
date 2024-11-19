@@ -1,5 +1,5 @@
 import AllianceTitle from './AllianceTitle';
-import { AllianceEntryFormContainer } from './style';
+import { AllianceEntryFormContainer } from './allianceEntryStyle';
 import { useEffect, useState } from 'react';
 import AllianceAddr from './AllianceAddr';
 import { IoMdCheckmark } from 'react-icons/io';
@@ -95,8 +95,6 @@ const AllianceEntryForm = () => {
         }
     }, [isSubmit]);
 
-    
-
     return (
         <AllianceEntryFormContainer>
             <AllianceTitle txt={'신규 입점 제의 상담 신청'} />
@@ -176,12 +174,16 @@ const AllianceEntryForm = () => {
                             </label>
                         </div>
                         <div className="right">
-                            <input type="text" name="area" id="area1" placeholder="토지면적을 입력해주세요." onChange={changeInput} />
-                            <p>평</p>
-                            <input type="text" name="area" id="area2" placeholder="전용면적을 입력해주세요." onChange={changeInput} />
-                            <p>
-                                평<span>[전용면적 : 건물 내 실 면적]</span>
-                            </p>
+                            <div className="box">
+                                <input type="text" name="area" id="area1" placeholder="토지면적을 입력해주세요." onChange={changeInput} />
+                                <p>평</p>
+                            </div>
+                            <div className="box">
+                                <input type="text" name="area" id="area2" placeholder="전용면적을 입력해주세요." onChange={changeInput} />
+                                <p>
+                                    평<span>[전용면적 : 건물 내 실 면적]</span>
+                                </p>
+                            </div>
                         </div>
                     </div>
 
@@ -192,18 +194,24 @@ const AllianceEntryForm = () => {
                             </label>
                         </div>
                         <div className="right">
-                            <input type="text" name="hope" id="hope1" placeholder="보증금을 입력해주세요." onChange={changeInput} />
-                            <p>만원</p>
-                            <input type="text" name="hope" id="hope2" placeholder="임대료을 입력해주세요." onChange={changeInput} />
-                            <p>만원</p>
-                            <input type="text" name="hope" id="hope3" placeholder="관리비를 입력해주세요." onChange={changeInput} />
-                            <p>만원</p>
+                            <div className="box">
+                                <input type="text" name="hope" id="hope1" placeholder="보증금을 입력해주세요." onChange={changeInput} />
+                                <p>만원</p>
+                            </div>
+                            <div className="box">
+                                <input type="text" name="hope" id="hope2" placeholder="임대료을 입력해주세요." onChange={changeInput} />
+                                <p>만원</p>
+                            </div>
+                            <div className="box">
+                                <input type="text" name="hope" id="hope3" placeholder="관리비를 입력해주세요." onChange={changeInput} />
+                                <p>만원</p>
+                            </div>
                         </div>
                     </div>
 
                     <div className="input_box etc">
                         <div className="left">
-                            <label className="req" htmlFor="hope">
+                            <label className="req" htmlFor="etc">
                                 기타 상세
                             </label>
                         </div>

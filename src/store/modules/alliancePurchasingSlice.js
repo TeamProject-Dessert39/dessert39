@@ -78,7 +78,7 @@ export const alliancePurchasingSlice = createSlice({
                 alert('회사명을 입력해 주세요.');
                 return;
             }
-            if (!state.info.b_number.part1 || !state.info.b_number.part2 || !state.info.b_number.part3) {
+            if (state.info.b_number.part1.replace(/\s+/g, "").length < 3 || state.info.b_number.part2.replace(/\s+/g, "").length < 2 || state.info.b_number.part3.replace(/\s+/g, "").length < 5) {
                 alert('사업자등록번호를 입력해 주세요.');
                 return;
             }
@@ -102,7 +102,7 @@ export const alliancePurchasingSlice = createSlice({
                 alert('담당자 이메일을 입력해 주세요.');
                 return;
             }
-            if (!state.info.phone.part1 || !state.info.phone.part2 || !state.info.phone.part3) {
+            if (state.info.phone.part1.replace(/\s+/g, "").length < 2 || state.info.phone.part2.replace(/\s+/g, "").length < 3 || state.info.phone.part3.replace(/\s+/g, "").length < 4) {
                 alert('담당자 연락처를 입력해 주세요.');
                 return;
             }
@@ -142,10 +142,6 @@ export const alliancePurchasingSlice = createSlice({
             }
             if (!state.question.num || state.question.num.trim() === '' || isNaN(Number(state.question.num))) {
                 alert('예상구매수량 - 숫자를 입력해 주세요.');
-                return;
-            }
-            if (1 > state.question.num) {
-                alert('예상구매금액 - 1 이상 입력해 주세요.');
                 return;
             }
             if (!state.question.date) {

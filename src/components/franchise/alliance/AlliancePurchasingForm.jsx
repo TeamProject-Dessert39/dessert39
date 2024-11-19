@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import AllianceTitle from './AllianceTitle';
-import { AlliancePurchasingFormContainer } from './style';
-import { FaPlus } from 'react-icons/fa';
+import { AlliancePurchasingFormContainer } from './alliancePurchasingStyle';
 import { MdLocalPostOffice } from 'react-icons/md';
 import { IoMdCheckmark } from 'react-icons/io';
 import { useDispatch, useSelector } from 'react-redux';
@@ -195,9 +194,9 @@ const AlliancePurchasingForm = () => {
                             <span>[사업자등록증]</span>
                         </div>
                         <div className="right">
-                            <input type="text" name="b_number" id="b_number01" onChange={changeInput} />
-                            <input type="text" name="b_number" id="b_number02" onChange={changeInput} />
-                            <input type="text" name="b_number" id="b_number03" onChange={changeInput} />
+                            <input type="text" name="b_number" id="b_number01" onChange={changeInput} maxLength={3} />
+                            <input type="text" name="b_number" id="b_number02" onChange={changeInput} maxLength={2} />
+                            <input type="text" name="b_number" id="b_number03" onChange={changeInput} maxLength={5} />
                         </div>
                     </div>
                     <div className="input_box name">

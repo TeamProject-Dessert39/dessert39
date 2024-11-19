@@ -109,7 +109,7 @@ const AllianceAddr = () => {
                     <FaMapMarkerAlt />
                     주소찾기
                 </button>
-                <input type="text" onChange={(e) => changeInput(e)} value={postcode} name="addr1" placeholder="우편번호" />
+                <input type="text" onChange={(e) => changeInput(e)} disabled value={postcode} name="addr1" placeholder="우편번호" />
             </div>
             <div
                 className="find"
@@ -136,7 +136,7 @@ const AllianceAddr = () => {
                 />
             </div>
             <div>
-                <input type="text" onChange={(e) => changeInput(e)} value={address} name="addr2" placeholder="주소" />
+                <input type="text" onChange={(e) => changeInput(e)} value={address} name="addr2" placeholder="주소" disabled />
             </div>
             <div>
                 <input

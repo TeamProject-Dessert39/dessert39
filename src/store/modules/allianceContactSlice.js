@@ -70,7 +70,7 @@ export const allianceContactSlice = createSlice({
                 alert('휴대번호를 선택해 주세요.');
                 return;
             }
-            if (!state.phone.input.part2) {
+            if (!state.phone.input.part2.replace(/\s+/g, "") || state.phone.input.part2.replace(/\s+/g, "").length < 8) {
                 alert('휴대번호를 입력해 주세요.');
                 return;
             }
@@ -79,7 +79,7 @@ export const allianceContactSlice = createSlice({
                 return;
             }
             // 휴대전화 확인 값 입력 확인
-            if (!state.phone.checkInput.part1 || !state.phone.checkInput.part2) {
+            if (!state.phone.checkInput.part1 || !state.phone.checkInput.part2.replace(/\s+/g, "") || state.phone.checkInput.part2.replace(/\s+/g, "").length < 8) {
                 alert('휴대전화 확인 - 휴대번호를 한번 더 입력해주세요.');
                 return;
             }

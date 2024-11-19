@@ -103,6 +103,9 @@ export const allianceSupplierSlice = createSlice({
             state.appli.b_name = state.appli.certify.certify_name;
             state.appli.b_phone = `${state.appli.certify.certify_phone.part1}-${state.appli.certify.certify_phone.part2}-${state.appli.certify.certify_phone.part3}`;
         },
+        resetCertifyNum: (state, action) => {
+            state.certifyNum = '';
+        },
         onEmail: (state, action) => {
             state.appli.b_email = action.payload;
             // console.log(state.appli.b_email);
@@ -162,6 +165,16 @@ export const allianceSupplierSlice = createSlice({
     },
 });
 
-export const { resetState, onDisabled, onEmail, onSubmitReset, insertCertify, getCertifyNumber, onCertify, onPersonalCheckSupplier, onSubmit } =
-    allianceSupplierSlice.actions;
+export const {
+    resetCertifyNum,
+    resetState,
+    onDisabled,
+    onEmail,
+    onSubmitReset,
+    insertCertify,
+    getCertifyNumber,
+    onCertify,
+    onPersonalCheckSupplier,
+    onSubmit,
+} = allianceSupplierSlice.actions;
 export default allianceSupplierSlice.reducer;

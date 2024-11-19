@@ -4,7 +4,7 @@ import { styled } from 'styled-components';
 export const AllianceSupplierContainer = styled.div`
     .inner {
         width: 95%;
-        padding: 100px 0;
+        padding: 100px 0 130px;
 
         .steps {
             width: 100%;
@@ -14,7 +14,10 @@ export const AllianceSupplierContainer = styled.div`
             li {
                 font-size: 18px;
                 height: 60px;
-                line-height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                /* line-height: 60px; */
                 text-align: center;
                 color: #c0c0c0;
                 &.on {
@@ -79,6 +82,7 @@ export const AllianceSupplierContainer = styled.div`
                         font-size: 17px;
                         letter-spacing: -0.5px;
                         line-height: 1.4;
+                        word-break: keep-all;
                     }
                 }
                 .inp {
@@ -111,6 +115,7 @@ export const AllianceSupplierContainer = styled.div`
                                 &::placeholder {
                                     color: #c0c0c0;
                                     font-size: 16px;
+                                    letter-spacing: -1px;
                                 }
                             }
                             & > input[type='password'] {
@@ -129,6 +134,7 @@ export const AllianceSupplierContainer = styled.div`
                     color: #fff;
                     border-radius: 5px;
                     letter-spacing: -1px;
+                    line-height: 40px;
                     border: none;
                     height: auto;
                     font-family: 'Noto Sans KR', sans-serif;
@@ -136,6 +142,189 @@ export const AllianceSupplierContainer = styled.div`
                     transition: 0.5s;
                     &:hover {
                         background-color: #505268;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1280px) {
+        .inner {
+            padding: 80px 0 130px;
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .inner {
+            .appli {
+                height: 415px;
+                li {
+                    padding: 40px;
+                    .txt {
+                        h3 {
+                            font-size: 28px;
+                        }
+                        p {
+                            font-size: 16px;
+                        }
+                    }
+
+                    .inp {
+                        dl {
+                            dt {
+                                font-size: 16px;
+                            }
+                            dd {
+                                font-size: 16px;
+                                & > input {
+                                    font-size: 16px;
+                                    &::placeholder {
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    button {
+                        font-size: 18px;
+                        padding: 6px 0;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .inner {
+            padding: 80px 0 100px;
+            .appli {
+                li {
+                    padding: 30px;
+                    height: 360px;
+                    .txt {
+                        h3 {
+                            margin-bottom: 40px;
+                        }
+                    }
+                    .inp {
+                        dl {
+                            height: 45px;
+                        }
+                    }
+                    button {
+                        padding: 2px 0;
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 850px) {
+        .inner {
+            padding: 60px 0 130px;
+        }
+    }
+
+    @media (max-width: 800px) {
+        .inner {
+            .appli {
+                flex-direction: column;
+                height: auto;
+                gap: 35px;
+                li {
+                    width: 100%;
+                    height: 330px;
+                    .txt {
+                        width: 50%;
+                        h3 {
+                            font-size: 24px;
+                            margin-bottom: 10px;
+                        }
+                        p {
+                            font-size: 15px;
+                        }
+                    }
+                    .inp {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .inner {
+            .steps {
+                li {
+                    font-size: 14px;
+                }
+            }
+
+            .appli {
+                gap: 30px;
+                li {
+                    height: auto;
+                    .txt {
+                        width: 70%;
+                        .pic {
+                            width: 35px;
+                        }
+                        h3 {
+                            font-size: 20px;
+                        }
+                        p {
+                            font-size: 14px;
+                        }
+                    }
+                    .inp {
+                    }
+                    button {
+                        font-size: 16px;
+                        height: 44px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .inner {
+            padding: 60px 0 80px;
+            .steps {
+                gap: 20px;
+                li {
+                    font-size: 13px;
+                }
+            }
+
+            .appli {
+                li {
+                    font-size: 13px;
+                    height: auto;
+                    .pic {
+                        width: 30px;
+                    }
+                    .txt {
+                        width: 100%;
+                        h3 {
+                            font-size: 18px;
+                        }
+                        p {
+                            width: 100%;
+                            font-size: 13px;
+                        }
+                    }
+                    .inp {
+                        dl {
+                            dt {
+                                font-size: 14px;
+                            }
+                            dd {
+                                font-size: 16px;
+                            }
+                        }
                     }
                 }
             }
@@ -156,9 +345,12 @@ export const AllianceSupplierContainer2 = styled.div`
             li {
                 font-size: 18px;
                 height: 60px;
-                line-height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 text-align: center;
                 color: #c0c0c0;
+                word-break: keep-all;
                 &.on {
                     position: relative;
                     color: #5c5c5c;
@@ -206,14 +398,14 @@ export const AllianceSupplierContainer2 = styled.div`
                 padding: 50px 0;
                 display: flex;
                 justify-content: center;
-                gap: 30px;
                 .l_box {
-                    width: 45%;
+                    width: 49%;
                     padding: 30px;
                     display: flex;
                     align-items: center;
                     gap: 30px;
                     border-right: 1px solid #e3e5e6;
+                    box-sizing: border-box;
                     .pic {
                         width: 120px;
                         height: 100px;
@@ -224,6 +416,7 @@ export const AllianceSupplierContainer2 = styled.div`
                     }
                     .txt {
                         width: 100%;
+                        box-sizing: border-box;
                         strong {
                             font-size: 18px;
                             font-weight: 700;
@@ -256,16 +449,19 @@ export const AllianceSupplierContainer2 = styled.div`
                     }
                 }
                 .r_box {
-                    width: 55%;
+                    padding-left: 30px;
+                    width: 51%;
                     display: flex;
                     flex-direction: column;
                     gap: 15px;
+                    box-sizing: border-box;
                     .input_box {
                         box-sizing: border-box;
                         display: flex;
                         align-items: center;
                         .left {
-                            width: 180px;
+                            width: 200px;
+                            box-sizing: border-box;
                             label {
                                 font-size: 20px;
                                 font-weight: 700;
@@ -289,6 +485,7 @@ export const AllianceSupplierContainer2 = styled.div`
                             display: flex;
                             align-items: center;
                             gap: 13px;
+                            box-sizing: border-box;
                             input {
                                 font-size: 16px;
                                 letter-spacing: -0.5px;
@@ -378,6 +575,7 @@ export const AllianceSupplierContainer2 = styled.div`
                 }
             }
         }
+
         .btns {
             margin-top: 80px;
             display: flex;
@@ -409,6 +607,350 @@ export const AllianceSupplierContainer2 = styled.div`
             }
         }
     }
+
+    @media (max-width: 1350px) {
+        .inner {
+            form {
+                .agreement {
+                    padding-top: 50px;
+                    h3 {
+                        font-size: 25px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .certify {
+                    .r_box {
+                        .input_box {
+                            .left {
+                                width: 160px;
+                                label {
+                                    font-size: 19px;
+                                }
+                            }
+                            .right {
+                                width: calc(100% - 160px);
+                            }
+                        }
+                    }
+                }
+
+                .num {
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1280px) {
+        .inner {
+            padding: 80px 0 100px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .inner {
+            padding: 80px 0 100px;
+            form {
+                .agreement {
+                    h3 {
+                        font-size: 23px;
+                    }
+                }
+
+                .certify {
+                    .l_box {
+                        .txt {
+                            strong {
+                                letter-spacing: -1px;
+                            }
+                            p {
+                                letter-spacing: -1px;
+                            }
+                            button {
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                    .r_box {
+                        .input_box {
+                            .left {
+                                width: 160px;
+                                label {
+                                    font-size: 18px;
+                                }
+                            }
+                            .right {
+                                width: calc(100% - 160px);
+                                input[type='text'] {
+                                    height: 45px;
+                                    font-size: 15px;
+                                    &::placeholder {
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 990px) {
+        .inner {
+            form {
+                .agreement {
+                    padding-top: 40px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 850px) {
+        .inner {
+            padding: 60px 0 100px;
+            form {
+                .certify {
+                    flex-direction: column;
+                    .l_box {
+                        width: 100%;
+                        border-right: none;
+                        border-bottom: 1px solid #e3e5e6;
+                    }
+                    .r_box {
+                        width: 100%;
+                        padding-left: 0;
+                        padding-top: 30px;
+                    }
+                }
+
+                .num {
+                    padding: 15px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    box-sizing: border-box;
+                    gap: 15px;
+                    .left {
+                        width: 100%;
+                        box-sizing: border-box;
+                        label {
+                            font-size: 18px;
+                        }
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+                    .right {
+                        width: 100%;
+                        box-sizing: border-box;
+                        gap: 15px;
+                        input {
+                            width: 33.3%;
+                        }
+                    }
+                }
+            }
+            .btns {
+                margin-top: 30px;
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .inner {
+            .steps {
+                li {
+                    font-size: 14px;
+                }
+            }
+
+            form {
+                .agreement {
+                    padding-top: 40px;
+                    margin-bottom: 40px;
+                    h3 {
+                        font-size: 20px;
+                        margin-bottom: 15px;
+                    }
+                }
+
+                .certify {
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .l_box {
+                        gap: 20px;
+                        text-align: center;
+                        padding: 0;
+                        flex-direction: column;
+                        width: 100%;
+                        align-items: center;
+                        border-right: none;
+                        border-bottom: none;
+                        .pic {
+                        }
+                        .txt {
+                            width: 100%;
+                            strong {
+                                letter-spacing: -0.5px;
+                            }
+                            p {
+                                letter-spacing: -0.5px;
+                            }
+                            button {
+                                margin-top: 20px;
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                    .r_box {
+                        width: 100%;
+                        padding-left: 0;
+                        padding-top: 0;
+                        .input_box {
+                            flex-direction: column;
+                            gap: 15px;
+                            .left {
+                                width: 100%;
+                                label {
+                                    font-size: 17px;
+                                }
+                            }
+                            .right {
+                                width: 100%;
+                                input[type='text'] {
+                                    height: 45px;
+                                    font-size: 15px;
+                                    padding: 0 10px;
+                                    &::placeholder {
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .num {
+                    padding: 15px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    box-sizing: border-box;
+                    gap: 10px;
+                    .left {
+                        width: 100%;
+                        box-sizing: border-box;
+                        label {
+                            font-size: 17px;
+                        }
+                        span {
+                            font-size: 16px;
+                        }
+                    }
+                    .right {
+                        width: 100%;
+                        box-sizing: border-box;
+                        gap: 10px;
+                        input {
+                            font-size: 15px;
+                            padding: 0 10px;
+                        }
+                    }
+                }
+            }
+            .btns {
+                margin-top: 40px;
+                button {
+                    width: 32%;
+                    height: 35px;
+                    font-size: 14px;
+                    border-radius: 40px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .inner {
+            .steps {
+                li {
+                    font-size: 13px;
+                }
+            }
+
+            form {
+                .agreement {
+                    padding-top: 50px;
+                    h3 {
+                        font-size: 18px;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .certify {
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .l_box {
+                        gap: 20px;
+                        text-align: center;
+                        padding: 0;
+                        flex-direction: column;
+                        width: 100%;
+                        align-items: center;
+                        border-right: none;
+                        border-bottom: none;
+                        .pic {
+                        }
+                        .txt {
+                            width: 100%;
+                            strong {
+                                font-size: 18px;
+                                letter-spacing: -0.5px;
+                            }
+                            p {
+                                font-size: 16px;
+                                letter-spacing: -0.5px;
+                            }
+                            button {
+                                margin-top: 20px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    .r_box {
+                        width: 100%;
+                        padding-left: 0;
+                        padding-top: 0;
+                        .input_box {
+                            flex-direction: column;
+                            gap: 15px;
+                            .left {
+                                width: 100%;
+                                label {
+                                    font-size: 18px;
+                                }
+                            }
+                            .right {
+                                width: 100%;
+                                input[type='text'] {
+                                    height: 45px;
+                                    font-size: 14px;
+                                    padding: 0 10px;
+                                    &::placeholder {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .btns {
+                margin-top: 30px;
+            }
+        }
+    }
 `;
 
 export const AllianceSupplierContainer3 = styled.div`
@@ -424,7 +966,9 @@ export const AllianceSupplierContainer3 = styled.div`
             li {
                 font-size: 18px;
                 height: 60px;
-                line-height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
                 text-align: center;
                 color: #c0c0c0;
                 &.on {
@@ -466,6 +1010,7 @@ export const AllianceSupplierContainer3 = styled.div`
             }
             p {
                 margin-top: 10px;
+                font-size: 18px;
             }
             button {
                 cursor: pointer;
@@ -490,6 +1035,128 @@ export const AllianceSupplierContainer3 = styled.div`
             }
         }
     }
+
+    @media (max-width: 1280px) {
+        .inner {
+            padding: 80px 0 100px;
+
+            .txt {
+                padding: 180px 0 100px;
+                text-align: center;
+                h3 {
+                    font-size: 28px;
+                    font-weight: 700;
+                }
+                p {
+                    margin-top: 10px;
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .inner {
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .inner {
+            padding: 80px 0 100px;
+
+            .txt {
+                padding: 180px 0 100px;
+                text-align: center;
+                h3 {
+                    font-size: 25px;
+                    font-weight: 700;
+                }
+                p {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 850px) {
+        .inner {
+            padding: 60px 0 80px;
+
+            .txt {
+                padding: 150px 0 100px;
+                text-align: center;
+                h3 {
+                    font-size: 23px;
+                    font-weight: 700;
+                }
+                p {
+                    margin-top: 8px;
+                    font-size: 16px;
+                }
+                button {
+                    margin-top: 40px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .inner {
+            .steps {
+                li {
+                    font-size: 14px;
+                }
+            }
+
+            .txt {
+                padding: 130px 0 80px;
+                text-align: center;
+                h3 {
+                    font-size: 20px;
+                    font-weight: 700;
+                }
+                p {
+                    margin-top: 6px;
+                    font-size: 15px;
+                }
+                button {
+                    cursor: pointer;
+                    margin-top: 30px;
+                    width: 120px;
+                    height: 40px;
+                    border-radius: 40px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .inner {
+            .steps {
+                li {
+                    font-size: 13px;
+                }
+            }
+
+            .txt {
+                padding: 110px 0 50px;
+                text-align: center;
+                h3 {
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                p {
+                    margin-top: 6px;
+                    font-size: 14px;
+                }
+                button {
+                    margin-top: 25px;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
 `;
 
 // AlliancePurchasing
@@ -506,6 +1173,12 @@ export const AlliancePurchasingContainer = styled.div`
                 letter-spacing: -0.5px;
                 padding-bottom: 20px;
             }
+        }
+    }
+
+    @media (max-width: 780px) {
+        .inner {
+            padding: 70px 0 100px;
         }
     }
 `;
@@ -559,7 +1232,6 @@ export const AllianceEntryContainer = styled.div`
                 padding: 40px 0;
                 display: flex;
                 justify-content: center;
-                gap: 20px;
                 .l_box {
                     width: 49%;
                     padding: 30px;
@@ -567,6 +1239,7 @@ export const AllianceEntryContainer = styled.div`
                     align-items: center;
                     gap: 30px;
                     border-right: 1px solid #e3e5e6;
+                    box-sizing: border-box;
                     .pic {
                         width: 100px;
                         height: 100px;
@@ -576,7 +1249,7 @@ export const AllianceEntryContainer = styled.div`
                         }
                     }
                     .txt {
-                        width: 100%;
+                        width: calc(100% - 100px);
                         strong {
                             font-size: 18px;
                             font-weight: 700;
@@ -585,6 +1258,7 @@ export const AllianceEntryContainer = styled.div`
                         p {
                             font-size: 16px;
                             letter-spacing: -0.5px;
+                            word-break: keep-all;
                         }
                         button {
                             font-family: 'Noto Sans KR', sans-serif;
@@ -612,6 +1286,8 @@ export const AllianceEntryContainer = styled.div`
                     display: flex;
                     flex-direction: column;
                     gap: 15px;
+                    padding-left: 30px;
+                    box-sizing: border-box;
                     .input_box {
                         box-sizing: border-box;
                         display: flex;
@@ -716,6 +1392,7 @@ export const AllianceEntryContainer = styled.div`
                     font-size: 16px;
                     padding: 1px 6px;
                     transition: 0.5s;
+                    box-sizing: border-box;
                     &.sure,
                     &.prev:hover {
                         background-color: #1c1c1c;
@@ -724,6 +1401,281 @@ export const AllianceEntryContainer = styled.div`
                     &.sure:hover {
                         box-shadow: -2px 2px 8px #00000066;
                     }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1350px) {
+        .inner {
+            form {
+                & > h3 {
+                    font-size: 25px;
+                }
+
+                .certify {
+                    .r_box {
+                        .input_box {
+                            .left {
+                                width: 160px;
+                                label {
+                                    font-size: 19px;
+                                }
+                            }
+                            .right {
+                                width: calc(100% - 160px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 1280px) {
+        .inner {
+            padding: 80px 0 100px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .inner {
+            padding: 80px 0 100px;
+            form {
+                & > h3 {
+                    font-size: 23px;
+                }
+
+                .certify {
+                    .l_box {
+                        .txt {
+                            strong {
+                                letter-spacing: -1px;
+                            }
+                            p {
+                                letter-spacing: -1px;
+                            }
+                            button {
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                    .r_box {
+                        .input_box {
+                            .left {
+                                width: 160px;
+                                label {
+                                    font-size: 18px;
+                                }
+                            }
+                            .right {
+                                width: calc(100% - 160px);
+                                input[type='text'] {
+                                    height: 45px;
+                                    font-size: 15px;
+                                    &::placeholder {
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 850px) {
+        .inner {
+            padding: 60px 0 100px;
+            form {
+                & > h3 {
+                    padding-bottom: 20px;
+                }
+
+                .certify {
+                    flex-direction: column;
+                    .l_box {
+                        width: 100%;
+                        border-right: none;
+                        border-bottom: 1px solid #e3e5e6;
+                    }
+                    .r_box {
+                        width: 100%;
+                        padding-left: 0;
+                        padding-top: 30px;
+                    }
+                }
+
+                .guide {
+                    p {
+                        font-size: 16px;
+                    }
+                }
+
+                .btns {
+                    margin-top: 60px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .inner {
+            form {
+                & > h3 {
+                    font-size: 20px;
+                    padding-bottom: 15px;
+                }
+
+                .agreement {
+                    margin-bottom: 45px;
+                }
+
+                .certify {
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .l_box {
+                        gap: 20px;
+                        text-align: center;
+                        padding: 0;
+                        flex-direction: column;
+                        width: 100%;
+                        align-items: center;
+                        border-right: none;
+                        border-bottom: none;
+                        .pic {
+                        }
+                        .txt {
+                            width: 100%;
+                            strong {
+                                letter-spacing: -0.5px;
+                            }
+                            p {
+                                letter-spacing: -0.5px;
+                            }
+                            button {
+                                margin-top: 20px;
+                                font-size: 17px;
+                            }
+                        }
+                    }
+                    .r_box {
+                        width: 100%;
+                        padding-left: 0;
+                        padding-top: 0;
+                        .input_box {
+                            flex-direction: column;
+                            gap: 15px;
+                            .left {
+                                width: 100%;
+                                label {
+                                    font-size: 17px;
+                                }
+                            }
+                            .right {
+                                width: 100%;
+                                input[type='text'] {
+                                    height: 45px;
+                                    font-size: 15px;
+                                    padding: 0 10px;
+                                    &::placeholder {
+                                        font-size: 15px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .guide {
+                    padding: 20px;
+                    p {
+                        line-height: 1.5;
+                    }
+                }
+
+                .btns {
+                    margin-top: 40px;
+                    button {
+                        width: 32%;
+                        height: 35px;
+                        font-size: 14px;
+                        border-radius: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        .inner {
+            form {
+                & > h3 {
+                    font-size: 18px;
+                }
+
+                .certify {
+                    flex-direction: column;
+                    gap: 20px;
+
+                    .l_box {
+                        gap: 20px;
+                        text-align: center;
+                        padding: 0;
+                        flex-direction: column;
+                        width: 100%;
+                        align-items: center;
+                        border-right: none;
+                        border-bottom: none;
+                        .pic {
+                        }
+                        .txt {
+                            width: 100%;
+                            strong {
+                                font-size: 18px;
+                                letter-spacing: -0.5px;
+                            }
+                            p {
+                                font-size: 16px;
+                                letter-spacing: -0.5px;
+                            }
+                            button {
+                                margin-top: 20px;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                    .r_box {
+                        width: 100%;
+                        padding-left: 0;
+                        padding-top: 0;
+                        .input_box {
+                            flex-direction: column;
+                            gap: 15px;
+                            .left {
+                                width: 100%;
+                                label {
+                                    font-size: 18px;
+                                }
+                            }
+                            .right {
+                                width: 100%;
+                                input[type='text'] {
+                                    height: 45px;
+                                    font-size: 14px;
+                                    padding: 0 10px;
+                                    &::placeholder {
+                                        font-size: 14px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .btns {
+                    margin-top: 30px;
                 }
             }
         }
