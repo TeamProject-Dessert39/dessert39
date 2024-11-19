@@ -26,12 +26,12 @@ const Layout = () => {
     return (
         <div className="wrap">
             <Header />
-            <main className="main" style={{ padding: '100px 0 0 0' }}>
+            <main className="main">
                 <Outlet />
                 <ul className={scroll ? 'fixed-btn on' : 'fixed-btn'}>
-                    <MainSideBtn title = {'STORE'}/>
-                    <MainSideBtn title = {'KAKAO'}/>
-                    <TopBtn/>
+                    <MainSideBtn title={'STORE'} />
+                    <MainSideBtn title={'KAKAO'} />
+                    <TopBtn />
                 </ul>
             </main>
             <Footer />

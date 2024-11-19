@@ -75,8 +75,16 @@ export const ContentWrap = styled.ul`
                 border-radius: 70px 0 0 0;
                 background-color: #412a0a;
                 position: relative;
-                width: 500px;
+                width: 1000px;
                 height: 550px;
+
+                @media (max-width: 1440px) {
+                    width: 800px;
+                }
+
+                @media (max-width: 1024px) {
+                    width: 500px;
+                }
 
                 .ecoTitle {
                     color: white;
@@ -97,9 +105,14 @@ export const ContentWrap = styled.ul`
             justify-content: center;
             position: relative; // 추가
 
-            @media (max-width: 1024px) {
+            @media (max-width: 1440px) {
                 height: 600px;
                 width: 400px;
+            }
+
+            @media (max-width: 1024px) {
+                height: 600px;
+                width: 300px;
             }
         
             img {

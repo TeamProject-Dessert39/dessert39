@@ -44,8 +44,8 @@ export const ImageSliderWrap = styled.div`
     // ---------------------------------------------------------------------
     // swiper
     .swiper {
+        padding-top: 100px;
         width: 100%;
-        /* height: 100%; // 원하는 높이 설정 */
         height: 850px;
     }
 
@@ -82,7 +82,7 @@ export const ImageSliderWrap = styled.div`
     .swiper-pagination {
         position: absolute;
         left: 96%; /* 오른쪽 여백 조정 */
-        top: 50%;
+        top: 56%;
         transform: translateY(-50%);
         display: flex;
         flex-direction: column;

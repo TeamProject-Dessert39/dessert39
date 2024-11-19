@@ -86,6 +86,10 @@ export const InfoWrap = styled.div`
     ul {
         margin-left: 70px;
 
+        @media (max-width: 1440px) {
+            width: 100%;
+        }
+
         @media (max-width: 1024px) {
             display: flex;
             align-items: flex-start;
