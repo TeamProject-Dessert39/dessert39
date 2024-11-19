@@ -9,6 +9,22 @@ export const SpecialWrap = styled.div`
         margin-bottom: 55px;
         letter-spacing: -0.075em;
 
+        @media (max-width: 480px) {
+            font-size: 24px;
+        }
+        /* 태블릿 스타일 */
+        @media (min-width: 481px) and (max-width: 768px) {
+            font-size: 28px;
+        }
+        /* 소형 데스크톱 스타일 */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            font-size: 32px;
+        }
+        /* 대형 데스크톱 스타일 */
+        @media (min-width: 1025px) {
+            font-size: 32px;
+        }
+
         b {
             font-weight: bold;
         }
@@ -19,6 +35,22 @@ export const SpecialWrap = styled.div`
         line-height: 1.5;
         letter-spacing: -0.05em;
         margin-bottom: 25px;
+
+        @media (max-width: 480px) {
+            font-size: 16px;
+        }
+        /* 태블릿 스타일 */
+        @media (min-width: 481px) and (max-width: 768px) {
+            font-size: 16px;
+        }
+        /* 소형 데스크톱 스타일 */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            font-size: 17px;
+        }
+        /* 대형 데스크톱 스타일 */
+        @media (min-width: 1025px) {
+            font-size: 18px;
+        }
     }
 
     .image-container {
@@ -34,6 +66,14 @@ export const SpecialWrap = styled.div`
             object-fit: cover;
             clip-path: inset(0 100% 0 0);
             transition: clip-path 1s ease;
+
+            @media (max-width: 480px) {
+                height: 260px;
+            }
+            /* 태블릿 스타일 */
+            @media (min-width: 481px) and (max-width: 768px) {
+                height: 320px;
+            }
         }
 
         &.visible {
@@ -44,5 +84,4 @@ export const SpecialWrap = styled.div`
             }
         }
     }
-`
-
+`;

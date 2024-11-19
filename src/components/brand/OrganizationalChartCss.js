@@ -34,5 +34,58 @@ export const HeadquartersWrap = styled.div`
             justify-content: center;
             gap: 100px;
         }
+
     }
+    @media (min-width: 769px) and (max-width: 1024px) {
+        padding-top: 80px;
+        .center{
+            h3{
+                font-size: 42px;
+            }
+            .partList{
+                gap: 50px;
+            }
+        }
+    }
+
+    @media (max-width: 850px) {
+        padding-top: 60px;
+        .center{
+            h3{
+
+            }
+            .desc{
+                font-size: 15px;
+                margin-bottom: 30px;
+            }
+            .partList{
+                gap : 20px
+            }
+        }
+    }
+
+    @media (max-width: 600px) {
+        .center{
+            h3{
+                font-size: 32px;
+            }
+        }
+    }
+
+    @media (max-width: 450px) {
+        .center{
+            h3{
+                font-size: 28px;
+                margin-bottom: 15px;
+                line-height: 120%;
+            }
+            .desc{
+                margin-bottom: 10px;
+            }
+            .partList{
+                gap : 10px
+            }
+        }
+    }
+
 `

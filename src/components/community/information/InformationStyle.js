@@ -107,6 +107,22 @@ export const EventDetailWrap = styled.section`
                 font-weight: 700;
                 color: #fff;
                 margin-bottom: 5px;
+
+                @media (max-width: 480px) {
+                    font-size: 16px;
+                }
+                /* 태블릿 스타일 */
+                @media (min-width: 481px) and (max-width: 768px) {
+                    font-size: 16px;
+                }
+                /* 소형 데스크톱 스타일 */
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    font-size: 18px;
+                }
+                /* 대형 데스크톱 스타일 */
+                @media (min-width: 1025px) {
+                    font-size: 20px;
+                }
             }
         }
         .etc {
