@@ -174,8 +174,7 @@ export const EcoImageSliderWrap = styled.div`
 
     .swiper {
         width: 100%;
-        height: 550px; // 높이 조정
-        /* padding-bottom: 50px; */
+        height: 550px;
 
         @media (max-width: 1440px) {
             height: 650px;
