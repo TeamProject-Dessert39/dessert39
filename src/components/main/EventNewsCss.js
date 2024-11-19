@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const EventNewsWrap = styled.div`
     padding: 100px 0;
-`
+`;
 
 export const TitleWrap = styled.div`
     font-size: 60px;
@@ -10,14 +10,21 @@ export const TitleWrap = styled.div`
     text-align: center;
     margin-bottom: 50px;
     font-family: 'Lexend Deca', sans-serif;
-`
+`;
 
 export const EventNewsSliderWrap = styled.div`
-
-.swiper {
+    .swiper {
         width: 100%;
         max-width: 1400px;
         margin: 0 auto;
+
+        @media (max-width: 1440px) {
+            width: 80%;
+        }
+
+        @media (max-width: 1024px) {
+            width: 90%;
+        }
     }
 
     .swiper-slide {
@@ -56,6 +63,11 @@ export const EventNewsSliderWrap = styled.div`
         display: block;
         margin: 0 auto;
         transition: 0.5s;
+
+        @media (max-width: 1024px) {
+            width: 210px;
+            height: 320px;
+        }
     }
 
     h2 {
@@ -84,6 +96,16 @@ export const EventNewsSliderWrap = styled.div`
         border-radius: 0 0 15px 15px;
         box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3); /* 그림자 추가 */
         box-sizing: border-box; /* 요소 크기 계산 방식 변경 (필요한 경우) */
+
+        h2 {
+            @media (max-width: 1024px) {
+                width: 210px;
+                height: 90px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
     }
 
     .swiper-pagination {
@@ -122,11 +144,11 @@ export const EventNewsSliderWrap = styled.div`
     }
 
     .swiper-button-prev {
-        left: 10%;
+        left: 0%;
     }
 
     .swiper-button-next {
-        right: 10%;
+        right: 0%;
     }
 
     .swiper-button-prev:after,
@@ -134,5 +156,4 @@ export const EventNewsSliderWrap = styled.div`
         font-size: 30px;
         color: black;
     }
-
-`
+`;

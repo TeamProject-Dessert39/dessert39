@@ -390,7 +390,7 @@ export const MobileNavWrap = styled.div`
     display: block;
     position: fixed;
     right: ${props => props.$isOpen ? '0px' : '-450px'};
-    top: 101px;
+    top: 100px;
     background-color: #FFF;
     width: 100%;
     max-width: 450px;
@@ -508,7 +508,7 @@ export const MobileNavWrap = styled.div`
 
 export const Overlay = styled.div`
     position: fixed;
-    top: 0;
+    top: 100px;
     left: 0;
     right: 0;
     bottom: 0;

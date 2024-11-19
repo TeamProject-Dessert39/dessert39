@@ -30,8 +30,24 @@ const EventNewsSlider = () => {
             <div className="swiper-container">
                 <Swiper
                     modules={[Navigation, Autoplay]}
-                    spaceBetween={0}
-                    slidesPerView={4}
+                    breakpoints={{
+                        1440: {
+                            slidesPerView: 3.5,
+                            spaceBetween: 40,
+                        },
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 25,
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 20,
+                        },
+                        480: {
+                            slidesPerView: 1.5,
+                            spaceBetween: 15,
+                        },
+                    }}
                     navigation={{
                         prevEl: prevRef.current,
                         nextEl: nextRef.current,

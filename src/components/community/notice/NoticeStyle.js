@@ -71,6 +71,22 @@ export const NoticeDetailWrap = styled.div`
                 font-weight: 700;
                 color: #fff;
                 margin-bottom: 5px;
+
+                @media (max-width: 480px) {
+                    font-size: 16px;
+                }
+                /* 태블릿 스타일 */
+                @media (min-width: 481px) and (max-width: 768px) {
+                    font-size: 16px;
+                }
+                /* 소형 데스크톱 스타일 */
+                @media (min-width: 769px) and (max-width: 1024px) {
+                    font-size: 18px;
+                }
+                /* 대형 데스크톱 스타일 */
+                @media (min-width: 1025px) {
+                    font-size: 20px;
+                }
             }
 
             .info {
@@ -86,8 +102,18 @@ export const NoticeDetailWrap = styled.div`
         }
 
         .img {
-            margin-top: 40px;
             text-align: center;
+            margin-top: 30px;
+            img {
+                width: 90%;
+                @media (max-width: 480px) {
+                    width: 80%;
+                }
+                /* 태블릿 스타일 */
+                @media (min-width: 481px) and (max-width: 768px) {
+                    width: 85%;
+                }
+            }
         }
         .titleDesc {
             padding: 25px;

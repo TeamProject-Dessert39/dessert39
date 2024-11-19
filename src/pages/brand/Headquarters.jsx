@@ -69,6 +69,7 @@ const Headquarters = () => {
                                             <br />
                                             이러한 관심이 모여 &#39;디저트&#39;라는 블루오션 시장의 새로운 개막을 알리고 있습니다.
                                         </div>
+                                        <div className="topline-mo"></div>
                                         <div className="rightTxt2">
                                             다양한 국가의 문화를 접할 수 있는 기회의 문턱이 낮아진 현재,
                                             <br />

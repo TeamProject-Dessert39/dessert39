@@ -19,6 +19,10 @@ export const SliderButtonWrap = styled.div`
     left: 5%;
     z-index: 2;
 
+    @media (max-width: 1024px) {
+        bottom: 19%;
+    }
+
     button {
         background-color: #d1d1d1;
         color: #ffffff;
@@ -41,8 +45,15 @@ export const ImageSliderWrap = styled.div`
     // swiper
     .swiper {
         width: 100%;
-        /* height: 100%; // 원하는 높이 설정 */
         height: 850px;
+
+        @media (max-width: 1440px) {
+            padding-top: 100px;
+        }
+
+        @media (max-width: 1024px) {
+            padding-top: 0;
+        }
     }
 
     .swiper-slide {
@@ -57,18 +68,39 @@ export const ImageSliderWrap = styled.div`
         width: 100%;
         height: 100%;
         object-fit: cover; // 이미지 비율을 유지하면서 컨테이너를 채움
+
+        @media screen and (max-width: 1024px) {
+            height: 70%;
+        }
+
+        @media screen and (max-width: 768px) {
+            width: 80vw;
+            height: 80vw;
+        }
+
+        @media screen and (max-width: 480px) {
+            width: 70vw;
+            height: 70vw;
+            border-top-left-radius: 30%;
+            border-top-right-radius: 30%;
+        }
     }
 
     .swiper-pagination {
         position: absolute;
         left: 96%; /* 오른쪽 여백 조정 */
-        top: 50%;
+        top: 56%;
         transform: translateY(-50%);
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 10px !important;
         height: 750px !important;
+
+        @media (max-width: 1024px) {
+            left: 96%;
+            top: 62%;
+        }
     }
 
     .swiper-pagination-bullet {
@@ -79,6 +111,12 @@ export const ImageSliderWrap = styled.div`
         overflow: hidden; /* 넘치는 텍스트 숨김 */
         background-color: #ffffff;
         opacity: 0.2;
+
+        @media (max-width: 1024px) {
+            margin: 4px 0 !important;
+            width: 6px !important;
+            height: 6px !important;
+        }
 
         &:hover {
             background-color: white;
@@ -99,6 +137,11 @@ export const TextBoxWrap = styled.div`
     height: 100%;
     display: flow;
 
+    @media (max-width: 1024px) {
+        top: 15%;
+        height: 70%;
+    }
+
     // ImagesSlider.jsx에서 props로 받아와서 animation 처리
     ${(props) =>
         props.$animate &&
@@ -111,6 +154,11 @@ export const TextBoxWrap = styled.div`
         z-index: 1;
         margin: 200px 0 20px 0;
         font-family: 'Lexend Deca', sans-serif;
+
+        @media (max-width: 1024px) {
+            font-size: 13px;
+            margin-bottom: 7px;
+        }
     }
 
     h3 {
@@ -118,6 +166,11 @@ export const TextBoxWrap = styled.div`
         z-index: 1;
         font-size: 50px;
         font-weight: 600;
+
+        @media (max-width: 1024px) {
+            font-size: 30px;
+            margin-bottom: 7px;
+        }
     }
 
     p {
@@ -126,6 +179,11 @@ export const TextBoxWrap = styled.div`
         font-size: 18px;
         font-weight: 600;
         margin: 20px 0 0 0;
+
+        @media (max-width: 1024px) {
+            font-size: 15px;
+            margin-top: 25px;
+        }
     }
 
     .btnWrap {
@@ -134,9 +192,16 @@ export const TextBoxWrap = styled.div`
         top: 65%;
         left: 0%;
 
+        @media (max-width: 1024px) {
+            top: 50%;
+        }
+
         .firstImg {
             width: 350px;
             margin-top: 40px;
+
+            @media (max-width: 1024px) {
+            }
         }
     }
 `;

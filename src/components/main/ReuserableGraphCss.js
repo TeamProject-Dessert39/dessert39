@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const ReuserableGraphWrap = styled.div``
+export const ReuserableGraphWrap = styled.div``;
 
 export const CenterCommentWrap = styled.div`
     padding-top: 100px;
@@ -14,9 +14,18 @@ export const CenterCommentWrap = styled.div`
     align-items: center;
     gap: 20px;
 
+    @media (max-width: 1024px) {
+        padding-top: 0;
+    }
+
     @keyframes fadeInOut {
-        0%, 100% { opacity: 0; }
-        50% { opacity: 1; }
+        0%,
+        100% {
+            opacity: 0;
+        }
+        50% {
+            opacity: 1;
+        }
     }
 
     .top {
@@ -40,13 +49,18 @@ export const CenterCommentWrap = styled.div`
         color: #05d2b2;
         font-weight: 600;
     }
-`
+`;
 
 export const GraphWrap = styled.div`
     display: flex;
     justify-content: center;
 
-`
+    .recharts-wrapper {
+        @media (max-width: 1024px) {
+            height: 500px !important;
+        }
+    }
+`;
 
 export const ChartTitleWrap = styled.div`
     text-align: center;
@@ -54,5 +68,4 @@ export const ChartTitleWrap = styled.div`
     font-size: 1.3rem;
     margin: 15px 0;
     font-weight: bold;
-
 `;
