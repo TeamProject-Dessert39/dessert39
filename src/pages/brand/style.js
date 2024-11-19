@@ -5,6 +5,8 @@ export const Inner = styled.div`
     margin: 0 auto;
     box-sizing: border-box;
     position: relative;
+    
+    padding: 0 20px;
 `;
 
 export const BiWrap = styled.div`

@@ -22,15 +22,32 @@ export const SupportWrap = styled.div`
         font-size: 20px;
         line-height: 1.5;
         letter-spacing: -0.05em;
+
+        @media (max-width: 480px) {
+            font-size: 17px;
+        }
+        /* 태블릿 스타일 */
+        @media (min-width: 481px) and (max-width: 768px) {
+            font-size: 17px;
+        }
+        /* 소형 데스크톱 스타일 */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            font-size: 18px;
+        }
+        /* 대형 데스크톱 스타일 */
+        @media (min-width: 1025px) {
+            font-size: 18px;
+        }
     }
-`
+`;
 
 export const ImgBoxWrap = styled.div`
     display: flex;
     justify-content: space-between;
     margin: 35px 0;
 
-    .frame1, .frame2 {
+    .frame1,
+    .frame2 {
         opacity: 0;
         transition: clip-path 1s, opacity 0.8s;
         transition: opacity 0.8s ease, transform 0.8s ease;
@@ -58,10 +75,9 @@ export const ImgBoxWrap = styled.div`
         margin-left: 50px;
         transition-delay: 0.3s;
     }
-`
+`;
 
 export const DetailWrap = styled.div`
-
     h4 {
         margin-bottom: 40px;
         display: flex;
@@ -84,11 +100,38 @@ export const DetailWrap = styled.div`
         display: flex;
         justify-content: space-between;
 
+        @media (max-width: 480px) {
+            flex-wrap: wrap;
+        }
+        /* 태블릿 스타일 */
+        @media (min-width: 481px) and (max-width: 768px) {
+            flex-wrap: wrap;
+        }
+        /* 소형 데스크톱 스타일 */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            flex-wrap: wrap;
+        }
+
         li {
             width: calc(25% - 60px / 4);
             opacity: 0;
             transform: translateY(20px);
             transition: opacity 0.5s, transform 0.5s;
+
+            @media (max-width: 480px) {
+                width: calc(50% - 10px);
+                margin-top: 20px;
+            }
+            /* 태블릿 스타일 */
+            @media (min-width: 481px) and (max-width: 768px) {
+                width: calc(50% - 10px);
+                margin-top: 20px;
+            }
+            /* 소형 데스크톱 스타일 */
+            @media (min-width: 769px) and (max-width: 1024px) {
+                width: calc(50% - 10px);
+                margin-top: 20px;
+            }
 
             &.visible {
                 opacity: 1;
@@ -101,9 +144,15 @@ export const DetailWrap = styled.div`
             }
         }
 
-        li:nth-child(2) {transition-delay: 0.2s;}
-        li:nth-child(3) {transition-delay: 0.4s;}
-        li:nth-child(4) {transition-delay: 0.6s;}
+        li:nth-child(2) {
+            transition-delay: 0.2s;
+        }
+        li:nth-child(3) {
+            transition-delay: 0.4s;
+        }
+        li:nth-child(4) {
+            transition-delay: 0.6s;
+        }
 
         .num {
             font-size: 22px;
@@ -116,6 +165,5 @@ export const DetailWrap = styled.div`
             letter-spacing: -0.05em;
             line-height: 1.4;
         }
-
     }
-`
+`;
