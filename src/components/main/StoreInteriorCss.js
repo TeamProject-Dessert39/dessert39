@@ -6,8 +6,14 @@ export const StoreInteriorWrap = styled.div`
     justify-content: center;
     align-items: center;
 
+    @media (max-width: 1440px) {
+        margin: 0 auto;
+        width: 95%;
+        justify-content: space-around;
+    }
+
     @media (max-width: 1024px) {
-        display:flex;
+        display: flex;
         flex-direction: column;
     }
 
@@ -26,6 +32,18 @@ export const StoreInteriorWrap = styled.div`
         display: flex;
         width: 540px;
         height: 540px;
+
+        @media (max-width: 1440px) {
+            width: 430px;
+            height: 430px;
+        }
+    }
+
+    .swiper-slide {
+        @media (max-width: 1440px) {
+            width: 430px !important;
+            height: 430px !important;
+        }
     }
 
     .swiper-slide img {
@@ -58,6 +76,12 @@ export const LeftSide = styled.div`
     width: 540px;
     margin: 0 180px 0 0;
 
+    @media (max-width: 1440px) {
+        width: 430px;
+        height: 430px;
+        margin: 0;
+    }
+
     @media (max-width: 1024px) {
         margin: 0;
     }
@@ -68,12 +92,16 @@ export const LeftSide = styled.div`
     }
 `;
 
-
 export const RightSide = styled.div`
     width: 540px;
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    @media (max-width: 1440px) {
+        width: 430px;
+        height: 430px;
+    }
 
     @media (max-width: 1024px) {
         padding-top: 40px;
@@ -89,6 +117,10 @@ export const RightSide = styled.div`
             width: 140px;
             height: 210px;
             margin: 0 150px 0 0;
+
+            @media (max-width: 1440px) {
+                margin: 0;
+            }
         }
     }
 
@@ -110,5 +142,4 @@ export const ControllBox = styled.div`
         font-size: 50px;
         line-height: 0;
     }
-`
-
+`;

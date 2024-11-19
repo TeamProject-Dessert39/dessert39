@@ -32,11 +32,11 @@ const EventNewsSlider = () => {
                     modules={[Navigation, Autoplay]}
                     breakpoints={{
                         1440: {
-                            slidesPerView: 4,
+                            slidesPerView: 3.5,
                             spaceBetween: 40,
                         },
                         1024: {
-                            slidesPerView: 3.5,
+                            slidesPerView: 3,
                             spaceBetween: 25,
                         },
                         768: {

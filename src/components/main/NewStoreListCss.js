@@ -17,7 +17,7 @@ export const NewStoreLeft = styled.div`
 
     @media (max-width: 1440px) {
         padding: 20px 0 20px 20px;
-        width: 20%;
+        width: 24%;
     }
 
     @media (max-width: 1024px) {
@@ -37,7 +37,7 @@ export const NewStoreRight = styled.div`
     font-size: 18px;
 
     @media (max-width: 1440px) {
-        width: 76%;
+        width: 73%;
     }
 
     @media (max-width: 1024px) {

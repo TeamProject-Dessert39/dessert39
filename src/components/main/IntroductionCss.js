@@ -25,7 +25,7 @@ export const IntroductionWrap = styled.div`
             padding: 0 0 20px 0;
         }
     }
-`
+`;
 
 export const TitleWrap = styled.div`
     padding: 20px 0 20px 0;
@@ -33,7 +33,7 @@ export const TitleWrap = styled.div`
     font-weight: 600;
     text-align: center;
     font-family: 'Lexend Deca', sans-serif;
-`
+`;
 
 export const LeftSide = styled.div`
     padding: 0 50px 0 50px;
@@ -53,12 +53,17 @@ export const LeftSide = styled.div`
         height: 400px;
         border-radius: 50px 5px 5px 5px;
 
+        @media (max-width: 1440px) {
+            width: 400px;
+            height: 310px;
+        }
+
         @media (max-width: 1024px) {
             width: 100%;
             height: 280px;
         }
     }
-`
+`;
 
 export const RightSide = styled.div`
     padding: 0 50px 0 50px;
@@ -77,9 +82,14 @@ export const RightSide = styled.div`
         height: 400px;
         border-radius: 5px 5px 50px 5px;
 
+        @media (max-width: 1440px) {
+            width: 400px;
+            height: 310px;
+        }
+
         @media (max-width: 1024px) {
             width: 100%;
             height: 280px;
         }
     }
-`
+`;

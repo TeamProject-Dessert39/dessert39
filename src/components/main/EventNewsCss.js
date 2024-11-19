@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const EventNewsWrap = styled.div`
     padding: 100px 0;
-`
+`;
 
 export const TitleWrap = styled.div`
     font-size: 60px;
@@ -10,14 +10,17 @@ export const TitleWrap = styled.div`
     text-align: center;
     margin-bottom: 50px;
     font-family: 'Lexend Deca', sans-serif;
-`
+`;
 
 export const EventNewsSliderWrap = styled.div`
-
-.swiper {
+    .swiper {
         width: 100%;
         max-width: 1400px;
         margin: 0 auto;
+
+        @media (max-width: 1440px) {
+            width: 80%;
+        }
 
         @media (max-width: 1024px) {
             width: 90%;
@@ -141,19 +144,11 @@ export const EventNewsSliderWrap = styled.div`
     }
 
     .swiper-button-prev {
-        left: 10%;
-
-        @media (max-width: 1024px) {
-            left: 0%;
-        }
+        left: 0%;
     }
 
     .swiper-button-next {
-        right: 10%;
-
-        @media (max-width: 1024px) {
-            right: 0%
-        }
+        right: 0%;
     }
 
     .swiper-button-prev:after,
@@ -161,5 +156,4 @@ export const EventNewsSliderWrap = styled.div`
         font-size: 30px;
         color: black;
     }
-
-`
+`;
