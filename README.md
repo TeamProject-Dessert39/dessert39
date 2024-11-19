@@ -17,7 +17,7 @@ dessert39 웹페이지를 보고 최대한 심플하고 간단한 로직을 통�
 ##  개발자 소개
 
 - 황인준 팀장 : Main page 및 Chart 라이브러리 컴포넌트, Swiper 컴포넌트 구현
-- 서유진 팀원 :
+- 서유진 팀원 : Franchise
 - 전규리 팀원 : Intro page , Menu , Store 페이지 구현
 - 허유정 팀원 :
 
@@ -84,8 +84,50 @@ dessert39 웹페이지를 보고 최대한 심플하고 간단한 로직을 통�
 
 <details><summary>Franchise
 </summary>
-*Write here!*
+
+- **Competitive page**
+
+디저트 39 프랜차이즈 창업에 대한 소개, 정보 제공
+
+![competitiveImg](https://teamproject-dessert39.github.io/dataCenter/images/ReadMe/Franchise/competitivePageImg.png)
+
+- **Interior page**
+
+디저트 39 매장 크기별 인테리어 소개
+
+![interiorImg](https://teamproject-dessert39.github.io/dataCenter/images/ReadMe/Franchise/interiorPageImg.png)
+
+- **Procedure page**
+
+디저트 39 가맹 절차 소개
+
+![processImg](https://teamproject-dessert39.github.io/dataCenter/images/ReadMe/Franchise/processPageImg.png)
+
+- **Contact page**
+
+디저트 39 가맹점 상담신청 문의 폼
+
+![contactImg](https://teamproject-dessert39.github.io/dataCenter/images/ReadMe/Franchise/contactPageImg.png)
+
+- **Alliance - Purchasing page**
+
+디저트 39 기업 및 단체 구매신청 문의 폼
+
+![purchasingImg](https://teamproject-dessert39.github.io/dataCenter/images/ReadMe/Franchise/purchasingPageImg.png)
+
+- **Alliance - Entry page**
+
+디저트 39 입점 제의 상담신청 문의 폼
+
+![entryImg](https://teamproject-dessert39.github.io/dataCenter/images/ReadMe/Franchise/entryPageImg.png)
+
+- **Alliance - Supplier page**
+
+디저트 39 협력사 신청 및 조회 폼
+
+![supplierImg](https://teamproject-dessert39.github.io/dataCenter/images/ReadMe/Franchise/supplierPageImg.png)
 </details>
+
 
 
 
