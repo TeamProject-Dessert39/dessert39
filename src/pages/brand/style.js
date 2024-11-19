@@ -14,6 +14,7 @@ export const BiWrap = styled.div`
     box-sizing: border-box;
 
     .center {
+        margin: 0 auto;
         width: 95%;
         max-width: 1440px;
     }
@@ -24,6 +25,7 @@ export const BiWrap = styled.div`
         gap: 75px;
 
         .left {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -50,8 +52,8 @@ export const BiWrap = styled.div`
 
             .point {
                 position: absolute;
-                top: 0;
-                left: 0;
+                top: -50px;
+                left: -75px;
                 width: 145px;
                 height: 530px;
                 background-image: url('https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/brand/orora_bg.png?raw=true');
@@ -61,7 +63,9 @@ export const BiWrap = styled.div`
                 p {
                     width: 300px;
                     color: #fff;
+                    font-weight: 500;
                     font-size: 25px;
+                    line-height: 1;
                     letter-spacing: 0.1em;
                     transform: rotate(90deg);
                     margin-top: 160px;
@@ -79,6 +83,7 @@ export const BiWrap = styled.div`
                 letter-spacing: -0.025em;
                 line-height: 1.3;
                 margin-bottom: 80px;
+                word-break: keep-all;
                 font-weight: 600;
                 font-family: 'Lexend Deca', sans-serif;
                 transform: translate(0, 70px);
@@ -100,6 +105,7 @@ export const BiWrap = styled.div`
                 transition: transform 1s, opacity 1s;
                 transition-delay: 0.4s;
                 opacity: 0;
+                word-break: keep-all;
 
                 &.visible {
                     transform: translate(0, 0);
@@ -114,6 +120,7 @@ export const BiWrap = styled.div`
                 transform: translate(0, 70px);
                 transition: transform 1s, opacity 1s;
                 transition-delay: 0.7s;
+                word-break: keep-all;
                 opacity: 0;
 
                 &.visible {
@@ -125,6 +132,7 @@ export const BiWrap = styled.div`
     }
 
     .logo {
+        width: 100%;
         flex-direction: column;
         display: flex;
         justify-content: space-between;
@@ -155,7 +163,7 @@ export const BiWrap = styled.div`
                 border: 1px solid #1b1b1b;
 
                 img {
-                    width: 90%;
+                    width: 100%;
                     max-width: 220px;
                     font-family: 'Noto Sans KR', sans-serif;
                 }
@@ -172,6 +180,225 @@ export const BiWrap = styled.div`
                     opacity: 0.2;
                     z-index: -1;
                     font-family: 'Noto Sans KR', sans-serif;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .cover {
+            gap: 65px;
+            .left {
+                height: 460px;
+                .point {
+                    width: 130px;
+                    height: 450px;
+                    p {
+                        margin-left: -55px;
+                    }
+                }
+            }
+            .right {
+                h3 {
+                    margin-bottom: 50px;
+                }
+                p {
+                    .pc {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        padding: 0 56px;
+        margin-top: 80px;
+
+        .cover {
+            gap: 40px;
+            .left {
+                max-width: 500px;
+                height: 380px;
+                margin-top: 35px;
+                .point {
+                    top: -55px;
+                    left: -55px;
+                    width: 100px;
+                    height: 380px;
+                    p {
+                        margin-left: -80px;
+                    }
+                }
+            }
+            .right {
+                h3 {
+                    margin-bottom: 30px;
+                    font-size: 38px;
+                }
+                p {
+                    .pc {
+                        display: none;
+                    }
+                }
+                .txt1 {
+                    font-size: 20px;
+                }
+                .txt2 {
+                    font-size: 17px;
+                }
+            }
+        }
+        .logo {
+            margin-top: 100px;
+            padding-bottom: 70px;
+        }
+    }
+
+    @media (max-width: 850px) {
+        padding: 0 30px;
+        margin-top: 50px;
+
+        .cover {
+            gap: unset;
+            .left {
+                max-width: 420px;
+                height: 340px;
+                margin-right: 40px;
+                .point {
+                    top: -40px;
+                    left: -30px;
+                    width: 80px;
+                    height: 330px;
+                    p {
+                        margin-left: -88px;
+                        font-size: 20px;
+                    }
+                }
+            }
+            .right {
+                h3 {
+                    margin-bottom: 15px;
+                    font-size: 32px;
+                }
+                p {
+                    .pc {
+                        display: none;
+                    }
+                }
+                .txt1 {
+                    font-size: 18px;
+                    margin-bottom: 15px;
+                }
+                .txt2 {
+                    font-size: 15px;
+                }
+            }
+        }
+
+        .logo {
+            margin-top: 80px;
+            padding-bottom: 70px;
+            .logoWrap {
+                h4 {
+                    font-size: 22px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 700px) {
+        .cover {
+            flex-direction: column;
+            align-items: flex-start;
+            .left {
+                width: 100%;
+                margin-bottom: 25px;
+            }
+            .right {
+                width: 100%;
+                h3 {
+                    font-size: 40px;
+                }
+                p {
+                    .pc {
+                        display: block;
+                    }
+                }
+                .txt1 {
+                    font-size: 20px;
+                }
+                .txt2 {
+                    font-size: 17px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 650px) {
+        .logo {
+            margin-top: 50px;
+            padding-bottom: 50px;
+            .logoWrap {
+                h4 {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 480px) {
+        margin-top: 50px;
+        padding-bottom: 50px;
+
+        .cover {
+            flex-direction: column;
+            align-items: flex-start;
+            .left {
+                margin-right: 0;
+                height: 280px;
+                margin-top: 20px;
+                .point {
+                    left: -20px;
+                    top: -25px;
+                    width: 70px;
+                    height: 260px;
+                    p {
+                        margin-top: 155px;
+                        margin-left: -100px;
+                        font-size: 18px;
+                    }
+                }
+            }
+            .right {
+                width: 100%;
+                h3 {
+                    font-size: 30px;
+                }
+                p {
+                    .pc {
+                        display: block;
+                    }
+                }
+                .txt1 {
+                    font-size: 18px;
+                }
+                .txt2 {
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .logo {
+            .logoWrap {
+                h4 {
+                    font-size: 20px;
+                }
+                .logoBox {
+                    height: 160px;
+                    img {
+                        width: 180px;
+                    }
                 }
             }
         }

@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import 참조변수 from '../../assets/api/데이터';
 
 const initialState = {
     isSubmit: false,
@@ -65,25 +64,29 @@ export const allianceEntrySlice = createSlice({
         onPersonalCheck3: (state, action) => {
             state.personalCheck.part3 = action.payload;
         },
-
-        // 주소찾기
         onAddr: (state, action) => {
             state.addr = action.payload;
             // console.log(state.addr);
         },
-
-        // 인증하기
         onCertify: (state, action) => {
             state.certify = action.payload;
             // console.log(state.certify);
         },
+        onEmail: (state, action) => {
+            state.b_email = action.payload;
+            // console.log(state.b_email);
+        },
+
+        // ----- 유효성 검사 -----
+
+        // 인증번호 받기
         getCertifyNumber: (state, action) => {
             if (state.certifyNum) {
                 alert('인증번호가 입력되었습니다.');
                 return;
             }
 
-            if (!state.certify.certify_name) {
+            if (!state.certify.certify_name.trim()) {
                 alert('실명을 입력해 주세요.');
                 return;
             }
@@ -91,7 +94,11 @@ export const allianceEntrySlice = createSlice({
                 alert('통신사를 선택해 주세요.');
                 return;
             }
-            if (!state.certify.certify_phone.part1 || state.certify.certify_phone.part2 < 4 || state.certify.certify_phone.part3 < 4) {
+            if (
+                !state.certify.certify_phone.part1 ||
+                (state.certify.certify_phone.part2.length) < 4 ||
+                (state.certify.certify_phone.part3.length ) < 4
+            ) {
                 alert('휴대폰번호를 입력해 주세요.');
                 return;
             }
@@ -104,26 +111,23 @@ export const allianceEntrySlice = createSlice({
                 return;
             }
 
+            // 랜덤 6자리 숫자
             state.certifyNum = String(Math.floor(100000 + Math.random() * 900000));
         },
+        // 인증완료 후 정보 입력
         insertCertify: (state, action) => {
             state.b_name = state.certify.certify_name;
             state.b_phone = `${state.certify.certify_phone.part1}-${state.certify.certify_phone.part2}-${state.certify.certify_phone.part3}`;
         },
+        // 인증 도중 취소 시 초기화
         resetCertifyNum: (state, action) => {
             state.certifyNum = '';
         },
-        onEmail: (state, action) => {
-            state.b_email = action.payload;
-            // console.log(state.b_email);
-        },
 
-        // 신규 입점 제의 상담 신청
+        // 신청하기
         onSubmit: (state, action) => {
-            // dispatch 객체로 전달
             const { store, recommend, area, hope, etc } = action.payload;
 
-            // payload 값 state에 넣음
             state.store = store;
             state.recommend = recommend;
             state.area = area;
@@ -144,42 +148,47 @@ export const allianceEntrySlice = createSlice({
                 return;
             }
 
+            // 인증 여부 확인
             if (!state.certifyNum) {
                 alert('휴대폰 인증해주세요.');
                 return;
             }
 
-            // 담당자 이름, 번호는 위에 있음.
-
-            const pattern = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-za-z0-9\-]+/;
-            if (!state.b_email) {
+            // 담당자 정보 확인 - 담당자 이름, 번호는 위에 있음
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!state.b_email.trim()) {
                 alert('담당자 이메일을 입력해 주세요.');
                 return;
             }
-            if (pattern.test(state.b_email) === false) {
+            if (!emailPattern.test(state.b_email)) {
                 alert('이메일 형식이 올바르지 않습니다.');
                 return;
             }
 
+            // 점포 구분 확인
             if (!state.store) {
                 alert('점포 구분을 선택해 주세요.');
                 return;
             }
+
+            // 추천인 구분 확인
             if (!state.recommend) {
                 alert('추천인 구분을 선택해 주세요.');
                 return;
             }
 
-            if (!state.addr.addr1 || !state.addr.addr2) {
+            // 주소 확인
+            if (!state.addr.addr1.trim() || !state.addr.addr2.trim()) {
                 alert('주소를 입력해 주세요.');
                 return;
             }
-            if (!state.addr.addr3) {
+            if (!state.addr.addr3.trim()) {
                 alert('상세주소를 입력해 주세요.');
                 return;
             }
 
-            if (!state.area.area1) {
+            // 면적 입력 확인
+            if (!state.area.area1.trim()) {
                 alert('토지면적을 입력해 주세요.');
                 return;
             }
@@ -187,7 +196,7 @@ export const allianceEntrySlice = createSlice({
                 alert('토지면적 숫자를 입력해 주세요.');
                 return;
             }
-            if (!state.area.area2) {
+            if (!state.area.area2.trim()) {
                 alert('전용면적을 입력해 주세요.');
                 return;
             }
@@ -196,7 +205,8 @@ export const allianceEntrySlice = createSlice({
                 return;
             }
 
-            if (!state.hope.hope1) {
+            // 비용 입력 확인
+            if (!state.hope.hope1.trim()) {
                 alert('보증금을 입력해 주세요.');
                 return;
             }
@@ -204,7 +214,7 @@ export const allianceEntrySlice = createSlice({
                 alert('보증금 숫자를 입력해 주세요.');
                 return;
             }
-            if (!state.hope.hope2) {
+            if (!state.hope.hope2.trim()) {
                 alert('임대료를 입력해 주세요.');
                 return;
             }
@@ -212,7 +222,7 @@ export const allianceEntrySlice = createSlice({
                 alert('임대료 숫자를 입력해 주세요.');
                 return;
             }
-            if (!state.hope.hope3) {
+            if (!state.hope.hope3.trim()) {
                 alert('관리비를 입력해 주세요.');
                 return;
             }
@@ -221,13 +231,15 @@ export const allianceEntrySlice = createSlice({
                 return;
             }
 
-            if (!state.etc) {
+            // 기타 입력 확인
+            if (!state.etc.trim()) {
                 alert('기타 상세를 입력해 주세요.');
                 return;
             }
 
+            // 신청 완료
             state.isSubmit = true;
-            alert('신청되었습니다. 닫기를 누르면 메인화면으로 이동합니다.');
+            alert('신청되었습니다. 확인을 누르면 메인화면으로 이동합니다.');
         },
     },
 });

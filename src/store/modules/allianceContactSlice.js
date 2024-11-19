@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import 참조변수 from '../../assets/api/데이터';
 
 const initialState = {
     isSubmit: false,
@@ -19,14 +18,10 @@ const initialState = {
     shape: [
         // 일반 체크박스는 문자열
         // 기타는 객체
-        // ex "추천", { value: "기타", input: "직접 입력 내용" }
+        // ex. "추천", { value: "기타", input: "직접 입력 내용" }
     ],
     time: '',
-    motive: [
-        // 일반 체크박스는 문자열
-        // 기타는 객체
-        // ex "추천", { value: "기타", input: "직접 입력 내용" }
-    ],
+    motive: [],
     desc: '',
 };
 
@@ -37,15 +32,14 @@ export const allianceContactSlice = createSlice({
         onSubmitReset: (state, action) => {
             state.isSubmit = false;
         },
+
         onPersonalCheck: (state, action) => {
             state.personalCheck = action.payload;
         },
-        // 신청하기
+
         onSubmit: (state, action) => {
-            // dispatch 객체로 전달
             const { phone, purpose, shape, time, motive, desc } = action.payload;
 
-            // payload 값 state에 넣음
             state.phone = {
                 input: phone.input,
                 checkInput: phone.checkInput,
@@ -56,8 +50,10 @@ export const allianceContactSlice = createSlice({
             state.time = time;
             state.motive = motive;
             state.desc = desc;
-            // 휴대전화, 휴대전화 확인 일치 여부
+            // 휴대전화, 휴대전화 확인 일치하는지 체크
             state.phone.isValid = state.phone.input.part1 === state.phone.checkInput.part1 && state.phone.input.part2 === state.phone.checkInput.part2;
+
+            // ----- 유효성검사 -----
 
             // 개인정보 동의 체크 여부 확인
             if (!state.personalCheck) {
@@ -70,7 +66,7 @@ export const allianceContactSlice = createSlice({
                 alert('휴대번호를 선택해 주세요.');
                 return;
             }
-            if (!state.phone.input.part2.replace(/\s+/g, "") || state.phone.input.part2.replace(/\s+/g, "").length < 8) {
+            if (!state.phone.input.part2.replace(/\s+/g, '') || state.phone.input.part2.replace(/\s+/g, '').length < 8) {
                 alert('휴대번호를 입력해 주세요.');
                 return;
             }
@@ -78,8 +74,13 @@ export const allianceContactSlice = createSlice({
                 alert('휴대번호 숫자를 입력해 주세요.');
                 return;
             }
+
             // 휴대전화 확인 값 입력 확인
-            if (!state.phone.checkInput.part1 || !state.phone.checkInput.part2.replace(/\s+/g, "") || state.phone.checkInput.part2.replace(/\s+/g, "").length < 8) {
+            if (
+                !state.phone.checkInput.part1 ||
+                !state.phone.checkInput.part2.replace(/\s+/g, '') ||
+                state.phone.checkInput.part2.replace(/\s+/g, '').length < 8
+            ) {
                 alert('휴대전화 확인 - 휴대번호를 한번 더 입력해주세요.');
                 return;
             }
@@ -87,6 +88,7 @@ export const allianceContactSlice = createSlice({
                 alert('휴대전화 확인 - 숫자를 입력해 주세요.');
                 return;
             }
+
             // 휴대전화 값 일치 여부 확인
             if (!state.phone.isValid) {
                 alert('휴대전화가 일치하지 않습니다.');
@@ -135,8 +137,9 @@ export const allianceContactSlice = createSlice({
                 return;
             }
 
+            // 신청 완료
             state.isSubmit = true;
-            alert('신청되었습니다. 닫기를 누르면 메인화면으로 이동합니다.');
+            alert('신청되었습니다. 확인을 누르면 메인화면으로 이동합니다.');
         },
     },
 });

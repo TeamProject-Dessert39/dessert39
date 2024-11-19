@@ -81,9 +81,9 @@ const Bi = () => {
                                 </p>
                                 <p className={`txt2 ${isVisible3 ? 'visible' : ''}`} ref={imgRef3}>
                                     Dessert39은 ‘디저트’ 시장을 이끌어갈 트렌드 리더로서
-                                    <br /> World Dessert Cafe 라는 차별적인 컨셉 아래, 세계 각국의 다양한 트렌드를
-                                    <br /> 담아내기 위한 끊임없는 연구 & 개발을 거듭해 가고 있습니다.
-                                    <br />
+                                    <br className="pc" /> World Dessert Cafe 라는 차별적인 컨셉 아래, 세계 각국의 다양한 트렌드를
+                                    <br className="pc" /> 담아내기 위한 끊임없는 연구 & 개발을 거듭해 가고 있습니다.
+                                    <br className="pc" />
                                     단순 ‘디저트 전문점’ 이 아닌 그이상의 가치를 담고 있습니다.
                                 </p>
                             </div>

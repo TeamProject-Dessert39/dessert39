@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import 참조변수 from '../../assets/api/데이터';
 
 const initialState = {
     isSubmit: false,
@@ -52,16 +51,19 @@ export const alliancePurchasingSlice = createSlice({
         onSubmitReset: (state, action) => {
             state.isSubmit = false;
         },
+
         onPersonalCheck: (state, action) => {
             state.personalCheck = action.payload;
         },
+
         // 신청하기
         onSubmit: (state, action) => {
-            // dispatch 객체로 전달
             const { info, question } = action.payload;
 
             state.info = info;
             state.question = question;
+
+            // ----- 유효성검사 -----
 
             // 개인정보 동의 체크 여부 확인
             if (!state.personalCheck) {
@@ -69,16 +71,20 @@ export const alliancePurchasingSlice = createSlice({
                 return;
             }
 
-            // 희망자 정보
+            // 구매 희망자 정보
             if (!state.info.purchaser) {
                 alert('구매자 유형을 선택해 주세요.');
                 return;
             }
-            if (!state.info.company) {
+            if (!state.info.company.trim()) {
                 alert('회사명을 입력해 주세요.');
                 return;
             }
-            if (state.info.b_number.part1.replace(/\s+/g, "").length < 3 || state.info.b_number.part2.replace(/\s+/g, "").length < 2 || state.info.b_number.part3.replace(/\s+/g, "").length < 5) {
+            if (
+                state.info.b_number.part1.replace(/\s+/g, '').length < 3 ||
+                state.info.b_number.part2.replace(/\s+/g, '').length < 2 ||
+                state.info.b_number.part3.replace(/\s+/g, '').length < 5
+            ) {
                 alert('사업자등록번호를 입력해 주세요.');
                 return;
             }
@@ -94,15 +100,19 @@ export const alliancePurchasingSlice = createSlice({
                 alert('사업자등록번호 - 숫자를 입력해 주세요.');
                 return;
             }
-            if (!state.info.b_name) {
+            if (!state.info.b_name.trim()) {
                 alert('담당자명을 입력해 주세요.');
                 return;
             }
-            if (!state.info.email.part1 || !state.info.email.part2) {
+            if (!state.info.email.part1.trim() || !state.info.email.part2) {
                 alert('담당자 이메일을 입력해 주세요.');
                 return;
             }
-            if (state.info.phone.part1.replace(/\s+/g, "").length < 2 || state.info.phone.part2.replace(/\s+/g, "").length < 3 || state.info.phone.part3.replace(/\s+/g, "").length < 4) {
+            if (
+                (state.info.phone.part1.replace(/\s+/g, '').length) < 2 ||
+                (state.info.phone.part2.replace(/\s+/g, '').length) < 3 ||
+                (state.info.phone.part3.replace(/\s+/g, '').length) < 4
+            ) {
                 alert('담당자 연락처를 입력해 주세요.');
                 return;
             }
@@ -148,13 +158,14 @@ export const alliancePurchasingSlice = createSlice({
                 alert('구매희망일자를 선택해 주세요.');
                 return;
             }
-            if (!state.question.desc) {
+            if (!state.question.desc.trim()) {
                 alert('문의내용을 입력해 주세요.');
                 return;
             }
 
+            // 신청 완료
             state.isSubmit = true;
-            alert('신청되었습니다. 닫기를 누르면 메인화면으로 이동합니다.');
+            alert('신청되었습니다. 확인을 누르면 메인화면으로 이동합니다.');
         },
     },
 });

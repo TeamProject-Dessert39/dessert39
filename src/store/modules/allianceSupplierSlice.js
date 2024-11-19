@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-// import 참조변수 from '../../assets/api/데이터';
 
 const initialState = {
     isSubmit: false,
@@ -35,13 +34,15 @@ export const allianceSupplierSlice = createSlice({
     initialState,
     reducers: {
         resetState: () => initialState,
+
+        // 신청 내역 조회
         onDisabled: (state, action) => {
             const { b_num, b_pw } = action.payload;
 
             state.inquiry.b_num = b_num;
             state.inquiry.b_pw = b_pw;
 
-            if (!state.inquiry.b_num) {
+            if (!state.inquiry.b_num.trim()) {
                 alert('사업자 번호를 입력해 주세요.');
                 return;
             }
@@ -49,7 +50,7 @@ export const allianceSupplierSlice = createSlice({
                 alert('사업자 번호 - 숫자를 입력해 주세요.');
                 return;
             }
-            if (!state.inquiry.b_pw) {
+            if (!state.inquiry.b_pw.trim()) {
                 alert('비밀번호를 입력해 주세요.');
                 return;
             }
@@ -59,24 +60,26 @@ export const allianceSupplierSlice = createSlice({
         onSubmitReset: (state, action) => {
             state.isSubmit = false;
         },
-
         onPersonalCheckSupplier: (state, action) => {
             state.appli.personalCheck = action.payload;
             // console.log(state.personalCheck);
         },
-
-        // 인증하기
+        onEmail: (state, action) => {
+            state.appli.b_email = action.payload;
+            // console.log(state.appli.b_email);
+        },
         onCertify: (state, action) => {
             state.appli.certify = action.payload;
             // console.log(state.appli.certify);
         },
+
+        // 인증하기
         getCertifyNumber: (state, action) => {
             if (state.appli.certifyNum) {
                 alert('인증번호가 입력되었습니다.');
                 return;
             }
-
-            if (!state.appli.certify.certify_name) {
+            if (!state.appli.certify.certify_name.trim()) {
                 alert('실명을 입력해 주세요.');
                 return;
             }
@@ -84,7 +87,11 @@ export const allianceSupplierSlice = createSlice({
                 alert('통신사를 선택해 주세요.');
                 return;
             }
-            if (!state.appli.certify.certify_phone.part1 || state.appli.certify.certify_phone.part2 < 4 || state.appli.certify.certify_phone.part3 < 4) {
+            if (
+                !state.appli.certify.certify_phone.part1 ||
+                state.appli.certify.certify_phone.part2.length < 4 ||
+                state.appli.certify.certify_phone.part3.length < 4
+            ) {
                 alert('휴대폰번호를 입력해 주세요.');
                 return;
             }
@@ -97,26 +104,23 @@ export const allianceSupplierSlice = createSlice({
                 return;
             }
 
+            // 랜덤 6자리 숫자
             state.appli.certifyNum = String(Math.floor(100000 + Math.random() * 900000));
         },
+        // 인증완료 후 정보 입력
         insertCertify: (state, action) => {
             state.appli.b_name = state.appli.certify.certify_name;
             state.appli.b_phone = `${state.appli.certify.certify_phone.part1}-${state.appli.certify.certify_phone.part2}-${state.appli.certify.certify_phone.part3}`;
         },
+        // 인증 도중 취소 시 초기화
         resetCertifyNum: (state, action) => {
-            state.certifyNum = '';
-        },
-        onEmail: (state, action) => {
-            state.appli.b_email = action.payload;
-            // console.log(state.appli.b_email);
+            state.appli.certifyNum = '';
         },
 
-        // 다음
+        // 다음 버튼 클릭시
         onSubmit: (state, action) => {
-            // dispatch 객체로 전달
             const { b_email, b_num } = action.payload;
 
-            // payload 값 state에 넣음
             state.appli.b_email = b_email;
             state.appli.b_num = b_num;
 
@@ -126,23 +130,24 @@ export const allianceSupplierSlice = createSlice({
                 return;
             }
 
+            // 인증 여부 확인
             if (!state.appli.certifyNum) {
                 alert('휴대폰 인증해주세요.');
                 return;
             }
 
-            // 담당자 이름, 번호는 위에 있음.
-
-            const pattern = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-za-z0-9\-]+/;
-            if (!state.appli.b_email) {
+            // 담당자 정보 확인 - 담당자 이름, 번호는 위에 있음
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!state.appli.b_email.trim()) {
                 alert('담당자 이메일을 입력해 주세요.');
                 return;
             }
-            if (pattern.test(state.appli.b_email) === false) {
+            if (!emailPattern.test(state.appli.b_email)) {
                 alert('이메일 형식이 올바르지 않습니다.');
                 return;
             }
 
+            // 사업자 등록 번호 확인
             if (!state.appli.b_num.part1 || !state.appli.b_num.part2 || !state.appli.b_num.part3) {
                 alert('사업자 등록번호를 입력해 주세요.');
                 return;
@@ -159,6 +164,7 @@ export const allianceSupplierSlice = createSlice({
                 return;
             }
 
+            // 완료
             state.isSubmit = true;
             alert('제출이 완료되었습니다.');
         },
