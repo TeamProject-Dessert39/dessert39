@@ -1,6 +1,9 @@
 import { styled } from 'styled-components';
 
 export const SubLayoutContainer = styled.div`
+    /* 헤더랑 겹침 해결 */
+    margin-top: 100px;
+
     position: relative;
     width: 100%;
     height: 220px;
