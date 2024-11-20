@@ -36,6 +36,10 @@ export const TabWrap = styled.div`
         a {
             text-decoration: none;
             color: inherit;
+
+            @media (max-width: 1024px) {
+                font-size: 14px;
+            }
         }
     }
 `;
@@ -79,12 +83,13 @@ export const ContentWrap = styled.ul`
                 height: 550px;
 
                 @media (max-width: 1440px) {
-                    width: 500px;
-                    height: 650px;
+                    width: 600px;
+                    height: 550px;
                 }
 
                 @media (max-width: 1024px) {
-                    width: 400px;
+                    width: 500px;
+                    height: 650px;
                 }
 
                 .ecoTitle {
@@ -108,7 +113,7 @@ export const ContentWrap = styled.ul`
 
             @media (max-width: 1440px) {
                 height: 600px;
-                width: 400px;
+                width: 300px;
             }
 
             @media (max-width: 1024px) {
@@ -168,6 +173,7 @@ export const EcoImageSliderWrap = styled.div`
     // ---------------------------------------------------------------------
     // swiper
     width: 100%;
+    height: 100%;
     max-width: 1200px; // 최대 너비 설정
     margin: 0 auto; // 중앙 정렬
     overflow: hidden; // 넘치는 부분 숨김
@@ -177,6 +183,10 @@ export const EcoImageSliderWrap = styled.div`
         height: 550px;
 
         @media (max-width: 1440px) {
+            height: 550px;
+        }
+
+        @media (max-width: 1024px) {
             height: 650px;
         }
     }
@@ -214,6 +224,9 @@ export const EcoImageSliderWrap = styled.div`
         padding: 20px 20px 20px 0;
 
         @media (max-width: 1440px) {
+            top: 70%;
+        }
+        @media (max-width: 1024px) {
             top: 70%;
         }
 

@@ -144,11 +144,25 @@ export const EventNewsSliderWrap = styled.div`
     }
 
     .swiper-button-prev {
-        left: 0%;
+        left: 2%;
+
+        @media (max-width: 1440px) {
+            left: 0%;
+        }
+        @media (max-width: 1024px) {
+            left: 0%;
+        }
     }
 
     .swiper-button-next {
-        right: 0%;
+        right: 2%;
+
+        @media (max-width: 1440px) {
+            right: 0%;
+        }
+        @media (max-width: 1024px) {
+            right: 0%;
+        }
     }
 
     .swiper-button-prev:after,

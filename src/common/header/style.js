@@ -38,12 +38,12 @@ export const HeaderInner = styled.div`
 
     @media (max-width: ${breakpoints.widescreen}) {
         height: 100px;
-        background-color: rebeccapurple;
+        //background-color: rebeccapurple;
     }
 
     @media (max-width: ${breakpoints.desktop}) {
         height: 100px;
-        background-color: white;
+        //background-color: white;
 
         .pc {
             display: none;
@@ -56,12 +56,12 @@ export const HeaderInner = styled.div`
 
     @media (max-width: ${breakpoints.tablet}) {
         height: 100px;
-        background-color: firebrick;
+        //background-color: firebrick;
     }
 
     @media (max-width: ${breakpoints.mobile}) {
         height: 100px;
-        background-color: darkorange;
+        //background-color: darkorange;
     }
     
     .inner {

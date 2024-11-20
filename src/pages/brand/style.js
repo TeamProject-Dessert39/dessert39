@@ -615,9 +615,34 @@ export const LocationWrap = styled.div`
     max-width: 1440px;
     margin: 0 auto;
 
+        /* 대형 데스크톱 스타일 */
+        @media (max-width: 1440px) {
+            padding-top: 80px;
+        }
+
+        /* 소형 데스크톱 스타일 */
+        @media (max-width: 1024px) {
+            padding-top: 60px;
+        }
+
+        /* 태블릿 스타일 */
+        @media (max-width: 768px) {
+            padding-top: 40px;
+        }
+
+        /* 모바일 스타일 */
+        @media (max-width: 480px) {
+            padding-top: 20px;
+        }
+
     .topBox {
         display: flex;
         align-items: center;
+
+        @media (max-width: 1024px) {
+	        flex-direction: column;
+            align-items: flex-start;
+        }
 
         .title {
             font-size: 45px;
@@ -628,6 +653,22 @@ export const LocationWrap = styled.div`
             font-weight: 700;
             line-height: 1.4;
             text-align: center;
+
+            @media (max-width: 1440px) {
+                margin-right: 50px;
+            }
+
+            @media (max-width: 1024px) {
+                font-size: 42px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 38px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 28px;
+            }
 
             span {
                 position: relative;
@@ -652,10 +693,25 @@ export const LocationWrap = styled.div`
         .contactList {
             display: flex;
 
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 0;
+            }
+
             .contactWrap {
                 margin-left: 50px;
                 display: flex;
                 align-items: center;
+
+                @media (max-width: 1024px) {
+                    margin-right: 20px;
+                    margin-left: 0;
+                }
+
+                @media (max-width: 768px) {
+                    padding: 15px 0;
+                }
 
                 :nth-child(1) {
                     margin-left: 0;
@@ -683,12 +739,36 @@ export const LocationWrap = styled.div`
                         margin-bottom: 8px;
                         font-weight: 600;
                         font-family: 'Lexend Deca', sans-serif;
+
+                        @media (max-width: 1024px) {
+                            font-size: 28px;
+                        }
+
+                        @media (max-width: 768px) {
+                            font-size: 22px;
+                        }
+
+                        @media (max-width: 480px) {
+                            font-size: 18px;
+                        }
                     }
 
                     p {
                         font-size: 18px;
                         letter-spacing: -0.025em;
                         line-height: 1.3;
+
+                        @media (max-width: 1024px) {
+                            font-size: 17px;
+                        }
+
+                        @media (max-width: 768px) {
+                            font-size: 16px;
+                        }
+
+                        @media (max-width: 480px) {
+                            font-size: 14px;
+                        }
                     }
                 }
 

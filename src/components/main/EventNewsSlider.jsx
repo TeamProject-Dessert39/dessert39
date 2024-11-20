@@ -33,19 +33,19 @@ const EventNewsSlider = () => {
                     breakpoints={{
                         1440: {
                             slidesPerView: 3.5,
-                            spaceBetween: 40,
+                            spaceBetween: 30,
                         },
                         1024: {
                             slidesPerView: 3,
-                            spaceBetween: 25,
+                            spaceBetween: 20,
                         },
                         768: {
-                            slidesPerView: 2,
-                            spaceBetween: 20,
+                            slidesPerView: 2.5,
+                            spaceBetween: 10,
                         },
                         480: {
                             slidesPerView: 1.5,
-                            spaceBetween: 15,
+                            spaceBetween: 5,
                         },
                     }}
                     navigation={{
