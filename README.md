@@ -66,13 +66,13 @@ dessert39 웹페이지를 보고 최대한 심플하고 간단한 로직을 통�
 
 <details><summary>Menu
 </summary>
-![onealog](https://raw.githubusercontent.com/TeamProject-Dessert39/dataCenter/master/images/ReadMe/menu/store/store.PNG)
+![image](https://raw.githubusercontent.com/TeamProject-Dessert39/dataCenter/master/images/ReadMe/menu/store/store.PNG)
 </details>
 
 
 <details><summary>Store
 </summary>
-![onealog](https://raw.githubusercontent.com/TeamProject-Dessert39/dataCenter/master/images/ReadMe/menu/store/menu.PNG)
+![image](https://raw.githubusercontent.com/TeamProject-Dessert39/dataCenter/master/images/ReadMe/menu/store/menu.PNG)
 </details>
 
 
