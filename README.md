@@ -66,13 +66,57 @@ dessert39 웹페이지를 보고 최대한 심플하고 간단한 로직을 통�
 
 <details><summary>Menu
 </summary>
-![image](https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/ReadMe/menu/store/menu.PNG?raw=true)
+  
+-- Menu의 하위 메뉴들은 모두 동일한 구조를 가지고 있어 하나의 jsx에 path주소에 따라 다른 데이터를 가져오도록 설정 해 두었습니다.
+
+![image](https://github.com/user-attachments/assets/767f186c-3fbd-4389-ac8c-973e21feb326)
+
+    //jsx부분
+    const scrollRefs = useRef([]);
+    const getData = location.pathname.replace(/\/menu\//g, '');
+    useEffect(() => {
+        dispatch(onLoadingData(getData));
+    }, [getData, dispatch]);
+
+    // redux부분
+    // getData (action.payload)값은 위에서 받아온 path 값임. 받아온 값에 따라 useEffect를 사용하여 데이터를 뿌려줌
+    onLoadingData: (state, action) => {
+        state.productItem = [];
+        state.newMenuItem = [];
+        state.clickMenuItem = [];
+        switch (action.payload) {
+            case 'dessert':
+                state.productItem.push(...state.dessertData)
+                state.newMenuItem = state.newMenu.filter(item => item.category === action.payload)
+                state.clickMenuItem = state.clickMenu.filter(item => item.category === action.payload)
+                break;
+            case 'beverage':
+                state.productItem.push(...state.coffeeData)
+                state.newMenuItem = state.newMenu.filter(item => item.category === 'coffee')
+                state.clickMenuItem = state.clickMenu.filter(item => item.category === 'coffee')
+                break;
+            case 'mdproduct':
+                state.productItem.push(...state.mdData)
+                state.newMenuItem = state.newMenu.filter(item => item.category === 'MD')
+                state.clickMenuItem = state.clickMenu.filter(item => item.category === 'MD')
+                    
+                break;
+            
+            default:
+                break;
+        }
+    }
+
+
 </details>
 
 
 <details><summary>Store
 </summary>
-![storeImage](https://TeamProject-Dessert39.github.io/dataCenter/blob/master/images/ReadMe/menu/store/store.png)
+  
+-- kakao api를 가져와 map을 구현하였습니다
+
+![image](https://github.com/user-attachments/assets/42de0c75-e8d3-4dde-9c8c-fbe8c3f2b63a)
 </details>
 
 
