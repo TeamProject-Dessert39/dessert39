@@ -66,7 +66,7 @@ dessert39 웹페이지를 보고 최대한 심플하고 간단한 로직을 통�
 
 <details><summary>Menu
 </summary>
-![image](https://raw.githubusercontent.com/TeamProject-Dessert39/dataCenter/master/images/ReadMe/menu/store/store.PNG)
+![image description](https://raw.githubusercontent.com/TeamProject-Dessert39/dataCenter/branch-name/images/ReadMe/menu/store/store.PNG)
 </details>
 
 
