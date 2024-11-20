@@ -66,13 +66,13 @@ dessert39 웹페이지를 보고 최대한 심플하고 간단한 로직을 통�
 
 <details><summary>Menu
 </summary>
-*Write here!*
+![image](https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/ReadMe/menu/store/menu.PNG?raw=true)
 </details>
 
 
 <details><summary>Store
 </summary>
-*Write here!*
+![image](https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/ReadMe/menu/store/store.PNG?raw=true)
 </details>
 
 
