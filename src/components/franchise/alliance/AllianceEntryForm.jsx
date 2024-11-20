@@ -90,7 +90,7 @@ const AllianceEntryForm = () => {
 
     useEffect(() => {
         if (isSubmit) {
-            navigate('/');
+            navigate('/main');
             dispatch(onSubmitReset());
         }
     }, [isSubmit]);

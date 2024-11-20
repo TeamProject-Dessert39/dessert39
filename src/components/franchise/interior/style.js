@@ -3,6 +3,9 @@ import { styled } from 'styled-components';
 // export const Section01Container = styled.div`
 
 export const InteriorVisualContainer = styled.div`
+    /* 헤더 겹침 해결 */
+    margin-top: 100px;
+
     background-image: url(https://teamproject-dessert39.github.io/dataCenter/images/franchise/interior_visual_bg.jpg);
     background-position: center;
     padding: 100px;

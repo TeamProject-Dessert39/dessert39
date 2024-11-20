@@ -1,25 +1,31 @@
-import IntroBtn from "../../components/button/IntroBtn";
-import { IntroCon } from "./styled";
+import IntroBtn from '../../components/button/IntroBtn';
+import { IntroCon } from './styled';
 
 const Mainintro = () => {
     return (
         <IntroCon>
             <section id="left">
                 <div className="section-wrap">
-                    <h3>DESSERT39 <br /> MENU</h3>
+                    <h3>
+                        DESSERT39 <br /> MENU
+                    </h3>
                     <div className="text-wrap">
                         <strong>디저트39 브랜드</strong>
-                        <p>신메뉴부터 인기 메뉴, 추천 메뉴까지 <br />
-                        디저트 39의 모든 메뉴와 최신 이벤트 소식을 살펴보세요.</p>
+                        <p>
+                            신메뉴부터 인기 메뉴, 추천 메뉴까지 <br />
+                            디저트 39의 모든 메뉴와 최신 이벤트 소식을 살펴보세요.
+                        </p>
                         <div className="introbtn">
-                            <IntroBtn title={'홈페이지'} link={'/'}></IntroBtn>
+                            <IntroBtn title={'홈페이지'} link={'/main'}></IntroBtn>
                         </div>
                     </div>
                 </div>
             </section>
             <section id="right">
                 <div className="section-wrap">
-                    <h3>DESSERT39 <br /> FRANCHISE</h3>
+                    <h3>
+                        DESSERT39 <br /> FRANCHISE
+                    </h3>
                     <div className="text-wrap">
                         <strong>디저트39 창업</strong>
                         <p>
@@ -35,7 +41,7 @@ const Mainintro = () => {
                 </div>
             </section>
         </IntroCon>
-    )
+    );
 };
 
 export default Mainintro;

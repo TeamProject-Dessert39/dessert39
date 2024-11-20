@@ -34,62 +34,77 @@ const App = () => {
             <HashRouter>
                 <ScrollToTop />
                 <Routes>
-                    <Route path="/intro" element={<Mainintro />} />
-                    <Route path="/" element={<Layout />}>
+                    <Route path="/" element={<Mainintro />} />
+
+                    {/* main */}
+                    <Route path="/main" element={<Layout />}>
                         <Route index element={<Main />} />
+                    </Route>
+                    {/* main end */}
 
-                        <Route path="/brand">
-                            <Route index path="intro" element={<Intro />} />
-                            <Route path="bi" element={<Bi />} />
-                            <Route path="headquarters" element={<Headquarters />} />
-                            <Route path="location" element={<Location />} />
+                    {/* brand */}
+                    <Route path="/brand" element={<Layout />}>
+                        <Route path="intro" element={<Intro />} />
+                        <Route path="bi" element={<Bi />} />
+                        <Route path="headquarters" element={<Headquarters />} />
+                        <Route path="location" element={<Location />} />
+                    </Route>
+                    {/* brand end */}
+
+                    {/* menu */}
+                    <Route path="/menu" element={<Layout />}>
+                        <Route path="dessert" element={<Dessert />} />
+                        <Route path="beverage" element={<Dessert />} />
+                        <Route path="mdproduct" element={<Dessert />} />
+                    </Route>
+                    {/* menu end */}
+
+                    {/* franchise */}
+                    <Route path="/franchise" element={<Layout />}>
+                        <Route path="competitive" element={<Competitive />} />
+                        <Route path="interior" element={<Interior />} />
+                        <Route path="procedure" element={<Procedure />} />
+                        <Route path="contact" element={<Contact />} />
+                        <Route path="alliance">
+                            <Route index element={<Alliance />} />
+                            <Route path="alliancePurchasing" element={<AlliancePurchasing />} />
+                            <Route path="allianceEntry" element={<AllianceEntry />} />
+                            <Route path="allianceSupplier" element={<AllianceSupplier />} />
+                            <Route path="allianceSupplier2" element={<AllianceSupplier2 />} />
+                            <Route path="allianceSupplier3" element={<AllianceSupplier3 />} />
                         </Route>
+                    </Route>
+                    {/* franchise end */}
 
-                        <Route path="/menu/dessert" element={<Dessert />} />
-                        <Route path="/menu/beverage" element={<Dessert />} />
-                        <Route path="/menu/mdproduct" element={<Dessert />} />
-
-                        {/* franchise */}
-                        <Route path="/franchise">
-                            <Route path="competitive" element={<Competitive />} />
-                            <Route path="interior" element={<Interior />} />
-                            <Route path="procedure" element={<Procedure />} />
-                            <Route path="contact" element={<Contact />} />
-                            <Route path="alliance">
-                                <Route index element={<Alliance />} />
-                                <Route path="alliancePurchasing" element={<AlliancePurchasing />} />
-                                <Route path="allianceEntry" element={<AllianceEntry />} />
-                                <Route path="allianceSupplier" element={<AllianceSupplier />} />
-                                <Route path="allianceSupplier2" element={<AllianceSupplier2 />} />
-                                <Route path="allianceSupplier3" element={<AllianceSupplier3 />} />
-                            </Route>
+                    {/* community */}
+                    <Route path="/community" element={<Layout />}>
+                        <Route path="information">
+                            <Route index element={<Information />} />
+                            <Route path=":informationID" element={<InformationDetail />} />
                         </Route>
-
-                        {/* community */}
-                        <Route path="/community">
-                            <Route path="information">
-                                <Route index element={<Information />} />
-                                <Route path=":informationID" element={<InformationDetail />} />
-                            </Route>
-                            <Route path="notice">
-                                <Route index element={<Notice />} />
-                                <Route path=":noticeID" element={<NoticeDetail />} />
-                            </Route>
-                            <Route path="eventstore">
-                                <Route index element={<EventStore />} />
-                                <Route path=":eventstoreID" element={<EventstoreDetail />} />
-                            </Route>
-                            <Route path="register" element={<Register />} />
+                        <Route path="notice">
+                            <Route index element={<Notice />} />
+                            <Route path=":noticeID" element={<NoticeDetail />} />
                         </Route>
-                        {/* community end */}
-
-                        {/* store */}
-                        <Route path="/store">
-                            <Route path="competitiveness" element={<Store />}></Route>
+                        <Route path="eventstore">
+                            <Route index element={<EventStore />} />
+                            <Route path=":eventstoreID" element={<EventstoreDetail />} />
                         </Route>
+                        <Route path="register" element={<Register />} />
+                    </Route>
+                    {/* community end */}
 
+                    {/* store */}
+                    <Route path="/store" element={<Layout />}>
+                        <Route path="competitiveness" element={<Store />}></Route>
+                    </Route>
+                    {/* store end */}
+
+                    {/* notFile */}
+                    <Route path="*" element={<Layout />}>
                         <Route path="*" element={<NotFile />} />
                     </Route>
+                    {/* notFile end */}
                 </Routes>
             </HashRouter>
         </>

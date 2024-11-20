@@ -15,7 +15,7 @@ const Header = () => {
             <HeaderInner>
                 <div className="inner">
                     <h1>
-                        <Link to="/">
+                        <Link to="/main">
                             <img
                                 className="svg"
                                 src="https://raw.githubusercontent.com/TeamProject-Dessert39/dataCenter/9ff6b61cec7dd243b2c413364b8b1b9d6b2c0c4a/icon/dessert39_simbol.svg"

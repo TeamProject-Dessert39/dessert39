@@ -161,6 +161,9 @@ export const AllianceAgreementItemContainer = styled.div`
 `;
 
 export const AllianceLayoutContainer = styled.div`
+    /* 헤더 겹침 해결 */
+    margin-top: 100px;
+
     position: relative;
     width: 100%;
     height: 225px;
