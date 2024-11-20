@@ -12,7 +12,10 @@ const Footer = () => {
             <div className="inner">
                 <LogoTabWrap>
                     <Link to={'/main'}>
-                        <img src="https://github.com/TeamProject-Dessert39/dataCenter/blob/master/icon/dessert39_logo.png?raw=true" alt="dessert39_logo" />
+                        <img
+                            src="https://github.com/TeamProject-Dessert39/dataCenter/blob/master/icon/dessert39_logo.png?raw=true"
+                            alt="dessert39_logo"
+                        />
                     </Link>
                 </LogoTabWrap>
                 <InfoWrap>
@@ -38,7 +41,7 @@ const Footer = () => {
                     </ul>
                 </InfoWrap>
                 <ContactWrap>
-                    <Link to={'/pages/franchise/alliance'}>
+                    <Link to={'/franchise/alliance'}>
                         <button>
                             제휴·제안 문의하기 <FiArrowRightCircle />
                         </button>

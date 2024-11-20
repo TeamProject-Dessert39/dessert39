@@ -98,12 +98,12 @@ Error generating stack: `+a.message+`
 
     @media (max-width: ${at.widescreen}) {
         height: 100px;
-        background-color: rebeccapurple;
+        //background-color: rebeccapurple;
     }
 
     @media (max-width: ${at.desktop}) {
         height: 100px;
-        background-color: white;
+        //background-color: white;
 
         .pc {
             display: none;
@@ -116,12 +116,12 @@ Error generating stack: `+a.message+`
 
     @media (max-width: ${at.tablet}) {
         height: 100px;
-        background-color: firebrick;
+        //background-color: firebrick;
     }
 
     @media (max-width: ${at.mobile}) {
         height: 100px;
-        background-color: darkorange;
+        //background-color: darkorange;
     }
     
     .inner {
@@ -882,7 +882,7 @@ Error generating stack: `+a.message+`
             }
         }
     }
-`,KN=()=>o.jsxs(VN,{children:[o.jsxs("div",{className:"inner",children:[o.jsx(GN,{children:o.jsx(ce,{to:"/main",children:o.jsx("img",{src:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/icon/dessert39_logo.png?raw=true",alt:"dessert39_logo"})})}),o.jsx(HN,{children:o.jsxs("ul",{children:[o.jsxs("li",{children:[o.jsx("span",{className:"company",children:"Company/CEO"}),o.jsx("p",{children:"SMC INTERNATIONAL CO., LTD. / Minchang Shin, Hanna Choi"})]}),o.jsxs("li",{children:[o.jsx("span",{className:"address",children:"Address"}),o.jsx("p",{children:"155 Bangbae Jungang-ro, Seocho-gu, Seoul"})]}),o.jsxs("li",{children:[o.jsx("span",{className:"cs",children:"Customer Service"}),o.jsx("p",{children:o.jsx("a",{href:"tel:1644-2927",children:"1644 - 2927"})})]}),o.jsxs("li",{children:[o.jsx("span",{className:"rn",children:"Registration Number"}),o.jsx("p",{children:"719 - 86 - 00092"})]})]})}),o.jsxs(qN,{children:[o.jsx(ce,{to:"/pages/franchise/alliance",children:o.jsxs("button",{children:["제휴·제안 문의하기 ",o.jsx(BN,{})]})}),o.jsxs("div",{className:"follow",children:[o.jsx("h4",{children:"FOLLOW US"}),o.jsxs("ul",{className:"followIcon",children:[o.jsx("li",{children:o.jsx("a",{target:"_black",href:"https://www.facebook.com/dessert39",children:o.jsx(RN,{})})}),o.jsx("li",{children:o.jsx("a",{target:"_black",href:"https://www.instagram.com/dessert39_official/#",children:o.jsx(MN,{})})}),o.jsx("li",{children:o.jsx("a",{target:"_black",href:"https://www.youtube.com/channel/UC0ykSSGK7ik4_qIlyA-jpcg",children:o.jsx(FN,{})})}),o.jsx("li",{children:o.jsx("a",{target:"_black",href:"https://blog.naver.com/dessertmakers",children:o.jsx(UN,{})})}),o.jsx("li",{children:o.jsx("a",{target:"_black",href:"https://www.tiktok.com/@dessert39_?",children:o.jsx(WN,{})})})]})]}),o.jsxs("div",{className:"contact",children:[o.jsx("h4",{children:"CONTACT US"}),o.jsxs("a",{href:"mailto:dessert39@dessert39.com",children:[o.jsx("span",{children:o.jsx("img",{src:"https://raw.githubusercontent.com/TeamProject-Dessert39/dataCenter/490cd36408095b9d46c800e9f2c8eddb1eb9e648/icon/contact_icon.svg",alt:"contact_icon"})}),"dessert39@dessert39.com"]})]})]})]}),o.jsx("strong",{children:"TM & Copyright 2022 DESSERT 39. All Rights Reserved."})]}),YN=D.li`
+`,KN=()=>o.jsxs(VN,{children:[o.jsxs("div",{className:"inner",children:[o.jsx(GN,{children:o.jsx(ce,{to:"/main",children:o.jsx("img",{src:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/icon/dessert39_logo.png?raw=true",alt:"dessert39_logo"})})}),o.jsx(HN,{children:o.jsxs("ul",{children:[o.jsxs("li",{children:[o.jsx("span",{className:"company",children:"Company/CEO"}),o.jsx("p",{children:"SMC INTERNATIONAL CO., LTD. / Minchang Shin, Hanna Choi"})]}),o.jsxs("li",{children:[o.jsx("span",{className:"address",children:"Address"}),o.jsx("p",{children:"155 Bangbae Jungang-ro, Seocho-gu, Seoul"})]}),o.jsxs("li",{children:[o.jsx("span",{className:"cs",children:"Customer Service"}),o.jsx("p",{children:o.jsx("a",{href:"tel:1644-2927",children:"1644 - 2927"})})]}),o.jsxs("li",{children:[o.jsx("span",{className:"rn",children:"Registration Number"}),o.jsx("p",{children:"719 - 86 - 00092"})]})]})}),o.jsxs(qN,{children:[o.jsx(ce,{to:"/franchise/alliance",children:o.jsxs("button",{children:["제휴·제안 문의하기 ",o.jsx(BN,{})]})}),o.jsxs("div",{className:"follow",children:[o.jsx("h4",{children:"FOLLOW US"}),o.jsxs("ul",{className:"followIcon",children:[o.jsx("li",{children:o.jsx("a",{target:"_black",href:"https://www.facebook.com/dessert39",children:o.jsx(RN,{})})}),o.jsx("li",{children:o.jsx("a",{target:"_black",href:"https://www.instagram.com/dessert39_official/#",children:o.jsx(MN,{})})}),o.jsx("li",{children:o.jsx("a",{target:"_black",href:"https://www.youtube.com/channel/UC0ykSSGK7ik4_qIlyA-jpcg",children:o.jsx(FN,{})})}),o.jsx("li",{children:o.jsx("a",{target:"_black",href:"https://blog.naver.com/dessertmakers",children:o.jsx(UN,{})})}),o.jsx("li",{children:o.jsx("a",{target:"_black",href:"https://www.tiktok.com/@dessert39_?",children:o.jsx(WN,{})})})]})]}),o.jsxs("div",{className:"contact",children:[o.jsx("h4",{children:"CONTACT US"}),o.jsxs("a",{href:"mailto:dessert39@dessert39.com",children:[o.jsx("span",{children:o.jsx("img",{src:"https://raw.githubusercontent.com/TeamProject-Dessert39/dataCenter/490cd36408095b9d46c800e9f2c8eddb1eb9e648/icon/contact_icon.svg",alt:"contact_icon"})}),"dessert39@dessert39.com"]})]})]})]}),o.jsx("strong",{children:"TM & Copyright 2022 DESSERT 39. All Rights Reserved."})]}),YN=D.li`
     div.btn{
         cursor: pointer;
         display: flex;
@@ -1460,6 +1460,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         a {
             text-decoration: none;
             color: inherit;
+
+            @media (max-width: 1024px) {
+                font-size: 14px;
+            }
         }
     }
 `,die=D.ul`
@@ -1501,12 +1505,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 height: 550px;
 
                 @media (max-width: 1440px) {
-                    width: 500px;
-                    height: 650px;
+                    width: 600px;
+                    height: 550px;
                 }
 
                 @media (max-width: 1024px) {
-                    width: 400px;
+                    width: 500px;
+                    height: 650px;
                 }
 
                 .ecoTitle {
@@ -1530,7 +1535,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 
             @media (max-width: 1440px) {
                 height: 600px;
-                width: 400px;
+                width: 300px;
             }
 
             @media (max-width: 1024px) {
@@ -1586,6 +1591,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     // ---------------------------------------------------------------------
     // swiper
     width: 100%;
+    height: 100%;
     max-width: 1200px; // 최대 너비 설정
     margin: 0 auto; // 중앙 정렬
     overflow: hidden; // 넘치는 부분 숨김
@@ -1595,6 +1601,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         height: 550px;
 
         @media (max-width: 1440px) {
+            height: 550px;
+        }
+
+        @media (max-width: 1024px) {
             height: 650px;
         }
     }
@@ -1632,6 +1642,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         padding: 20px 20px 20px 0;
 
         @media (max-width: 1440px) {
+            top: 70%;
+        }
+        @media (max-width: 1024px) {
             top: 70%;
         }
 
@@ -2519,11 +2532,25 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     }
 
     .swiper-button-prev {
-        left: 0%;
+        left: 2%;
+
+        @media (max-width: 1440px) {
+            left: 0%;
+        }
+        @media (max-width: 1024px) {
+            left: 0%;
+        }
     }
 
     .swiper-button-next {
-        right: 0%;
+        right: 2%;
+
+        @media (max-width: 1440px) {
+            right: 0%;
+        }
+        @media (max-width: 1024px) {
+            right: 0%;
+        }
     }
 
     .swiper-button-prev:after,
@@ -2531,7 +2558,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         font-size: 30px;
         color: black;
     }
-`,Hie=[{id:1,title:"[24년 8월 신메뉴]제로 뱅쇼, 제로 샹그리아 출시!",date:"2024-08-26",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_01.png?raw=true",linkUrl:"/community/information/8"},{id:2,title:"[24년 8월 신메뉴]설탕무첨가 요거트 아이스크림 음료 5종 출시!",date:"2024-08-14",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_02.png?raw=true",linkUrl:"/community/information/9"},{id:3,title:"[24년 11월 신메뉴]흑당라떼 2종 출시!",date:"2024-11-05",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_03.png?raw=true",linkUrl:"/community/information/46"},{id:4,title:"[24년 10월신메뉴]가격, 가격, 맛 모두 &#39;착한바닐라라떼&#39; 출시!",date:"2024-10-24",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_04.png?raw=true",linkUrl:"/community/information/1"},{id:5,title:"[24년 10월 신메뉴]노슈거 바스크 치즈 케이크 출시!",date:"2024-10-08",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_05.png?raw=true",linkUrl:"/community/information/2"},{id:6,title:"[24년 10월 신메뉴]바나나 콜드브루 라떼 출시!",date:"2024-10-07",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_06.png?raw=true",linkUrl:"/community/information/3"},{id:7,title:"[24년 9월 신메뉴]스페셜티 원두 변경",date:"2024-09-30",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_07.png?raw=true",linkUrl:"/community/information/4"},{id:8,title:"[24년 9월 신메뉴]설탕무첨가 허니자몽 음료4종 출시!",date:"2024-09-19",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_08.png?raw=true",linkUrl:"/community/information/5"},{id:9,title:"[24년 9월 신메뉴]노슈거 크림치즈 크로칸슈 출시!",date:"2024-09-19",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_09.png?raw=true",linkUrl:"/community/information/6"},{id:10,title:"[24 8월 신메뉴]리치 블랜딩 음료 4종 출시!",date:"2024-08-29",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_10.png?raw=true",linkUrl:"/community/information/7"}],qie=()=>{const e=C.useRef(null),t=C.useRef(null),r=C.useRef(null);return C.useEffect(()=>{r.current&&e.current&&t.current&&(r.current.params.navigation.prevEl=e.current,r.current.params.navigation.nextEl=t.current,r.current.navigation.init(),r.current.navigation.update())},[]),o.jsx(Gie,{children:o.jsxs("div",{className:"swiper-container",children:[o.jsx(lt,{modules:[qr,Xt],breakpoints:{1440:{slidesPerView:3.5,spaceBetween:40},1024:{slidesPerView:3,spaceBetween:25},768:{slidesPerView:2,spaceBetween:20},480:{slidesPerView:1.5,spaceBetween:15}},navigation:{prevEl:e.current,nextEl:t.current},autoplay:{delay:3e3,disableOnInteraction:!1},loop:!0,onSwiper:n=>r.current=n,allowTouchMove:!0,watchSlidesProgress:!0,onBeforeInit:n=>{n.params.navigation.prevEl=e.current,n.params.navigation.nextEl=t.current},children:Hie.map(n=>o.jsx(ne,{children:o.jsxs(ce,{to:n.linkUrl,children:[o.jsx("img",{referrerPolicy:"no-referrer",src:n.photoUrl,alt:`EventNews_${n.id}`}),o.jsxs("div",{className:"swiper-slide-content",children:[o.jsx("h2",{dangerouslySetInnerHTML:{__html:n.title}}),o.jsx("h3",{dangerouslySetInnerHTML:{__html:n.date}})]})]})},n.id))}),o.jsx("div",{className:"swiper-button-prev",ref:e}),o.jsx("div",{className:"swiper-button-next",ref:t})]})})},Kie=()=>o.jsxs(Wie,{children:[o.jsx(Vie,{children:"Event & News"}),o.jsx(qie,{}),o.jsx(kb,{linkUrl:"/community/information"})]}),Yie=D.div`
+`,Hie=[{id:1,title:"[24년 8월 신메뉴]제로 뱅쇼, 제로 샹그리아 출시!",date:"2024-08-26",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_01.png?raw=true",linkUrl:"/community/information/8"},{id:2,title:"[24년 8월 신메뉴]설탕무첨가 요거트 아이스크림 음료 5종 출시!",date:"2024-08-14",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_02.png?raw=true",linkUrl:"/community/information/9"},{id:3,title:"[24년 11월 신메뉴]흑당라떼 2종 출시!",date:"2024-11-05",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_03.png?raw=true",linkUrl:"/community/information/46"},{id:4,title:"[24년 10월신메뉴]가격, 가격, 맛 모두 &#39;착한바닐라라떼&#39; 출시!",date:"2024-10-24",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_04.png?raw=true",linkUrl:"/community/information/1"},{id:5,title:"[24년 10월 신메뉴]노슈거 바스크 치즈 케이크 출시!",date:"2024-10-08",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_05.png?raw=true",linkUrl:"/community/information/2"},{id:6,title:"[24년 10월 신메뉴]바나나 콜드브루 라떼 출시!",date:"2024-10-07",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_06.png?raw=true",linkUrl:"/community/information/3"},{id:7,title:"[24년 9월 신메뉴]스페셜티 원두 변경",date:"2024-09-30",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_07.png?raw=true",linkUrl:"/community/information/4"},{id:8,title:"[24년 9월 신메뉴]설탕무첨가 허니자몽 음료4종 출시!",date:"2024-09-19",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_08.png?raw=true",linkUrl:"/community/information/5"},{id:9,title:"[24년 9월 신메뉴]노슈거 크림치즈 크로칸슈 출시!",date:"2024-09-19",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_09.png?raw=true",linkUrl:"/community/information/6"},{id:10,title:"[24 8월 신메뉴]리치 블랜딩 음료 4종 출시!",date:"2024-08-29",photoUrl:"https://github.com/TeamProject-Dessert39/dataCenter/blob/master/images/main/EventNewsList/EventNewsList_10.png?raw=true",linkUrl:"/community/information/7"}],qie=()=>{const e=C.useRef(null),t=C.useRef(null),r=C.useRef(null);return C.useEffect(()=>{r.current&&e.current&&t.current&&(r.current.params.navigation.prevEl=e.current,r.current.params.navigation.nextEl=t.current,r.current.navigation.init(),r.current.navigation.update())},[]),o.jsx(Gie,{children:o.jsxs("div",{className:"swiper-container",children:[o.jsx(lt,{modules:[qr,Xt],breakpoints:{1440:{slidesPerView:3.5,spaceBetween:30},1024:{slidesPerView:3,spaceBetween:20},768:{slidesPerView:2.5,spaceBetween:10},480:{slidesPerView:1.5,spaceBetween:5}},navigation:{prevEl:e.current,nextEl:t.current},autoplay:{delay:3e3,disableOnInteraction:!1},loop:!0,onSwiper:n=>r.current=n,allowTouchMove:!0,watchSlidesProgress:!0,onBeforeInit:n=>{n.params.navigation.prevEl=e.current,n.params.navigation.nextEl=t.current},children:Hie.map(n=>o.jsx(ne,{children:o.jsxs(ce,{to:n.linkUrl,children:[o.jsx("img",{referrerPolicy:"no-referrer",src:n.photoUrl,alt:`EventNews_${n.id}`}),o.jsxs("div",{className:"swiper-slide-content",children:[o.jsx("h2",{dangerouslySetInnerHTML:{__html:n.title}}),o.jsx("h3",{dangerouslySetInnerHTML:{__html:n.date}})]})]})},n.id))}),o.jsx("div",{className:"swiper-button-prev",ref:e}),o.jsx("div",{className:"swiper-button-next",ref:t})]})})},Kie=()=>o.jsxs(Wie,{children:[o.jsx(Vie,{children:"Event & News"}),o.jsx(qie,{}),o.jsx(kb,{linkUrl:"/community/information"})]}),Yie=D.div`
     background-color: #242424;
     color: white;
     display: flex;
@@ -3402,9 +3429,34 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     max-width: 1440px;
     margin: 0 auto;
 
+        /* 대형 데스크톱 스타일 */
+        @media (max-width: 1440px) {
+            padding-top: 80px;
+        }
+
+        /* 소형 데스크톱 스타일 */
+        @media (max-width: 1024px) {
+            padding-top: 60px;
+        }
+
+        /* 태블릿 스타일 */
+        @media (max-width: 768px) {
+            padding-top: 40px;
+        }
+
+        /* 모바일 스타일 */
+        @media (max-width: 480px) {
+            padding-top: 20px;
+        }
+
     .topBox {
         display: flex;
         align-items: center;
+
+        @media (max-width: 1024px) {
+	        flex-direction: column;
+            align-items: flex-start;
+        }
 
         .title {
             font-size: 45px;
@@ -3415,6 +3467,22 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             font-weight: 700;
             line-height: 1.4;
             text-align: center;
+
+            @media (max-width: 1440px) {
+                margin-right: 50px;
+            }
+
+            @media (max-width: 1024px) {
+                font-size: 42px;
+            }
+
+            @media (max-width: 768px) {
+                font-size: 38px;
+            }
+
+            @media (max-width: 480px) {
+                font-size: 28px;
+            }
 
             span {
                 position: relative;
@@ -3439,10 +3507,25 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         .contactList {
             display: flex;
 
+            @media (max-width: 768px) {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px 0;
+            }
+
             .contactWrap {
                 margin-left: 50px;
                 display: flex;
                 align-items: center;
+
+                @media (max-width: 1024px) {
+                    margin-right: 20px;
+                    margin-left: 0;
+                }
+
+                @media (max-width: 768px) {
+                    padding: 15px 0;
+                }
 
                 :nth-child(1) {
                     margin-left: 0;
@@ -3470,12 +3553,36 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         margin-bottom: 8px;
                         font-weight: 600;
                         font-family: 'Lexend Deca', sans-serif;
+
+                        @media (max-width: 1024px) {
+                            font-size: 28px;
+                        }
+
+                        @media (max-width: 768px) {
+                            font-size: 22px;
+                        }
+
+                        @media (max-width: 480px) {
+                            font-size: 18px;
+                        }
                     }
 
                     p {
                         font-size: 18px;
                         letter-spacing: -0.025em;
                         line-height: 1.3;
+
+                        @media (max-width: 1024px) {
+                            font-size: 17px;
+                        }
+
+                        @media (max-width: 768px) {
+                            font-size: 16px;
+                        }
+
+                        @media (max-width: 480px) {
+                            font-size: 14px;
+                        }
                     }
                 }
 
