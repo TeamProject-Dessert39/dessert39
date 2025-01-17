@@ -19,7 +19,7 @@ dessert39 웹페이지를 보고 최대한 심플하고 간단한 로직을 통�
 - 황인준 팀장 : Main page 및 Chart 라이브러리 컴포넌트, Swiper 컴포넌트 구현
 - 서유진 팀원 : Franchise page 구현
 - 전규리 팀원 : Intro page , Menu , Store 페이지 구현
-- 허유정 팀원 :
+- 허윤정 팀원 : Community 페이지 구현
 
 ## 🛠 개발 환경
 - react v18.3.1
